@@ -13,7 +13,7 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
   about: {
     description:
       "Conoce nuestra clinica odontologica, enfoque humano y compromiso con una atencion dental de calidad en tu ciudad.",
-    title: "Nosotros | Clinica Odontologica"
+    title: "Nosotros | Dental Expertos"
   },
   beforeAfter: {
     description:
@@ -23,7 +23,7 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
   contact: {
     description:
       "Encuentra direccion, telefono y canales de contacto para resolver dudas y visitarnos facilmente.",
-    title: "Contacto | Clinica Odontologica"
+    title: "Contacto | Dental Expertos"
   },
   facilities: {
     description:
@@ -33,7 +33,7 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
   home: {
     description:
       "Clinica odontologica enfocada en salud bucal, estetica dental y prevencion para toda la familia.",
-    title: "Inicio | Clinica Odontologica"
+    title: "Inicio | Dental Expertos"
   },
   staff: {
     description:

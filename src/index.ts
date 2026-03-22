@@ -22,7 +22,7 @@ app.set("views", join(currentDirectory, "views"));
 app.set("layout", "layouts/app");
 
 app.locals.defaultImageUrl = "/img/default.svg";
-app.locals.siteName = "Clinica Odontologica";
+app.locals.siteName = "Dental Expertos";
 
 app.use(expressEjsLayouts);
 app.use(express.static(publicDirectory));
