@@ -21,10 +21,22 @@ app.set("view engine", "ejs");
 app.set("views", join(currentDirectory, "views"));
 app.set("layout", "layouts/app");
 
+app.locals.defaultImageUrl = "/img/default.svg";
+app.locals.siteName = "Clinica Odontologica";
+
 app.use(expressEjsLayouts);
 app.use(express.static(publicDirectory));
 
 app.use("/", indexRouter);
+
+app.use((_request, response) => {
+  response.status(404).send("Ruta no encontrada");
+});
+
+app.use((error: Error, _request: express.Request, response: express.Response, _next: express.NextFunction) => {
+  console.error(error);
+  response.status(500).send("Error interno del servidor");
+});
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);

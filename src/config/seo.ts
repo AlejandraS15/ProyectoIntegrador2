@@ -11,32 +11,39 @@ type SeoKey =
 
 const seoDictionary: Record<SeoKey, SeoMetadata> = {
   about: {
-    description: "Conoce nuestra filosofia de atencion odontologica y compromiso con tu sonrisa.",
-    title: "Nosotros"
+    description:
+      "Conoce nuestra clinica odontologica, enfoque humano y compromiso con una atencion dental de calidad en tu ciudad.",
+    title: "Nosotros | Clinica Odontologica"
   },
   beforeAfter: {
-    description: "Casos clinicos y resultados antes y despues de nuestros tratamientos.",
-    title: "Antes y Despues"
+    description:
+      "Revisa casos de antes y despues para conocer resultados reales de nuestros tratamientos odontologicos.",
+    title: "Antes y Despues | Resultados Odontologicos"
   },
   contact: {
-    description: "Encuentra nuestra direccion, canales de contacto y horarios de atencion.",
-    title: "Contacto"
+    description:
+      "Encuentra direccion, telefono y canales de contacto para resolver dudas y visitarnos facilmente.",
+    title: "Contacto | Clinica Odontologica"
   },
   facilities: {
-    description: "Recorre nuestras instalaciones disenadas para tu comodidad y seguridad.",
-    title: "Instalaciones"
+    description:
+      "Conoce nuestras instalaciones odontologicas, equipamiento y espacios preparados para tu comodidad.",
+    title: "Instalaciones | Clinica Dental"
   },
   home: {
-    description: "Clinica odontologica enfocada en salud bucal, confianza y bienestar.",
-    title: "Inicio"
+    description:
+      "Clinica odontologica enfocada en salud bucal, estetica dental y prevencion para toda la familia.",
+    title: "Inicio | Clinica Odontologica"
   },
   staff: {
-    description: "Conoce al equipo de odontologas que cuidara de tu salud oral.",
-    title: "Equipo"
+    description:
+      "Conoce al equipo de odontologas y profesionales que te acompanan en cada etapa de tu tratamiento.",
+    title: "Equipo Odontologico"
   },
   treatments: {
-    description: "Explora los tratamientos odontologicos disponibles para cada necesidad.",
-    title: "Tratamientos"
+    description:
+      "Explora tratamientos odontologicos: limpieza, restauracion, estetica y rehabilitacion segun tu necesidad.",
+    title: "Tratamientos Dentales"
   }
 };
 
