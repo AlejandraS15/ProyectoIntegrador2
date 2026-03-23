@@ -6,13 +6,13 @@ class ResultsController {
 
     const cases = [
       {
-        before: "/assets/before1.jpg",
-        after: "/assets/after1.jpg",
+        before: "/assets/before1.png",
+        after: "/assets/after1.png",
       }
     ];
 
     response.render("results/index", {
-      //seo: getSeoMetadata("results"),
+      seo: getSeoMetadata("results"),
       cases
     });
   }

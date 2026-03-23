@@ -7,7 +7,8 @@ type SeoKey =
   | "facilities"
   | "home"
   | "staff"
-  | "treatments";
+  | "treatments"
+  | "results";
 
 const seoDictionary: Record<SeoKey, SeoMetadata> = {
   about: {
@@ -44,6 +45,11 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
     description:
       "Explora tratamientos odontologicos: limpieza, restauracion, estetica y rehabilitacion segun tu necesidad.",
     title: "Tratamientos Dentales"
+  },
+  results: {
+    title: "Resultados | Dental Expertos",
+    description: "Mira los resultados reales de nuestros tratamientos dentales.",
+    imageUrl: "/assets/resultados.jpg"
   }
 };
 
