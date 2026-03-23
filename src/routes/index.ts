@@ -6,6 +6,7 @@ import HomeController from "../controllers/HomeController.js";
 import MediaController from "../controllers/MediaController.js";
 import StaffController from "../controllers/StaffController.js";
 import TreatmentController from "../controllers/TreatmentController.js";
+import ResultsController from "../controllers/ResultsController.js";
 
 const router = Router();
 
@@ -16,5 +17,6 @@ router.get("/equipo", StaffController.index);
 router.get("/instalaciones", MediaController.facilities);
 router.get("/nosotros", AboutController.index);
 router.get("/tratamientos", TreatmentController.index);
+router.get("/resultados", ResultsController.index);
 
 export default router;
