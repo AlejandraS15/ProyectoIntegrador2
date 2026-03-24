@@ -317,34 +317,17 @@
     object-position: center 16%;
   }
 
-  .profile-accordion {
+  .profile-section {
     @apply rounded-2xl border border-dental-brown/15 bg-dental-ivory/40 px-4 py-3;
   }
 
-  .profile-accordion__summary {
-    @apply cursor-pointer text-base font-semibold text-dental-dark;
-    list-style: none;
+  .profile-section__title {
+    @apply text-base font-semibold text-dental-dark;
   }
 
-  .profile-accordion__summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .profile-accordion__summary::after {
-    content: "+";
-    float: right;
-    color: #5d4037;
-  }
-
-  .profile-accordion[open] .profile-accordion__summary::after {
-    content: "-";
-  }
-
-  .profile-accordion__list {
+  .profile-section__list {
     @apply mt-3 grid gap-2 pl-5 pr-1 text-[0.96rem] text-dental-brown/85;
     list-style: disc;
-    max-height: 9rem;
-    overflow-y: auto;
   }
 
   @media (max-width: 640px) {
