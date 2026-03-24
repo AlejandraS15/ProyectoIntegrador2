@@ -8,7 +8,7 @@
     : `background-image: url('${after}'); background-position: center; background-size: cover;`;
   const beforeText = typeof beforeLabel === "string" && beforeLabel.trim().length > 0 ? beforeLabel : "Antes";
   const afterText = typeof afterLabel === "string" && afterLabel.trim().length > 0 ? afterLabel : "Despues";
-  const isCompact = compact === true;
+  const isCompact = typeof compact !== "undefined" && compact === true;
 %>
 
 <article class="rounded-3xl border border-dental-beige/50 bg-white p-4 premium-shadow <%= isCompact ? 'before-after-card--compact' : '' %>">
