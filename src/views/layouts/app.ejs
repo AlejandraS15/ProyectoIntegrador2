@@ -36,5 +36,17 @@
         duration: 800,
         easing: 'ease-out-cubic',
       });
+      // Before & After Slider Logic
+      document.querySelectorAll(".before-after").forEach(container => {
+        const slider = container.querySelector(".slider");
+        const afterImg = container.querySelector(".img-after");
+        const divider = container.querySelector(".divider");
+
+        slider.addEventListener("input", (e) => {
+          const value = e.target.value;
+          afterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+          divider.style.left = value + "%";
+        });
+      });
     </script>
 </html>
