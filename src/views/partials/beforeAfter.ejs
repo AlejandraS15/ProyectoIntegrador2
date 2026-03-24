@@ -1,8 +1,36 @@
-<div class="before-after">
-  <img src="<%= before %>" class="img-before">
-  <img src="<%= after %>" class="img-after">
+<%
+  const hasCompositeImage = typeof image === "string" && image.trim().length > 0;
+  const beforeStyle = hasCompositeImage
+    ? `background-image: url('${image}'); background-position: left center; background-size: 200% 100%;`
+    : `background-image: url('${before}'); background-position: center; background-size: cover;`;
+  const afterStyle = hasCompositeImage
+    ? `background-image: url('${image}'); background-position: right center; background-size: 200% 100%;`
+    : `background-image: url('${after}'); background-position: center; background-size: cover;`;
+  const beforeText = typeof beforeLabel === "string" && beforeLabel.trim().length > 0 ? beforeLabel : "Antes";
+  const afterText = typeof afterLabel === "string" && afterLabel.trim().length > 0 ? afterLabel : "Despues";
+  const isCompact = compact === true;
+%>
 
-  <input type="range" min="0" max="100" value="50" class="slider">
+<article class="rounded-3xl border border-dental-beige/50 bg-white p-4 premium-shadow <%= isCompact ? 'before-after-card--compact' : '' %>">
+  <div class="before-after <%= isCompact ? 'before-after--compact' : '' %>" style="--ba-position: 50%;">
+    <div class="before-after__media" role="img" aria-label="Comparacion visual de antes y despues">
+      <div class="before-after__panel before-after__panel--before" data-inline-style="<%= beforeStyle %>"></div>
+      <div class="before-after__panel before-after__panel--after" data-inline-style="<%= afterStyle %>"></div>
+      <span class="before-after__badge before-after__badge--left"><%= beforeText %></span>
+      <span class="before-after__badge before-after__badge--right"><%= afterText %></span>
+      <div class="before-after__divider" aria-hidden="true">
+        <span class="before-after__handle"></span>
+      </div>
+    </div>
 
-  <div class="divider"></div>
-</div>
+    <input
+      type="range"
+      min="0"
+      max="100"
+      value="50"
+      step="1"
+      class="before-after__slider"
+      aria-label="Control deslizante para comparar antes y despues"
+    />
+  </div>
+</article>

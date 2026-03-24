@@ -6,9 +6,9 @@ type SeoKey =
   | "contact"
   | "facilities"
   | "home"
+  | "results"
   | "staff"
-  | "treatments"
-  | "results";
+  | "treatments";
 
 const seoDictionary: Record<SeoKey, SeoMetadata> = {
   about: {
@@ -36,6 +36,11 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
       "Clinica odontologica enfocada en salud bucal, estetica dental y prevencion para toda la familia.",
     title: "Inicio | Dental Expertos"
   },
+  results: {
+    description: "Mira los resultados reales de nuestros tratamientos dentales.",
+    imageUrl: "/assets/after1.png",
+    title: "Resultados | Dental Expertos"
+  },
   staff: {
     description:
       "Conoce al equipo de odontologas y profesionales que te acompanan en cada etapa de tu tratamiento.",
@@ -45,11 +50,6 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
     description:
       "Explora tratamientos odontologicos: limpieza, restauracion, estetica y rehabilitacion segun tu necesidad.",
     title: "Tratamientos Dentales"
-  },
-  results: {
-    title: "Resultados | Dental Expertos",
-    description: "Mira los resultados reales de nuestros tratamientos dentales.",
-    imageUrl: "/assets/resultados.jpg"
   }
 };
 

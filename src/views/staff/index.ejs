@@ -1,81 +1,281 @@
 <!-- HERO STAFF -->
-<section class="pt-32 pb-16 bg-dental-ivory relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
-    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Nuestros Especialistas</span>
-    <h1 class="text-5xl font-serif text-dental-dark mb-6">Conoce al Equipo Médico</h1>
-    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">Profesionales altamente capacitados y comprometidos con devolverte la seguridad al sonreír.</p>
+<section class="relative overflow-hidden bg-dental-ivory pt-32 pb-16">
+  <div class="section-container text-center" data-aos="fade-up">
+    <span class="mb-2 block text-sm font-bold uppercase tracking-widest text-dental-brown">Nuestros Especialistas</span>
+    <h1 class="mb-6 text-5xl text-dental-dark">Conoce al Equipo Medico Principal</h1>
+    <p class="mx-auto max-w-3xl text-lg text-dental-brown/80">
+      Tres doctoras lideran Dental Expertos con precision clinica, sensibilidad estetica y un trato humano que se siente desde la primera consulta.
+    </p>
   </div>
 </section>
 
 <!-- STAFF GRID -->
-<section class="py-16 bg-dental-cream">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <!-- Doctor 1 -->
-      <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="100">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dra. María Especialista</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Ortodoncia</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Más de 10 años de experiencia creando sonrisas perfectas y armónicas.</p>
-      </div>
+<section class="bg-dental-cream py-16 relative">
+  <div class="section-container">
+    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <article class="doctor-card group" data-aos="fade-up" data-aos-delay="100">
+        <button type="button" class="doctor-card__trigger" data-modal-target="modal-isabella" aria-label="Ver perfil completo de Dra. Isabella Lopez">
+          <div class="doctor-card__media">
+            <img
+              src="/img/staff/isabella-lopez.jpg"
+              alt="Dra Isabella Lopez, odontologa estetica"
+              class="doctor-card__image doctor-card__image--isabella"
+              onerror="this.onerror=null;this.src='/img/default.svg';"
+            />
+            <div class="doctor-card__overlay">
+              <div class="doctor-card__overlay-content">
+                <span class="doctor-card__overlay-title">Ver Trayectoria</span>
+                <p class="doctor-card__overlay-copy">Click para detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 text-left bg-white transition-colors group-hover:bg-dental-ivory/30">
+            <h2 class="font-serif text-2xl text-dental-dark mb-1 group-hover:text-dental-gold transition-colors">Dra. Isabella Lopez</h2>
+            <p class="text-xs font-bold uppercase tracking-widest text-dental-gold mb-4">Odontologia Estetica</p>
+            <p class="text-dental-brown/70 leading-relaxed mb-6 line-clamp-3">
+              Profesional apasionada, creativa e innovadora, enfocada en disenos de sonrisa de alta estetica.
+            </p>
+            <span class="inline-flex items-center text-sm font-medium text-dental-gold group-hover:text-dental-brown transition-colors">
+              Ver perfil completo
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </span>
+          </div>
+        </button>
+      </article>
 
-       <!-- Doctor 2 -->
-       <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dr. Carlos Cirujano</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Implantología Oral</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Especialista en recuperación integral de piezas dentales perdidas.</p>
-      </div>
+      <article class="doctor-card group" data-aos="fade-up" data-aos-delay="180">
+        <button type="button" class="doctor-card__trigger" data-modal-target="modal-yenny" aria-label="Ver perfil completo de Dra. Yenny Madrigal">
+          <div class="doctor-card__media">
+            <img
+              src="/img/staff/yenny-madrigal.jpg"
+              alt="Dra Yenny Madrigal"
+              class="doctor-card__image doctor-card__image--yenny"
+              onerror="this.onerror=null;this.src='/img/default.svg';"
+            />
+            <div class="doctor-card__overlay">
+              <div class="doctor-card__overlay-content">
+                <span class="doctor-card__overlay-title">Ver Trayectoria</span>
+                <p class="doctor-card__overlay-copy">Click para detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 text-left bg-white transition-colors group-hover:bg-dental-ivory/30">
+            <h2 class="font-serif text-2xl text-dental-dark mb-1 group-hover:text-dental-gold transition-colors">Dra. Yenny Madrigal</h2>
+            <p class="text-xs font-bold uppercase tracking-widest text-dental-gold mb-4">Ortodoncia y Estetica</p>
+            <p class="text-dental-brown/70 leading-relaxed mb-6 line-clamp-3">
+              Odontologa con trayectoria en evolucion constante y especializacion en ortodoncia desde 2016.
+            </p>
+            <span class="inline-flex items-center text-sm font-medium text-dental-gold group-hover:text-dental-brown transition-colors">
+              Ver perfil completo
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </span>
+          </div>
+        </button>
+      </article>
 
-      <!-- Doctor 3 -->
-      <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="300">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dra. Ana Estética</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Diseño de Sonrisa</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Apasionada por la armonía facial y la estética dental moderna.</p>
-      </div>
-
-      <!-- Doctor 4 -->
-      <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="400">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dr. Roberto General</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Odontología General</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Atención cálida, humana y preventiva enfocada en toda la familia.</p>
-      </div>
-
+      <article class="doctor-card group" data-aos="fade-up" data-aos-delay="260">
+        <button type="button" class="doctor-card__trigger" data-modal-target="modal-yised" aria-label="Ver perfil completo de Dra. Yised Hernandez">
+          <div class="doctor-card__media">
+            <img
+              src="/img/staff/yised-hernandez.jpg"
+              alt="Dra Yised Hernandez"
+              class="doctor-card__image doctor-card__image--yised"
+              onerror="this.onerror=null;this.src='/img/default.svg';"
+            />
+            <div class="doctor-card__overlay">
+              <div class="doctor-card__overlay-content">
+                <span class="doctor-card__overlay-title">Ver Trayectoria</span>
+                <p class="doctor-card__overlay-copy">Click para detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 text-left bg-white transition-colors group-hover:bg-dental-ivory/30">
+            <h2 class="font-serif text-2xl text-dental-dark mb-1 group-hover:text-dental-gold transition-colors">Dra. Yised Hernandez</h2>
+            <p class="text-xs font-bold uppercase tracking-widest text-dental-gold mb-4">Especialista en Estetica</p>
+            <p class="text-dental-brown/70 leading-relaxed mb-6 line-clamp-3">
+              Comprometida con la etica profesional, la excelencia clinica y la mejor experiencia para cada paciente.
+            </p>
+            <span class="inline-flex items-center text-sm font-medium text-dental-gold group-hover:text-dental-brown transition-colors">
+              Ver perfil completo
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </span>
+          </div>
+        </button>
+      </article>
     </div>
   </div>
 </section>
+
+<!-- MODALS -->
+<div id="modal-container">
+  <div id="modal-isabella" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
+      <button type="button" data-modal-close="modal-isabella" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="Cerrar modal Isabella">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <div class="md:flex">
+        <div class="md:w-2/5 modal-profile__image-wrap">
+          <img src="/img/staff/isabella-lopez.jpg" class="modal-profile__image modal-profile__image--isabella" onerror="this.onerror=null;this.src='/img/default.svg';" alt="Perfil Dra Isabella">
+        </div>
+        <div class="md:w-3/5 p-8 md:p-12 bg-white">
+          <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4">Odontologia Estetica</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Isabella Lopez</h2>
+          <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6">
+            <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-gold pl-4 bg-dental-ivory/20 py-2">
+              "Soy odontologa estetica. Mi energia y dedicacion son contagiosas; soy autentica, empatica y fiel a mis valores."
+            </p>
+            <p>
+              Disfruto actualizarme constantemente para mejorar mis habilidades personales y profesionales e inspirar a mis pacientes. Mi enfoque se centra en crear sonrisas naturales que reflejen la esencia unica de cada persona.
+            </p>
+            <details class="profile-accordion">
+              <summary class="profile-accordion__summary">Formacion Destacada</summary>
+              <ul class="profile-accordion__list">
+                <li>Diplomado de alta estetica.</li>
+                <li>Curso de resina estratificada y alta estetica con Dra. Laura Ochoa.</li>
+                <li>Formacion en Pardoux con Dra. Daniela Alcalde.</li>
+                <li>Curso de estratificacion en carillas ceramicas.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-100 flex justify-end">
+            <a href="https://wa.me/573153374433?text=Hola%20Dental%20Expertos,%20quisiera%20agendar%20una%20cita%20con%20la%20Dra.%20Isabella%20Lopez." target="_blank" class="inline-flex items-center px-6 py-3 rounded-full bg-dental-gold text-white font-medium hover:bg-dental-brown transition-colors shadow-lg shadow-dental-gold/20">
+              Agendar Cita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-yenny" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
+      <button type="button" data-modal-close="modal-yenny" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="Cerrar modal Yenny">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <div class="md:flex">
+        <div class="md:w-2/5 modal-profile__image-wrap">
+          <img src="/img/staff/yenny-madrigal.jpg" class="modal-profile__image modal-profile__image--yenny" onerror="this.onerror=null;this.src='/img/default.svg';" alt="Perfil Dra Yenny">
+        </div>
+        <div class="md:w-3/5 p-8 md:p-12 bg-white">
+          <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4">Ortodoncia y Estetica</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Yenny Madrigal</h2>
+          <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6">
+            <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-gold pl-4 bg-dental-ivory/20 py-2">
+              "Desde mi graduacion en 2009 he enfocado mi carrera en ortodoncia y en el arte de los disenos de sonrisa en resina y ceramica."
+            </p>
+            <p>
+              Odontologa con trayectoria en evolucion constante y especializacion en ortodoncia desde 2016. Mi practica ha sido fortalecida por la guia de mentores de alto nivel, permitiendome ofrecer tratamientos que transforman vidas.
+            </p>
+            <details class="profile-accordion">
+              <summary class="profile-accordion__summary">Mentores y Referentes</summary>
+              <ul class="profile-accordion__list">
+                <li>Patto Mora</li>
+                <li>Martin Prato</li>
+                <li>Cristian Quevedo</li>
+                <li>Felipe Bezerra</li>
+                <li>Daniela Alcalde</li>
+              </ul>
+            </details>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-100 flex justify-end">
+            <a href="https://wa.me/573153374433?text=Hola%20Dental%20Expertos,%20quisiera%20agendar%20una%20cita%20con%20la%20Dra.%20Yenny%20Madrigal." target="_blank" class="inline-flex items-center px-6 py-3 rounded-full bg-dental-gold text-white font-medium hover:bg-dental-brown transition-colors shadow-lg shadow-dental-gold/20">
+              Agendar Cita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-yised" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
+      <button type="button" data-modal-close="modal-yised" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="Cerrar modal Yised">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <div class="md:flex">
+        <div class="md:w-2/5 modal-profile__image-wrap">
+          <img src="/img/staff/yised-hernandez.jpg" class="modal-profile__image modal-profile__image--yised" onerror="this.onerror=null;this.src='/img/default.svg';" alt="Perfil Dra Yised">
+        </div>
+        <div class="md:w-3/5 p-8 md:p-12 bg-white">
+          <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4">Especialista en Estetica</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Yised Hernandez</h2>
+          <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6">
+            <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-gold pl-4 bg-dental-ivory/20 py-2">
+              "Comprometida con la etica profesional, la excelencia clinica y la mejor experiencia para cada paciente."
+            </p>
+            <p>
+              Cuento con 7 años de experiencia y formacion continua en odontologia estetica para entregar resultados de alto nivel. Mi objetivo diario es brindar atencion honesta, amable y tecnicamente impecable.
+            </p>
+            <details class="profile-accordion">
+              <summary class="profile-accordion__summary">Capacitaciones Principales</summary>
+              <ul class="profile-accordion__list">
+                <li>Diplomado de estetica.</li>
+                <li>Cursos de estratificacion con resina de alta estetica.</li>
+                <li>Curso intensivo de carillas indirectas y laminados ceramicos.</li>
+                <li>Curso de rehabilitacion sobre implantes.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="mt-8 pt-6 border-t border-gray-100 flex justify-end">
+            <a href="https://wa.me/573153374433?text=Hola%20Dental%20Expertos,%20quisiera%20agendar%20una%20cita%20con%20la%20Dra.%20Yised%20Hernandez." target="_blank" class="inline-flex items-center px-6 py-3 rounded-full bg-dental-gold text-white font-medium hover:bg-dental-brown transition-colors shadow-lg shadow-dental-gold/20">
+              Agendar Cita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function initStaffModals() {
+    const modalTriggers = document.querySelectorAll('[data-modal-target]');
+    const closeButtons = document.querySelectorAll('[data-modal-close]');
+
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    modalTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const modalId = trigger.getAttribute('data-modal-target');
+        if (modalId) openModal(modalId);
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal-close');
+        if (modalId) closeModal(modalId);
+      });
+    });
+
+    document.querySelectorAll('.modal-backdrop').forEach((modal) => {
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          closeModal(modal.id);
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      const openedModal = document.querySelector('.modal-backdrop.is-open');
+      if (openedModal) {
+        closeModal(openedModal.id);
+      }
+    });
+  })();
+</script>

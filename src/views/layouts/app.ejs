@@ -36,16 +36,34 @@
         duration: 800,
         easing: 'ease-out-cubic',
       });
-      // Before & After Slider Logic
-      document.querySelectorAll(".before-after").forEach(container => {
-        const slider = container.querySelector(".slider");
-        const afterImg = container.querySelector(".img-after");
-        const divider = container.querySelector(".divider");
+      // Before & After slider logic
+      document.querySelectorAll(".before-after").forEach((container) => {
+        const slider = container.querySelector(".before-after__slider");
+        const panels = container.querySelectorAll("[data-inline-style]");
 
-        slider.addEventListener("input", (e) => {
-          const value = e.target.value;
-          afterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
-          divider.style.left = value + "%";
+        panels.forEach((panel) => {
+          const styleText = panel.getAttribute("data-inline-style");
+          if (styleText) {
+            panel.style.cssText = styleText;
+          }
+        });
+
+        if (!(slider instanceof HTMLInputElement)) {
+          return;
+        }
+
+        const updatePosition = (value) => {
+          const numericValue = Number(value);
+          const clamped = Number.isFinite(numericValue)
+            ? Math.min(100, Math.max(0, numericValue))
+            : 50;
+
+          container.style.setProperty("--ba-position", `${clamped}%`);
+        };
+
+        updatePosition(slider.value);
+        slider.addEventListener("input", (event) => {
+          updatePosition(event.currentTarget.value);
         });
       });
     </script>

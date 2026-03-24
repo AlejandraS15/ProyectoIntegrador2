@@ -4,9 +4,9 @@ import AboutController from "../controllers/AboutController.js";
 import ContactController from "../controllers/ContactController.js";
 import HomeController from "../controllers/HomeController.js";
 import MediaController from "../controllers/MediaController.js";
+import ResultsController from "../controllers/ResultsController.js";
 import StaffController from "../controllers/StaffController.js";
 import TreatmentController from "../controllers/TreatmentController.js";
-import ResultsController from "../controllers/ResultsController.js";
 
 const router = Router();
 
