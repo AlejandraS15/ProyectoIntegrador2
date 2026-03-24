@@ -59,7 +59,7 @@
 
   .before-after__panel--after {
     z-index: 2;
-    clip-path: inset(0 calc(100% - var(--ba-position, 50%)) 0 0);
+    clip-path: inset(0 0 0 var(--ba-position, 50%));
   }
 
   .before-after__badge {

@@ -638,7 +638,7 @@ h1, h2, h3, h4, h5, h6{
 
 .before-after__panel--after {
   z-index: 2;
-  clip-path: inset(0 calc(100% - var(--ba-position, 50%)) 0 0);
+  clip-path: inset(0 0 0 var(--ba-position, 50%));
 }
 
 .before-after__badge {
@@ -2441,19 +2441,9 @@ h1, h2, h3, h4, h5, h6{
     flex-direction: row;
   }
 
-  .sm\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .sm\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .sm\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .sm\:text-lg{
