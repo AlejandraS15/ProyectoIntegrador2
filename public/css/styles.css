@@ -1054,9 +1054,12 @@ h1, h2, h3, h4, h5, h6{
   display: grid;
   gap: 0.5rem;
   padding-left: 1.25rem;
+  padding-right: 0.25rem;
   font-size: 0.96rem;
   color: rgb(93 64 55 / 0.85);
   list-style: disc;
+  max-height: 9rem;
+  overflow-y: auto;
 }
 
 @media (max-width: 640px) {
@@ -1364,6 +1367,10 @@ h1, h2, h3, h4, h5, h6{
 
 .h-full{
   height: 100%;
+}
+
+.max-h-\[24rem\]{
+  max-height: 24rem;
 }
 
 .max-h-\[90vh\]{
@@ -1691,6 +1698,11 @@ h1, h2, h3, h4, h5, h6{
   border-color: rgb(245 245 220 / 0.6);
 }
 
+.border-dental-brown{
+  --tw-border-opacity: 1;
+  border-color: rgb(93 64 55 / var(--tw-border-opacity, 1));
+}
+
 .border-dental-dark{
   --tw-border-opacity: 1;
   border-color: rgb(26 15 10 / var(--tw-border-opacity, 1));
@@ -1955,6 +1967,10 @@ h1, h2, h3, h4, h5, h6{
 
 .pl-4{
   padding-left: 1rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .pt-1{

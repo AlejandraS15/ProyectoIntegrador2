@@ -341,8 +341,10 @@
   }
 
   .profile-accordion__list {
-    @apply mt-3 grid gap-2 pl-5 text-[0.96rem] text-dental-brown/85;
+    @apply mt-3 grid gap-2 pl-5 pr-1 text-[0.96rem] text-dental-brown/85;
     list-style: disc;
+    max-height: 9rem;
+    overflow-y: auto;
   }
 
   @media (max-width: 640px) {
