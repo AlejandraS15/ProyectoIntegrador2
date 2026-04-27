@@ -17,6 +17,7 @@ router.get("/equipo", StaffController.index);
 router.get("/instalaciones", MediaController.facilities);
 router.get("/nosotros", AboutController.index);
 router.get("/tratamientos", TreatmentController.index);
+router.get("/tratamientos/:slug", TreatmentController.show);
 router.get("/resultados", ResultsController.index);
 
 export default router;

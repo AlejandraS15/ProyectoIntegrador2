@@ -13,43 +13,51 @@ type SeoKey =
 const seoDictionary: Record<SeoKey, SeoMetadata> = {
   about: {
     description:
-      "Conoce nuestra clínica odontológica, enfoque humano y compromiso con una atención dental de calidad en tu ciudad.",
-    title: "Nosotros | Dental Expertos"
+      "Conoce Dental Expertos, clínica odontológica estética en Guayabal, Medellín, enfocada en sonrisas naturales y atención cercana.",
+    keywords: "clinica odontologica estetica guayabal, odontologia estetica medellin, dental expertos medellin",
+    title: "Clínica Odontológica Estética en Guayabal"
   },
   beforeAfter: {
     description:
-      "Revisa casos de antes y después para conocer resultados reales de nuestros tratamientos odontológicos.",
-    title: "Antes y Después | Resultados Odontológicos"
+      "Casos reales de antes y después en diseño de sonrisa, carillas y estética dental en Medellín.",
+    keywords: "antes y despues diseño de sonrisa medellin, resultados odontologia estetica, casos dentales medellin",
+    title: "Antes y Después | Diseño de Sonrisa Medellín"
   },
   contact: {
     description:
-      "Encuentra dirección, teléfono y canales de contacto para resolver dudas y visitarnos fácilmente.",
-    title: "Contacto | Dental Expertos"
+      "Agenda tu valoración odontológica estética en Guayabal, Medellín. Dirección, WhatsApp, teléfono y horarios de Dental Expertos.",
+    keywords: "odontologo guayabal medellin, clinica dental guayabal, valoracion diseño de sonrisa medellin",
+    title: "Contacto | Clínica Dental en Guayabal Medellín"
   },
   facilities: {
     description:
-      "Conoce nuestras instalaciones odontológicas, equipamiento y espacios preparados para tu comodidad.",
-    title: "Instalaciones | Clínica Dental"
+      "Conoce nuestras instalaciones odontológicas en Guayabal, Medellín: espacios cómodos, bioseguridad y atención estética dental.",
+    keywords: "instalaciones clinica dental medellin, clinica odontologica guayabal, consultorio odontologico medellin",
+    title: "Instalaciones | Clínica Odontológica en Guayabal"
   },
   home: {
     description:
-      "Clínica odontológica enfocada en salud bucal, estética dental y prevención para toda la familia.",
-    title: "Inicio | Dental Expertos"
+      "Clínica odontológica estética en Guayabal, Medellín. Diseño de sonrisa, carillas dentales, blanqueamiento, ortodoncia estética e implantes.",
+    keywords: "diseño de sonrisa medellin, clinica odontologica estetica guayabal, carillas dentales medellin, blanqueamiento dental medellin",
+    title: "Diseño de Sonrisa en Medellín"
   },
   results: {
-    description: "Mira los resultados reales de nuestros tratamientos dentales.",
+    description: "Mira resultados reales de diseño de sonrisa, carillas y blanqueamiento dental en Dental Expertos Medellín.",
     imageUrl: "/assets/after1.png",
-    title: "Resultados | Dental Expertos"
+    keywords: "resultados diseño de sonrisa medellin, carillas dentales medellin, blanqueamiento dental medellin",
+    title: "Resultados | Estética Dental Medellín"
   },
   staff: {
     description:
-      "Conoce al equipo de odontólogas y profesionales que te acompañan en cada etapa de tu tratamiento.",
-    title: "Equipo Odontológico"
+      "Conoce nuestro equipo de odontólogas en Medellín, especialistas en estética dental, diseño de sonrisa y ortodoncia.",
+    keywords: "odontologas esteticas medellin, especialistas diseño de sonrisa medellin, equipo odontologico guayabal",
+    title: "Equipo Odontológico Estético en Medellín"
   },
   treatments: {
     description:
-      "Explora tratamientos odontológicos: limpieza, restauración, estética y rehabilitación según tu necesidad.",
-    title: "Tratamientos Dentales"
+      "Tratamientos de estética dental en Medellín: diseño de sonrisa, carillas, blanqueamiento, ortodoncia estética e implantes.",
+    keywords: "tratamientos dentales medellin, diseño de sonrisa medellin, carillas dentales medellin, implantes esteticos medellin",
+    title: "Tratamientos de Estética Dental en Medellín"
   }
 };
 

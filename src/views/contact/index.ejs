@@ -22,7 +22,11 @@
           </div>
           <div class="pt-1">
             <h4 class="font-bold text-lg text-dental-dark">Nuestra Ubicación</h4>
-            <p class="text-dental-brown/80 mt-1 leading-relaxed">Avenida Guayabal, antes de finalizar el puente de la 10 y a 5 minutos de la Estacion Poblado del Metro.<br>Cra. 52 # 07-115, Guayabal.</p>
+            <p class="text-dental-brown/80 mt-1 leading-relaxed">Avenida Guayabal, antes de finalizar el puente de la 10 y a 5 minutos de la Estación Poblado del Metro.<br>Cra. 52 # 07-115, Guayabal.</p>
+            <a href="<%= googleMapsUrl %>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-dental-brown transition-colors hover:text-dental-dark">
+              Ver en Google Maps
+              <i data-lucide="map" class="h-4 w-4"></i>
+            </a>
           </div>
         </div>
 
@@ -62,12 +66,12 @@
         Escribir por WhatsApp
       </a>
 
-      <div class="w-full h-56 rounded-2xl overflow-hidden bg-slate-100 relative group">
+      <a href="<%= googleMapsUrl %>" target="_blank" rel="noopener noreferrer" class="w-full h-56 rounded-2xl overflow-hidden bg-slate-100 relative group block">
         <div class="absolute inset-0 flex items-center justify-center bg-dental-beige/30 z-10 backdrop-blur-[2px]">
           <span class="bg-white text-dental-dark px-4 py-2 rounded-full font-medium shadow-sm text-sm group-hover:scale-105 transition-transform duration-300">Mapa de ubicación</span>
         </div>
         <img src="/img/placeholders/map-guayabal.svg" alt="Mapa de ubicación de Dental Expertos en Guayabal" class="w-full h-full object-cover opacity-80">
-      </div>
+      </a>
     </div>
 
   </div>

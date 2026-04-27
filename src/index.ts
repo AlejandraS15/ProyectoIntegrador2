@@ -22,10 +22,66 @@ app.set("views", join(currentDirectory, "views"));
 app.set("layout", "layouts/app");
 
 app.locals.defaultImageUrl = "/img/placeholders/dental-preview.svg";
+app.locals.googleMapsUrl =
+  "https://www.google.com/maps/search/?api=1&query=Cra.%2052%20%23%2007-115%2C%20Guayabal%2C%20Medell%C3%ADn%2C%20Colombia";
 app.locals.siteName = "Dental Expertos";
 
 app.use(expressEjsLayouts);
 app.use(express.static(publicDirectory));
+
+app.use((request, response, next) => {
+  const baseUrl = (process.env.SITE_URL ?? `${request.protocol}://${request.get("host")}`).replace(/\/$/, "");
+  const path = request.originalUrl.split("?")[0] || "/";
+  const canonicalUrl = `${baseUrl}${path}`;
+  const imageUrl = `${baseUrl}${app.locals.defaultImageUrl}`;
+
+  response.locals.absoluteImageUrl = (url: string): string => {
+    if (url.startsWith("http://") || url.startsWith("https://")) {
+      return url;
+    }
+
+    return `${baseUrl}${url.startsWith("/") ? url : `/${url}`}`;
+  };
+  response.locals.canonicalUrl = canonicalUrl;
+  response.locals.localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@id": `${baseUrl}/#dentist`,
+    "@type": ["Dentist", "LocalBusiness"],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "CO",
+      addressLocality: "Medellín",
+      addressRegion: "Antioquia",
+      postalCode: "050024",
+      streetAddress: "Cra. 52 # 07-115, Guayabal"
+    },
+    areaServed: ["Medellín", "Guayabal", "El Poblado", "Antioquia"],
+    description:
+      "Clínica odontológica estética en Guayabal, Medellín, especializada en diseño de sonrisa, carillas, ortodoncia estética, blanqueamiento e implantes.",
+    email: "dentalexpertos@hotmail.com",
+    hasMap: app.locals.googleMapsUrl,
+    image: imageUrl,
+    name: app.locals.siteName,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        closes: "19:00",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        closes: "15:00",
+        dayOfWeek: "Saturday",
+        opens: "08:00"
+      }
+    ],
+    priceRange: "$$",
+    telephone: "+573008938020",
+    url: baseUrl
+  };
+  next();
+});
 
 app.use("/", indexRouter);
 
