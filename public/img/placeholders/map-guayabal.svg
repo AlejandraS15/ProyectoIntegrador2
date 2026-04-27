@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title">
+  <title id="title">Mapa de ubicacion Dental Expertos</title>
+  <rect width="900" height="420" fill="#FDFBF7"/>
+  <path d="M-20 110C178 22 304 54 468 142s280 92 452 16" fill="none" stroke="#F5F5DC" stroke-width="58"/>
+  <path d="M-50 332c180-94 337-100 472-18s290 86 528-56" fill="none" stroke="#F5F5DC" stroke-width="52"/>
+  <path d="M112 0v420M320 0v420M548 0v420M764 0v420" stroke="#5D4037" stroke-width="4" opacity="0.12"/>
+  <path d="M0 74h900M0 210h900M0 354h900" stroke="#5D4037" stroke-width="4" opacity="0.12"/>
+  <circle cx="450" cy="210" r="74" fill="#1A0F0A"/>
+  <path d="M450 110c46 69 92 108 92 166 0 51-41 92-92 92s-92-41-92-92c0-58 46-97 92-166Z" fill="#5D4037"/>
+  <circle cx="450" cy="236" r="36" fill="#FFFDF5"/>
+</svg>

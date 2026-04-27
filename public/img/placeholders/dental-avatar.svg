@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-labelledby="title">
+  <title id="title">Perfil odontologico de respaldo</title>
+  <rect width="600" height="750" fill="#FFFDF5"/>
+  <rect x="38" y="38" width="524" height="674" rx="42" fill="#F5F5DC"/>
+  <circle cx="300" cy="258" r="112" fill="#5D4037" opacity="0.86"/>
+  <path d="M125 688c36-158 98-237 175-237s139 79 175 237" fill="#1A0F0A" opacity="0.78"/>
+  <path d="M300 141c36 53 83 80 83 132 0 45-36 80-83 80s-83-35-83-80c0-52 47-79 83-132Z" fill="#FFFDF5"/>
+</svg>

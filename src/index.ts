@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 app.set("views", join(currentDirectory, "views"));
 app.set("layout", "layouts/app");
 
-app.locals.defaultImageUrl = "/img/default.svg";
+app.locals.defaultImageUrl = "/img/placeholders/dental-preview.svg";
 app.locals.siteName = "Dental Expertos";
 
 app.use(expressEjsLayouts);
