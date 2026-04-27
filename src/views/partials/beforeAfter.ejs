@@ -7,7 +7,7 @@
     ? `background-image: url('${image}'); background-position: right center; background-size: 200% 100%;`
     : `background-image: url('${after}'); background-position: center; background-size: cover;`;
   const beforeText = typeof beforeLabel === "string" && beforeLabel.trim().length > 0 ? beforeLabel : "Antes";
-  const afterText = typeof afterLabel === "string" && afterLabel.trim().length > 0 ? afterLabel : "Despues";
+  const afterText = typeof afterLabel === "string" && afterLabel.trim().length > 0 ? afterLabel : "Después";
   const isCompact = typeof compact !== "undefined" && compact === true;
 %>
 
@@ -30,7 +30,7 @@
       value="50"
       step="1"
       class="before-after__slider"
-      aria-label="Control deslizante para comparar antes y despues"
+      aria-label="Control deslizante para comparar antes y después"
     />
   </div>
 </article>

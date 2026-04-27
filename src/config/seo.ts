@@ -13,27 +13,27 @@ type SeoKey =
 const seoDictionary: Record<SeoKey, SeoMetadata> = {
   about: {
     description:
-      "Conoce nuestra clinica odontologica, enfoque humano y compromiso con una atencion dental de calidad en tu ciudad.",
+      "Conoce nuestra clínica odontológica, enfoque humano y compromiso con una atención dental de calidad en tu ciudad.",
     title: "Nosotros | Dental Expertos"
   },
   beforeAfter: {
     description:
-      "Revisa casos de antes y despues para conocer resultados reales de nuestros tratamientos odontologicos.",
-    title: "Antes y Despues | Resultados Odontologicos"
+      "Revisa casos de antes y después para conocer resultados reales de nuestros tratamientos odontológicos.",
+    title: "Antes y Después | Resultados Odontológicos"
   },
   contact: {
     description:
-      "Encuentra direccion, telefono y canales de contacto para resolver dudas y visitarnos facilmente.",
+      "Encuentra dirección, teléfono y canales de contacto para resolver dudas y visitarnos fácilmente.",
     title: "Contacto | Dental Expertos"
   },
   facilities: {
     description:
-      "Conoce nuestras instalaciones odontologicas, equipamiento y espacios preparados para tu comodidad.",
-    title: "Instalaciones | Clinica Dental"
+      "Conoce nuestras instalaciones odontológicas, equipamiento y espacios preparados para tu comodidad.",
+    title: "Instalaciones | Clínica Dental"
   },
   home: {
     description:
-      "Clinica odontologica enfocada en salud bucal, estetica dental y prevencion para toda la familia.",
+      "Clínica odontológica enfocada en salud bucal, estética dental y prevención para toda la familia.",
     title: "Inicio | Dental Expertos"
   },
   results: {
@@ -43,12 +43,12 @@ const seoDictionary: Record<SeoKey, SeoMetadata> = {
   },
   staff: {
     description:
-      "Conoce al equipo de odontologas y profesionales que te acompanan en cada etapa de tu tratamiento.",
-    title: "Equipo Odontologico"
+      "Conoce al equipo de odontólogas y profesionales que te acompañan en cada etapa de tu tratamiento.",
+    title: "Equipo Odontológico"
   },
   treatments: {
     description:
-      "Explora tratamientos odontologicos: limpieza, restauracion, estetica y rehabilitacion segun tu necesidad.",
+      "Explora tratamientos odontológicos: limpieza, restauración, estética y rehabilitación según tu necesidad.",
     title: "Tratamientos Dentales"
   }
 };

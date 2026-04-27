@@ -2,7 +2,7 @@ import type { ResultCase } from "../types/results.js";
 
 const baseCase: Omit<ResultCase, "description" | "title"> = {
   after: "",
-  afterLabel: "Despues",
+  afterLabel: "Después",
   before: "",
   beforeLabel: "Antes",
   image: ""
@@ -14,7 +14,7 @@ export const resultCases: ResultCase[] = [
     after: "/assets/results/case-1-after.jpg",
     before: "/assets/results/case-1-before.jpg",
     description: "Diseño completo de sonrisa con análisis de proporción y armonía facial. Resultado natural y radiante.",
-    title: "Diseno de Sonrisa"
+    title: "Diseño de Sonrisa"
   },
   {
     ...baseCase,
