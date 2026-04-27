@@ -8,7 +8,7 @@
     <!-- AOS Animate on scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
-  <body class="min-h-screen bg-dental-ivory text-dental-dark antialiased selection:bg-dental-brown selection:text-dental-ivory">
+  <body class="min-h-screen overflow-x-hidden bg-dental-ivory text-dental-dark antialiased selection:bg-dental-brown selection:text-dental-ivory">
     <%- include("../partials/header") %>
     
     <main class="w-full">
@@ -19,7 +19,7 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/573008938020?text=Hola%20Dental%20Expertos%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer"
-        class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center">
+        class="fixed bottom-8 right-8 z-50 hidden bg-[#25D366] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 sm:flex items-center justify-center">
       <i data-lucide="message-circle" class="w-7 h-7"></i>
     </a>
 
@@ -27,4 +27,5 @@
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="/js/main.js"></script>
+  </body>
 </html>

@@ -1,20 +1,21 @@
 <!-- HERO SECTION -->
-<section id="inicio" class="relative min-h-screen flex items-center pt-20 bg-dental-cream">
+<section id="inicio" class="page-hero relative flex min-h-screen items-center bg-dental-cream pt-24 pb-16 md:pt-28">
   <!-- Decorative Elements -->
   <div class="absolute top-[-10%] right-[-5%] w-[50%] h-[50%] bg-dental-beige/40 rounded-full blur-3xl"></div>
   <div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-dental-beige/30 rounded-full blur-3xl"></div>
   
   <!-- Animated accent line -->
   <div class="absolute top-32 left-0 w-64 h-1 bg-gradient-to-r from-dental-brown/0 via-dental-brown/60 to-transparent transform -skew-x-12"></div>
+  <div class="ambient-band"></div>
 
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10 w-full">
     <div data-aos="fade-right">
       <div class="inline-flex items-center gap-2 px-4 py-2 bg-dental-beige/50 text-dental-brown text-xs font-bold tracking-widest uppercase rounded-full mb-6 backdrop-blur-sm border border-dental-beige">
         <span class="w-2 h-2 bg-dental-brown rounded-full animate-pulse"></span>
         Estética Dental Especializada
       </div>
       
-      <h1 class="text-5xl lg:text-7xl font-serif text-dental-dark leading-[1.1] mb-4">
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-dental-dark leading-[1.05] mb-5">
         Tu Sonrisa Perfecta<br/><span class="text-dental-brown italic">Ya Existe</span>
       </h1>
       
@@ -25,12 +26,12 @@
         Con precisión artística, tecnología de punta y más de 15 años de experiencia, transformamos sonrisas en obras maestras. Cada detalle, cada proporción, cada reflejo cuenta.
       </p>
       
-      <div class="flex flex-wrap gap-4 mt-8">
-        <a href="/tratamientos" class="bg-dental-dark text-dental-ivory px-8 py-4 rounded-full font-medium hover:bg-dental-brown transition-all premium-shadow flex items-center gap-2 group">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-4 mt-8">
+        <a href="/tratamientos" class="premium-button premium-button--dark px-8 py-4 group">
           Explorar Servicios
           <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
         </a>
-        <a href="/contacto" class="bg-white text-dental-dark px-8 py-4 rounded-full font-medium hover:bg-dental-ivory transition-all border border-dental-beige flex items-center gap-2">
+        <a href="/contacto" class="premium-button premium-button--light px-8 py-4">
           Agendar Consulta
         </a>
       </div>
@@ -55,17 +56,17 @@
     </div>
 
     <div class="relative" data-aos="zoom-in" data-aos-delay="200">
-      <div class="relative z-10 rounded-[2rem] overflow-hidden premium-shadow border-4 border-white/50">
+      <div class="image-frame relative z-10 rounded-[2rem] border-4 border-white/70">
         <div class="absolute inset-0 bg-gradient-to-br from-dental-beige/20 to-transparent z-5"></div>
         <img 
           src="/img/clinic/Home.png" 
           alt="Diseño de Sonrisa - Estética Dental"
           loading="lazy"
           onerror="this.src='/img/clinic/image.png';"
-          class="w-full h-[600px] object-cover"
+          class="w-full h-[420px] sm:h-[520px] lg:h-[600px] object-cover"
         />
       </div>
-      <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl premium-shadow z-20 flex items-center gap-4 hidden sm:flex" data-aos="fade-up" data-aos-delay="400">
+      <div class="absolute -bottom-8 -left-4 lg:-left-8 bg-white/95 p-5 lg:p-6 rounded-3xl premium-shadow z-20 flex items-center gap-4 hidden sm:flex backdrop-blur" data-aos="fade-up" data-aos-delay="400">
         <div class="w-12 h-12 bg-dental-beige rounded-full flex items-center justify-center text-dental-brown">
           <i data-lucide="shield-check" class="w-6 h-6"></i>
         </div>
@@ -88,7 +89,7 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="100">
+      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="100">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="sparkles" class="w-6 h-6"></i>
         </div>
@@ -96,7 +97,7 @@
         <p class="text-sm text-dental-brown/80 leading-relaxed">Sonrisa armónica y radiante diseñada exclusivamente para ti.</p>
       </div>
 
-      <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="200">
+      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="200">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="users" class="w-6 h-6"></i>
         </div>
@@ -104,7 +105,7 @@
         <p class="text-sm text-dental-brown/80 leading-relaxed">Alineación perfecta con opciones discretas e invisibles.</p>
       </div>
 
-      <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="300">
+      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="300">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="stethoscope" class="w-6 h-6"></i>
         </div>
@@ -112,7 +113,7 @@
         <p class="text-sm text-dental-brown/80 leading-relaxed">Restauración de sonrisa con máximo cuidado y naturalidad.</p>
       </div>
 
-      <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="400">
+      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="400">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="shield-check" class="w-6 h-6"></i>
         </div>
@@ -144,7 +145,7 @@
         <p class="text-dental-ivory/70 mb-8 leading-relaxed">
           Combinamos arte y ciencia para crear sonrisas que reflejan tu belleza natural. Cada detalle importa: proporción, color, armonía facial.
         </p>
-        <a href="/nosotros" class="inline-block bg-dental-beige text-dental-dark px-8 py-3 rounded-full text-sm font-medium hover:bg-white transition-colors">
+        <a href="/nosotros" class="premium-button premium-button--light px-8 py-3 text-sm">
           Conoce más de nosotros
         </a>
       </div>
@@ -207,7 +208,7 @@
 
     <div class="grid md:grid-cols-3 gap-8">
       
-      <div class="bg-white p-8 rounded-3xl border border-dental-beige premium-shadow" data-aos="fade-up" data-aos-delay="100">
+      <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
         <div class="flex text-[#F59E0B] mb-6">
           <i data-lucide="star" class="w-4 h-4 fill-current"></i>
           <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -227,7 +228,7 @@
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl border border-dental-beige premium-shadow" data-aos="fade-up" data-aos-delay="200">
+      <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
         <div class="flex text-[#F59E0B] mb-6">
           <i data-lucide="star" class="w-4 h-4 fill-current"></i>
           <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -247,7 +248,7 @@
         </div>
       </div>
 
-      <div class="bg-white p-8 rounded-3xl border border-dental-beige premium-shadow" data-aos="fade-up" data-aos-delay="300">
+      <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
         <div class="flex text-[#F59E0B] mb-6">
           <i data-lucide="star" class="w-4 h-4 fill-current"></i>
           <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -285,11 +286,11 @@
           Agenda tu consulta de valoración y descubre cómo podemos ayudarte a lograr la sonrisa que siempre has deseado.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="/contacto" class="bg-dental-ivory text-dental-dark px-8 py-4 rounded-full font-medium hover:bg-white transition-all flex items-center justify-center gap-2">
+          <a href="/contacto" class="premium-button premium-button--light px-8 py-4">
             Agendar valoración
             <i data-lucide="calendar" class="w-5 h-5"></i>
           </a>
-          <a href="https://wa.me/573008938020?text=Hola%20Dental%20Expertos%2C%20quiero%20agendar%20una%20cita" target="_blank" class="bg-transparent border border-dental-ivory/30 text-dental-ivory px-8 py-4 rounded-full font-medium hover:bg-dental-ivory/10 transition-all flex items-center justify-center gap-2">
+          <a href="https://wa.me/573008938020?text=Hola%20Dental%20Expertos%2C%20quiero%20agendar%20una%20cita" target="_blank" class="premium-button border border-dental-ivory/30 bg-transparent px-8 py-4 text-dental-ivory hover:bg-dental-ivory/10">
             Contactar por WhatsApp
             <i data-lucide="message-circle" class="w-5 h-5"></i>
           </a>

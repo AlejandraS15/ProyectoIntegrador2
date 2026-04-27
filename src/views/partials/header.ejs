@@ -1,7 +1,7 @@
 <header id="main-nav" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent py-4">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
     <a href="/" class="flex items-center gap-2 group">
-      <div class="w-10 h-10 bg-dental-dark rounded-full flex items-center justify-center transition-transform group-hover:scale-105">
+      <div class="w-10 h-10 bg-dental-dark rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:rotate-6">
         <i data-lucide="sparkles" class="text-dental-beige w-5 h-5"></i>
       </div>
       <div class="flex flex-col leading-none">
@@ -12,32 +12,32 @@
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
-      <a href="/" class="text-sm font-medium text-dental-dark hover:text-dental-brown transition-colors">Inicio</a>
-      <a href="/nosotros" class="text-sm font-medium text-dental-dark hover:text-dental-brown transition-colors">Nosotros</a>
-      <a href="/tratamientos" class="text-sm font-medium text-dental-dark hover:text-dental-brown transition-colors">Tratamientos</a>
-      <a href="/resultados" class="text-sm font-medium text-dental-dark hover:text-dental-brown transition-colors">Resultados</a>
-      <a href="/equipo" class="text-sm font-medium text-dental-dark hover:text-dental-brown transition-colors">Equipo</a>
-      <a href="/contacto" class="bg-dental-dark text-dental-ivory px-6 py-2.5 rounded-full text-sm font-medium hover:bg-dental-brown transition-all premium-shadow">
+      <a href="/" class="relative text-sm font-medium text-dental-dark transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-dental-brown after:transition-all after:duration-300 hover:text-dental-brown hover:after:w-full">Inicio</a>
+      <a href="/nosotros" class="relative text-sm font-medium text-dental-dark transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-dental-brown after:transition-all after:duration-300 hover:text-dental-brown hover:after:w-full">Nosotros</a>
+      <a href="/tratamientos" class="relative text-sm font-medium text-dental-dark transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-dental-brown after:transition-all after:duration-300 hover:text-dental-brown hover:after:w-full">Tratamientos</a>
+      <a href="/resultados" class="relative text-sm font-medium text-dental-dark transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-dental-brown after:transition-all after:duration-300 hover:text-dental-brown hover:after:w-full">Resultados</a>
+      <a href="/equipo" class="relative text-sm font-medium text-dental-dark transition-colors after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-dental-brown after:transition-all after:duration-300 hover:text-dental-brown hover:after:w-full">Equipo</a>
+      <a href="/contacto" class="premium-button premium-button--dark px-6 py-2.5 text-sm">
         Agenda tu cita
       </a>
     </nav>
 
     <!-- Mobile Toggle -->
-    <button id="mobile-menu-btn" class="md:hidden text-dental-dark p-2" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Alternar menú">
+    <button id="mobile-menu-btn" class="md:hidden rounded-full border border-dental-beige/70 bg-white/70 p-2 text-dental-dark shadow-sm backdrop-blur" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Alternar menú">
       <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
       <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-dental-ivory border-t border-dental-beige premium-shadow overflow-hidden transition-all duration-300">
-    <nav class="flex flex-col px-6 py-4 gap-4" aria-label="Navegación móvil">
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-dental-ivory/95 border-t border-dental-beige premium-shadow overflow-hidden backdrop-blur-xl transition-all duration-300">
+    <nav class="flex flex-col px-6 py-5 gap-4" aria-label="Navegación móvil">
       <a href="/" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Inicio</a>
       <a href="/nosotros" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Nosotros</a>
       <a href="/tratamientos" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Tratamientos</a>
       <a href="/resultados" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Resultados</a>
       <a href="/equipo" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Equipo</a>
-      <a href="/contacto" class="bg-dental-dark text-dental-ivory text-center mt-4 px-6 py-3 rounded-full text-base font-medium">
+      <a href="/contacto" class="premium-button premium-button--dark mt-4 px-6 py-3 text-base">
         Agenda tu cita
       </a>
     </nav>

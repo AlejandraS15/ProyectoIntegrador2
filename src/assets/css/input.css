@@ -5,27 +5,217 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --dental-dark: #1a0f0a;
+    --dental-brown: #5d4037;
+    --dental-gold: #bfa76a;
+    --dental-beige: #f5f5dc;
+    --dental-ivory: #fffdf5;
+    --dental-cream: #fdfbf7;
+    --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+
   body {
     @apply font-sans;
+    background:
+      linear-gradient(180deg, rgba(255, 253, 245, 0.96), rgba(253, 251, 247, 0.98)),
+      radial-gradient(circle at 18% 8%, rgba(191, 167, 106, 0.12), transparent 28rem);
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+
+  a,
+  button,
+  input,
+  summary {
+    transition-timing-function: var(--ease-premium);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(191, 167, 106, 0.9);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background: var(--dental-brown);
+    color: var(--dental-ivory);
+  }
 }
 
 .premium-shadow {
-  box-shadow: 0 10px 30px -10px rgba(26, 15, 10, 0.1);
+  box-shadow:
+    0 22px 60px -36px rgba(26, 15, 10, 0.38),
+    0 10px 24px -18px rgba(93, 64, 55, 0.28);
 }
 
 .glass-nav {
-  background: rgba(255, 253, 245, 0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 253, 245, 0.82);
+  border-bottom: 1px solid rgba(93, 64, 55, 0.1);
+  backdrop-filter: blur(18px) saturate(1.15);
+  box-shadow: 0 18px 60px -46px rgba(26, 15, 10, 0.48);
+}
+
+.text-dental-gold {
+  color: var(--dental-gold);
+}
+
+.bg-dental-gold {
+  background-color: var(--dental-gold);
 }
 
 @layer components {
   .section-container {
     @apply mx-auto w-full max-w-7xl px-6;
+  }
+
+  .page-hero {
+    @apply relative overflow-hidden;
+    background:
+      linear-gradient(180deg, rgba(255, 253, 245, 0.9), rgba(253, 251, 247, 0.98)),
+      linear-gradient(115deg, rgba(245, 245, 220, 0.62), transparent 54%);
+  }
+
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(93, 64, 55, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(93, 64, 55, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent 78%);
+  }
+
+  .section-kicker {
+    @apply mb-3 block text-xs font-bold uppercase text-dental-brown;
+    letter-spacing: 0.18em;
+  }
+
+  .premium-card {
+    @apply relative overflow-hidden border border-dental-beige/60 bg-white;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.75) inset,
+      0 22px 58px -42px rgba(26, 15, 10, 0.38);
+    transition:
+      transform 420ms var(--ease-premium),
+      box-shadow 420ms var(--ease-premium),
+      border-color 420ms var(--ease-premium),
+      background-color 420ms var(--ease-premium);
+  }
+
+  .premium-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), transparent 42%);
+    opacity: 0.64;
+  }
+
+  .premium-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .premium-card:hover,
+  .premium-card:focus-within {
+    transform: translateY(-0.42rem);
+    border-color: rgba(191, 167, 106, 0.52);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.85) inset,
+      0 30px 74px -42px rgba(26, 15, 10, 0.48);
+  }
+
+  .premium-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold;
+    min-height: 3rem;
+    transition:
+      transform 300ms var(--ease-premium),
+      box-shadow 300ms var(--ease-premium),
+      background-color 300ms var(--ease-premium),
+      color 300ms var(--ease-premium),
+      border-color 300ms var(--ease-premium);
+  }
+
+  .premium-button:hover,
+  .premium-button:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .premium-button--dark {
+    @apply bg-dental-dark text-dental-ivory;
+    box-shadow: 0 18px 36px -20px rgba(26, 15, 10, 0.72);
+  }
+
+  .premium-button--dark:hover,
+  .premium-button--dark:focus-visible {
+    @apply bg-dental-brown;
+    box-shadow: 0 22px 42px -20px rgba(93, 64, 55, 0.64);
+  }
+
+  .premium-button--light {
+    @apply border border-dental-beige bg-white text-dental-dark;
+    box-shadow: 0 16px 34px -26px rgba(26, 15, 10, 0.34);
+  }
+
+  .premium-button--light:hover,
+  .premium-button--light:focus-visible {
+    @apply border-dental-brown/20 bg-dental-ivory;
+  }
+
+  .image-frame {
+    @apply relative overflow-hidden bg-white;
+    box-shadow:
+      0 34px 90px -52px rgba(26, 15, 10, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.72) inset;
+  }
+
+  .image-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(115deg, rgba(255, 255, 255, 0.22), transparent 34%),
+      linear-gradient(0deg, rgba(26, 15, 10, 0.16), transparent 35%);
+    mix-blend-mode: soft-light;
+  }
+
+  .ambient-band {
+    position: absolute;
+    inset: auto 0 0;
+    height: 42%;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, transparent, rgba(191, 167, 106, 0.1), transparent),
+      linear-gradient(180deg, transparent, rgba(255, 253, 245, 0.36));
+  }
+
+  .stagger-list > * {
+    animation: premium-rise 700ms var(--ease-premium) both;
+    animation-delay: calc(var(--stagger-index, 0) * 80ms);
+  }
+
+  @keyframes premium-rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+      filter: blur(6px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
   }
 
   .before-after {
@@ -205,11 +395,17 @@
   .doctor-card {
     @apply relative overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 ease-out;
     border: 1px solid rgba(93, 64, 55, 0.15);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.8) inset,
+      0 22px 58px -42px rgba(26, 15, 10, 0.38);
   }
 
   .doctor-card:hover {
-    @apply -translate-y-2 shadow-xl;
+    @apply -translate-y-2;
     border-color: rgba(93, 64, 55, 0.28);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.86) inset,
+      0 32px 80px -44px rgba(26, 15, 10, 0.52);
   }
 
   .doctor-card__trigger {
@@ -331,6 +527,10 @@
   }
 
   @media (max-width: 640px) {
+    .section-container {
+      @apply px-5;
+    }
+
     .before-after__media {
       aspect-ratio: 4 / 3;
     }
@@ -342,6 +542,24 @@
 
     .doctor-card__media {
       aspect-ratio: 5 / 6;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .premium-card:hover,
+    .premium-card:focus-within,
+    .premium-button:hover,
+    .premium-button:focus-visible {
+      transform: none;
     }
   }
 }

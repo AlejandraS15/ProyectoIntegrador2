@@ -11,6 +11,8 @@
   let activeModal = null;
   let lastFocusedElement = null;
 
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function initIconsAndAnimations() {
     if (window.lucide) {
       window.lucide.createIcons();
@@ -18,9 +20,10 @@
 
     if (window.AOS) {
       window.AOS.init({
-        duration: 800,
-        easing: "ease-out-cubic",
-        offset: 50,
+        disable: prefersReducedMotion,
+        duration: 900,
+        easing: "ease-out-quart",
+        offset: 70,
         once: true
       });
     }
@@ -42,6 +45,7 @@
       menuIcon.classList.toggle("hidden", isOpen);
       closeIcon.classList.toggle("hidden", !isOpen);
       menuBtn.setAttribute("aria-expanded", String(isOpen));
+      document.body.classList.toggle("overflow-hidden", isOpen);
     };
 
     const handleScroll = () => {
