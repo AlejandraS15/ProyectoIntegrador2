@@ -3,17 +3,26 @@
   <!-- Decorative Elements -->
   <div class="absolute top-[-10%] right-[-5%] w-[50%] h-[50%] bg-dental-beige/40 rounded-full blur-3xl"></div>
   <div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-dental-beige/30 rounded-full blur-3xl"></div>
+  
+  <!-- Animated accent line -->
+  <div class="absolute top-32 left-0 w-64 h-1 bg-gradient-to-r from-dental-brown/0 via-dental-brown/60 to-transparent transform -skew-x-12"></div>
 
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
     <div data-aos="fade-right">
-      <span class="inline-block px-4 py-1.5 bg-dental-beige text-dental-brown text-xs font-bold tracking-widest uppercase rounded-full mb-6">
-        Excelencia en Salud Dental
-      </span>
-      <h1 class="text-5xl lg:text-7xl font-serif text-dental-dark leading-[1.1] mb-6">
-        Odontología especializada para tu <span class="text-dental-brown italic">familia</span>
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-dental-beige/50 text-dental-brown text-xs font-bold tracking-widest uppercase rounded-full mb-6 backdrop-blur-sm border border-dental-beige">
+        <span class="w-2 h-2 bg-dental-brown rounded-full animate-pulse"></span>
+        Estética Dental Especializada
+      </div>
+      
+      <h1 class="text-5xl lg:text-7xl font-serif text-dental-dark leading-[1.1] mb-4">
+        Tu Sonrisa Perfecta<br/><span class="text-dental-brown italic">Ya Existe</span>
       </h1>
-      <p class="text-lg text-dental-brown/80 mb-10 max-w-lg leading-relaxed">
-        Combinamos tecnología de vanguardia con un enfoque humano y artístico para brindarte la atención exclusiva que mereces.
+      
+      <p class="text-lg text-dental-brown/80 mb-2 max-w-lg leading-relaxed">
+        <span class="font-semibold text-dental-dark">Nosotros solo la diseñamos para ti.</span>
+      </p>
+      <p class="text-base text-dental-brown/70 mb-10 max-w-lg leading-relaxed">
+        Con precisión artística, tecnología de punta y más de 15 años de experiencia, transformamos sonrisas en obras maestras. Cada detalle, cada proporciones, cada reflejo cuenta.
       </p>
       
       <div class="flex flex-wrap gap-4 mt-8">
@@ -22,7 +31,7 @@
           <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
         </a>
         <a href="/contacto" class="bg-white text-dental-dark px-8 py-4 rounded-full font-medium hover:bg-dental-ivory transition-all border border-dental-beige flex items-center gap-2">
-          Contactar
+          Agendar Consulta
         </a>
       </div>
       
@@ -46,12 +55,13 @@
     </div>
 
     <div class="relative" data-aos="zoom-in" data-aos-delay="200">
-      <div class="relative z-10 rounded-[2rem] overflow-hidden premium-shadow">
+      <div class="relative z-10 rounded-[2rem] overflow-hidden premium-shadow border-4 border-white/50">
+        <div class="absolute inset-0 bg-gradient-to-br from-dental-beige/20 to-transparent z-5"></div>
         <img 
-          src="/img/clinic/image.png" 
-          alt="Sonrisa Perfecta"
+          src="/img/clinic/Home.png" 
+          alt="Diseño de Sonrisa - Estética Dental"
           loading="lazy"
-          onerror="this.onerror=null;this.src='/img/default.svg';"
+          onerror="this.src='/img/clinic/image.png';"
           class="w-full h-[600px] object-cover"
         />
       </div>
@@ -72,7 +82,7 @@
 <section id="servicios" class="py-24 bg-dental-ivory">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16" data-aos="fade-up">
-      <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Nuestras Especialidades</span>
+      <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Nuestras Especialidades Estéticas</span>
       <h2 class="text-4xl md:text-5xl font-serif text-dental-dark">Servicios Destacados</h2>
     </div>
 
@@ -83,31 +93,31 @@
           <i data-lucide="sparkles" class="w-6 h-6"></i>
         </div>
         <h3 class="font-serif text-xl mb-3 text-dental-dark">Diseño de Sonrisa</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Transformación estética armónica y radiante.</p>
+        <p class="text-sm text-dental-brown/80 leading-relaxed">Sonrisa armónica y radiante diseñada exclusivamente para ti.</p>
       </div>
 
       <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="200">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="users" class="w-6 h-6"></i>
         </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Ortodoncia</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Alineación dental con brackets y tecnología invisible.</p>
+        <h3 class="font-serif text-xl mb-3 text-dental-dark">Ortodoncia Estética</h3>
+        <p class="text-sm text-dental-brown/80 leading-relaxed">Alineación perfecta con opciones discretas e invisibles.</p>
       </div>
 
       <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="300">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="stethoscope" class="w-6 h-6"></i>
         </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Rehabilitación Oral</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Restauración integral de función y estética dental.</p>
+        <h3 class="font-serif text-xl mb-3 text-dental-dark">Rehabilitación Estética</h3>
+        <p class="text-sm text-dental-brown/80 leading-relaxed">Restauración de sonrisa con máximo cuidado y naturalidad.</p>
       </div>
 
       <div class="p-8 pb-12 bg-white rounded-[2rem] border border-dental-beige/50 hover:border-dental-brown/20 transition-all hover:-translate-y-2 group premium-shadow" data-aos="fade-up" data-aos-delay="400">
         <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
           <i data-lucide="shield-check" class="w-6 h-6"></i>
         </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Implantes Dentales</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Soluciones permanentes para pérdida de dientes.</p>
+        <h3 class="font-serif text-xl mb-3 text-dental-dark">Implantes Estéticos</h3>
+        <p class="text-sm text-dental-brown/80 leading-relaxed">Dientes naturales y permanentes que lucen impecables.</p>
       </div>
 
     </div>
@@ -130,9 +140,9 @@
       
       <div class="lg:col-span-1" data-aos="fade-right">
         <span class="text-dental-beige text-xs font-bold tracking-widest uppercase mb-4 block">Nuestra Promesa</span>
-        <h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">Por qué elegirnos</h2>
+        <h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">Resultados que transforman</h2>
         <p class="text-dental-ivory/70 mb-8 leading-relaxed">
-          Nos dedicamos a crear una experiencia dental que reduzca la ansiedad, brindando resultados estéticos en un entorno cálido, profesional y seguro.
+          Combinamos arte y ciencia para crear sonrisas que reflejan tu belleza natural. Cada detalle importa: proporción, color, armonía facial.
         </p>
         <a href="/nosotros" class="inline-block bg-dental-beige text-dental-dark px-8 py-3 rounded-full text-sm font-medium hover:bg-white transition-colors">
           Conoce más de nosotros
