@@ -23,7 +23,7 @@ app.set("layout", "layouts/app");
 
 app.locals.defaultImageUrl = "/img/placeholders/dental-preview.svg";
 app.locals.googleMapsUrl =
-  "https://www.google.com/maps/search/?api=1&query=Cra.%2052%20%23%2007-115%2C%20Guayabal%2C%20Medell%C3%ADn%2C%20Colombia";
+  "https://www.google.com/maps/place/Dental+Expertos,+Cra.+52+%23+7-115,+Guayabal,+Medell%C3%ADn,+Guayabal,+Medell%C3%ADn,+Antioquia/@6.2137364,-75.5827135,16z/data=!4m6!3m5!1s0x8e4429d121384199:0x174c3362860f3874!8m2!3d6.2137364!4d-75.5827135!16s%2Fg%2F11j53bg4nq";
 app.locals.siteName = "Dental Expertos";
 
 app.use(expressEjsLayouts);
@@ -59,6 +59,11 @@ app.use((request, response, next) => {
     description:
       "Clínica odontológica estética en Guayabal, Medellín, especializada en diseño de sonrisa, carillas, ortodoncia estética, blanqueamiento e implantes.",
     email: "dentalexpertos@hotmail.com",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 6.2137364,
+      longitude: -75.5827135
+    },
     hasMap: app.locals.googleMapsUrl,
     image: imageUrl,
     name: app.locals.siteName,
@@ -86,7 +91,12 @@ app.use((request, response, next) => {
 app.use("/", indexRouter);
 
 app.use((_request, response) => {
-  response.status(404).send("Ruta no encontrada");
+  response.status(404).render("errors/404", {
+    seo: {
+      description: "La página solicitada no existe en Dental Expertos. Encuentra tratamientos, resultados, equipo y contacto.",
+      title: "Página no encontrada"
+    }
+  });
 });
 
 app.use((error: Error, _request: express.Request, response: express.Response, _next: express.NextFunction) => {

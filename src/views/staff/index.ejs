@@ -108,7 +108,7 @@
 
 <!-- MODALS -->
 <div id="modal-container">
-  <div id="modal-isabella" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div id="modal-isabella" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-isabella-title">
     <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
       <button type="button" data-modal-close="modal-isabella" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="Cerrar modal Isabella">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
@@ -119,7 +119,7 @@
         </div>
         <div class="md:w-3/5 p-8 md:p-12 bg-white">
           <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4">Odontología Estética</span>
-          <h2 class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Isabella Lopez</h2>
+          <h2 id="modal-isabella-title" class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Isabella Lopez</h2>
           <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6 max-h-[24rem] overflow-y-auto pr-2">
             <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-brown pl-4 bg-dental-ivory/20 py-2">
               "Soy odontóloga estética. Mi energía y dedicación son contagiosas; soy auténtica, empática y fiel a mis valores."
@@ -147,7 +147,7 @@
     </div>
   </div>
 
-  <div id="modal-yenny" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div id="modal-yenny" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-yenny-title">
     <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
       <button type="button" data-modal-close="modal-yenny" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="Cerrar modal Yenny">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
@@ -158,7 +158,7 @@
         </div>
         <div class="md:w-3/5 p-8 md:p-12 bg-white">
           <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4">Ortodoncia y Estetica</span>
-          <h2 class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Yenny Madrigal</h2>
+          <h2 id="modal-yenny-title" class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Yenny Madrigal</h2>
           <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6 max-h-[24rem] overflow-y-auto pr-2">
             <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-brown pl-4 bg-dental-ivory/20 py-2">
               "Desde mi graduación en 2009 he enfocado mi carrera en ortodoncia y en el arte de los diseños de sonrisa en resina y cerámica."
@@ -187,7 +187,7 @@
     </div>
   </div>
 
-  <div id="modal-yised" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div id="modal-yised" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-yised-title">
     <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
       <button type="button" data-modal-close="modal-yised" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="Cerrar modal Yised">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
@@ -198,7 +198,7 @@
         </div>
         <div class="md:w-3/5 p-8 md:p-12 bg-white">
           <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4">Especialista en Estetica</span>
-          <h2 class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Yised Hernandez</h2>
+          <h2 id="modal-yised-title" class="font-serif text-3xl md:text-4xl text-dental-dark mb-6">Dra. Yised Hernandez</h2>
           <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6 max-h-[24rem] overflow-y-auto pr-2">
             <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-brown pl-4 bg-dental-ivory/20 py-2">
               "Comprometida con la ética profesional, la excelencia clínica y la mejor experiencia para cada paciente."
@@ -226,56 +226,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  (function initStaffModals() {
-    const modalTriggers = document.querySelectorAll('[data-modal-target]');
-    const closeButtons = document.querySelectorAll('[data-modal-close]');
-
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (!modal) return;
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (!modal) return;
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-
-    modalTriggers.forEach((trigger) => {
-      trigger.addEventListener('click', () => {
-        const modalId = trigger.getAttribute('data-modal-target');
-        if (modalId) openModal(modalId);
-      });
-    });
-
-    closeButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal-close');
-        if (modalId) closeModal(modalId);
-      });
-    });
-
-    document.querySelectorAll('.modal-backdrop').forEach((modal) => {
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          closeModal(modal.id);
-        }
-      });
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key !== 'Escape') return;
-      const openedModal = document.querySelector('.modal-backdrop.is-open');
-      if (openedModal) {
-        closeModal(openedModal.id);
-      }
-    });
-  })();
-</script>

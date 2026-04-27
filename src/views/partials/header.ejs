@@ -23,7 +23,7 @@
     </nav>
 
     <!-- Mobile Toggle -->
-    <button id="mobile-menu-btn" class="md:hidden text-dental-dark p-2" aria-label="Alternar menú">
+    <button id="mobile-menu-btn" class="md:hidden text-dental-dark p-2" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Alternar menú">
       <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
       <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
     </button>
@@ -31,7 +31,7 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-dental-ivory border-t border-dental-beige premium-shadow overflow-hidden transition-all duration-300">
-    <nav class="flex flex-col px-6 py-4 gap-4">
+    <nav class="flex flex-col px-6 py-4 gap-4" aria-label="Navegación móvil">
       <a href="/" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Inicio</a>
       <a href="/nosotros" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Nosotros</a>
       <a href="/tratamientos" class="text-lg font-serif text-dental-dark py-2 border-b border-dental-beige/30">Tratamientos</a>
@@ -43,33 +43,3 @@
     </nav>
   </div>
 </header>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.getElementById('main-nav');
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    // Scroll effect
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('glass-nav', 'py-2', 'shadow-sm');
-        nav.classList.remove('bg-transparent', 'py-4');
-      } else {
-        nav.classList.remove('glass-nav', 'py-2', 'shadow-sm');
-        nav.classList.add('bg-transparent', 'py-4');
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    // Mobile menu toggle
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-  });
-</script>

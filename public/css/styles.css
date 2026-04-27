@@ -564,40 +564,6 @@ h1, h2, h3, h4, h5, h6{
   font-family: "Playfair Display", serif;
 }
 
-.container{
-  width: 100%;
-}
-
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
-
 .section-container{
   margin-left: auto;
   margin-right: auto;
@@ -1092,6 +1058,10 @@ h1, h2, h3, h4, h5, h6{
   bottom: 0px;
 }
 
+.bottom-4{
+  bottom: 1rem;
+}
+
 .bottom-6{
   bottom: 1.5rem;
 }
@@ -1348,12 +1318,12 @@ h1, h2, h3, h4, h5, h6{
   height: 1.25rem;
 }
 
-.h-56{
-  height: 14rem;
-}
-
 .h-6{
   height: 1.5rem;
+}
+
+.h-64{
+  height: 16rem;
 }
 
 .h-7{
@@ -1402,6 +1372,10 @@ h1, h2, h3, h4, h5, h6{
 
 .max-h-\[90vh\]{
   max-height: 90vh;
+}
+
+.min-h-\[72vh\]{
+  min-height: 72vh;
 }
 
 .min-h-screen{
@@ -1977,6 +1951,10 @@ h1, h2, h3, h4, h5, h6{
   padding: 1rem;
 }
 
+.p-5{
+  padding: 1.25rem;
+}
+
 .p-6{
   padding: 1.5rem;
 }
@@ -2321,10 +2299,6 @@ h1, h2, h3, h4, h5, h6{
   opacity: 0.05;
 }
 
-.opacity-80{
-  opacity: 0.8;
-}
-
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -2340,12 +2314,6 @@ h1, h2, h3, h4, h5, h6{
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2366,12 +2334,6 @@ h1, h2, h3, h4, h5, h6{
 
 .backdrop-blur{
   --tw-backdrop-blur: blur(8px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.backdrop-blur-\[2px\]{
-  --tw-backdrop-blur: blur(2px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -2504,6 +2466,10 @@ h1, h2, h3, h4, h5, h6{
   background-color: rgb(32 190 89 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-dental-beige\/60:hover{
+  background-color: rgb(245 245 220 / 0.6);
+}
+
 .hover\:bg-dental-brown:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(93 64 55 / var(--tw-bg-opacity, 1));
@@ -2573,6 +2539,11 @@ h1, h2, h3, h4, h5, h6{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:bg-dental-brown{
+  --tw-bg-opacity: 1;
+  background-color: rgb(93 64 55 / var(--tw-bg-opacity, 1));
 }
 
 .group:hover .group-hover\:bg-dental-ivory\/30{
@@ -2705,6 +2676,10 @@ h1, h2, h3, h4, h5, h6{
 
   .lg\:grid-cols-\[0\.8fr_1\.2fr\]{
     grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .lg\:grid-cols-\[0\.95fr_1\.05fr\]{
+    grid-template-columns: 0.95fr 1.05fr;
   }
 
   .lg\:grid-cols-\[1\.05fr_0\.95fr\]{
