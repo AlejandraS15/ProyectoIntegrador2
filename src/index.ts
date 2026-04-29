@@ -4,6 +4,7 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { attachI18nLocals } from "./config/i18n.js";
 import indexRouter from "./routes/index.js";
 
 const currentFilePath = fileURLToPath(import.meta.url);
@@ -30,6 +31,8 @@ app.use(expressEjsLayouts);
 app.use(express.static(publicDirectory));
 
 app.use((request, response, next) => {
+  attachI18nLocals(request, response);
+
   const baseUrl = (process.env.SITE_URL ?? `${request.protocol}://${request.get("host")}`).replace(/\/$/, "");
   const path = request.originalUrl.split("?")[0] || "/";
   const canonicalUrl = `${baseUrl}${path}`;

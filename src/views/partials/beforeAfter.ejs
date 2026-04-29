@@ -11,9 +11,9 @@
   const isCompact = typeof compact !== "undefined" && compact === true;
 %>
 
-<article class="rounded-3xl border border-dental-beige/50 bg-white p-4 premium-shadow <%= isCompact ? 'before-after-card--compact' : '' %>">
+<article class="before-after-card rounded-3xl border border-dental-beige/50 bg-white p-4 premium-shadow <%= isCompact ? 'before-after-card--compact' : '' %>">
   <div class="before-after <%= isCompact ? 'before-after--compact' : '' %>" style="--ba-position: 50%;">
-    <div class="before-after__media" role="img" aria-label="Comparacion visual de antes y despues">
+    <div class="before-after__media" role="img" aria-label="<%= typeof isEnglish !== 'undefined' && isEnglish ? 'Before and after visual comparison' : 'Comparación visual de antes y después' %>">
       <div class="before-after__panel before-after__panel--before" data-inline-style="<%= beforeStyle %>"></div>
       <div class="before-after__panel before-after__panel--after" data-inline-style="<%= afterStyle %>"></div>
       <span class="before-after__badge before-after__badge--left"><%= beforeText %></span>
@@ -30,7 +30,7 @@
       value="50"
       step="1"
       class="before-after__slider"
-      aria-label="Control deslizante para comparar antes y después"
+      aria-label="<%= typeof isEnglish !== 'undefined' && isEnglish ? 'Slider to compare before and after' : 'Control deslizante para comparar antes y después' %>"
     />
   </div>
 </article>

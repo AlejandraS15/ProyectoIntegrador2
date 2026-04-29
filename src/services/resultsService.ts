@@ -1,4 +1,5 @@
-import { resultCases } from "../data/results.js";
+import type { Language } from "../config/i18n.js";
+import { getResultCases } from "../data/results.js";
 
 import type { ResultCase } from "../types/results.js";
 
@@ -7,9 +8,9 @@ interface ResultsPageData {
 }
 
 class ResultsService {
-  public static getPageData(): ResultsPageData {
+  public static getPageData(language: Language = "es"): ResultsPageData {
     return {
-      cases: resultCases
+      cases: getResultCases(language)
     };
   }
 }

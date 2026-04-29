@@ -1,35 +1,76 @@
-<section class="page-hero pt-32 pb-12 bg-dental-ivory">
-  <div class="section-container text-center" data-aos="fade-up">
-    <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-dental-brown">
-      Galería de Transformaciones
-    </span>
-    <h1 class="text-4xl sm:text-5xl text-dental-dark">Diseños de Sonrisa Realizados</h1>
-    <p class="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-dental-brown/80 sm:text-lg">
-      Cada caso representa la dedicación de nuestro equipo por crear sonrisas armónicas, naturales y transformadoras. Desliza para ver el antes y después de nuestros trabajos.
-    </p>
+<% const featuredCase = cases[0]; %>
+<% const secondaryCases = cases.slice(1); %>
+
+<section class="results-hero page-hero relative overflow-hidden bg-dental-ivory pt-32 pb-16">
+  <div class="section-container relative z-10 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+    <div data-aos="fade-right">
+      <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-dental-brown">
+        <%= isEnglish ? "Transformation Gallery" : "Galería de Transformaciones" %>
+      </span>
+      <h1 class="max-w-2xl text-4xl text-dental-dark sm:text-5xl lg:text-6xl">
+        <%= isEnglish ? "Real smile transformations" : "Transformaciones reales de sonrisa" %>
+      </h1>
+    </div>
+
+    <div class="results-hero__panel" data-aos="fade-left" data-aos-delay="120">
+      <p>
+        <%= isEnglish
+          ? "A curated selection of before-and-after cases. Move each divider to compare the change with precision."
+          : "Una selección curada de casos antes y después. Mueve cada divisor para comparar el cambio con precisión." %>
+      </p>
+      <div class="results-hero__chips" aria-hidden="true">
+        <span><%= isEnglish ? "Real cases" : "Casos reales" %></span>
+        <span><%= isEnglish ? "Natural finish" : "Acabado natural" %></span>
+        <span><%= isEnglish ? "Slide to compare" : "Desliza para comparar" %></span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="pb-20 bg-dental-cream">
-  <div class="section-container">
-    <div class="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      <% cases.forEach((c, index) => { %>
-        <article class="premium-card rounded-[1.7rem] p-4" data-aos="fade-up" data-aos-delay="<%= Math.min(index * 60, 300) %>">
-          <%- include("../partials/beforeAfter", {
-            after: c.after,
-            afterLabel: c.afterLabel,
-            before: c.before,
-            beforeLabel: c.beforeLabel,
-            compact: true,
-            image: c.image
-          }) %>
+<section class="results-gallery relative overflow-hidden bg-dental-cream pb-24 pt-8">
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-dental-ivory to-transparent"></div>
+  <div class="pointer-events-none absolute -left-24 top-28 h-80 w-80 rounded-full border border-dental-brown/10"></div>
+  <div class="pointer-events-none absolute -right-24 bottom-24 h-96 w-96 rounded-full border border-dental-brown/10"></div>
 
-          <div class="mt-4">
-            <h2 class="text-lg text-dental-dark"><%= c.title %></h2>
-            <p class="mt-2 text-sm leading-relaxed text-dental-brown/75"><%= c.description %></p>
+  <div class="section-container relative z-10">
+    <div class="results-editorial">
+      <article class="results-showcase" data-aos="fade-up">
+        <div class="results-showcase__header">
+          <div>
+            <span><%= isEnglish ? "Featured case" : "Caso destacado" %></span>
+            <h2><%= featuredCase.title %></h2>
           </div>
-        </article>
-      <% }) %>
+          <strong>01</strong>
+        </div>
+
+        <%- include("../partials/beforeAfter", {
+          after: featuredCase.after,
+          afterLabel: featuredCase.afterLabel,
+          before: featuredCase.before,
+          beforeLabel: featuredCase.beforeLabel,
+          compact: false,
+          image: featuredCase.image
+        }) %>
+      </article>
+
+      <div class="results-side">
+        <% secondaryCases.forEach((c, index) => { %>
+          <article class="results-mini" data-aos="fade-up" data-aos-delay="<%= 120 + index * 80 %>">
+            <div class="results-mini__header">
+              <span>0<%= index + 2 %></span>
+              <h2><%= c.title %></h2>
+            </div>
+            <%- include("../partials/beforeAfter", {
+              after: c.after,
+              afterLabel: c.afterLabel,
+              before: c.before,
+              beforeLabel: c.beforeLabel,
+              compact: true,
+              image: c.image
+            }) %>
+          </article>
+        <% }) %>
+      </div>
     </div>
   </div>
 </section>

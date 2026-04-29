@@ -1,19 +1,25 @@
 <!-- HERO CONTACT -->
 <section class="page-hero pt-32 pb-16 bg-dental-ivory relative border-b border-dental-beige">
   <div class="section-container text-center" data-aos="fade-up">
-    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Estamos para ti</span>
-    <h1 class="text-5xl font-serif text-dental-dark mb-6">Contáctanos</h1>
-    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">Agenda tu cita o resuelve tus dudas comunicándote por nuestros canales oficiales.</p>
+    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">
+      <%= isEnglish ? "We are here for you" : "Estamos para ti" %>
+    </span>
+    <h1 class="text-5xl font-serif text-dental-dark mb-6"><%= isEnglish ? "Contact Us" : "Contáctanos" %></h1>
+    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">
+      <%= isEnglish
+        ? "Book your appointment or ask us anything through our official channels."
+        : "Agenda tu cita o resuelve tus dudas comunicándote por nuestros canales oficiales." %>
+    </p>
   </div>
 </section>
 
 <!-- CONTACT SECTION -->
 <section class="py-20 bg-dental-cream">
   <div class="section-container grid lg:grid-cols-2 gap-16">
-    
-    <!-- Contact Info -->
     <div data-aos="fade-right">
-      <h2 class="text-3xl font-serif text-dental-dark mb-10">Información de la Clínica</h2>
+      <h2 class="text-3xl font-serif text-dental-dark mb-10">
+        <%= isEnglish ? "Clinic Information" : "Información de la Clínica" %>
+      </h2>
       
       <div class="space-y-8">
         <div class="flex items-start gap-5">
@@ -21,10 +27,15 @@
             <i data-lucide="map-pin" class="w-7 h-7"></i>
           </div>
           <div class="pt-1">
-            <h4 class="font-bold text-lg text-dental-dark">Nuestra Ubicación</h4>
-            <p class="text-dental-brown/80 mt-1 leading-relaxed">Avenida Guayabal, antes de finalizar el puente de la 10 y a 5 minutos de la Estación Poblado del Metro.<br>Cra. 52 # 07-115, Guayabal.</p>
+            <h4 class="font-bold text-lg text-dental-dark"><%= isEnglish ? "Our Location" : "Nuestra Ubicación" %></h4>
+            <p class="text-dental-brown/80 mt-1 leading-relaxed">
+              <%= isEnglish
+                ? "Avenida Guayabal, near the end of the 10th Street bridge and 5 minutes from Poblado Metro Station."
+                : "Avenida Guayabal, antes de finalizar el puente de la 10 y a 5 minutos de la Estación Poblado del Metro." %><br>
+              Cra. 52 # 07-115, Guayabal.
+            </p>
             <a href="<%= googleMapsUrl %>" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-dental-brown transition-colors hover:text-dental-dark">
-              Ver en Google Maps
+              <%= isEnglish ? "Open in Google Maps" : "Ver en Google Maps" %>
               <i data-lucide="map" class="h-4 w-4"></i>
             </a>
           </div>
@@ -35,7 +46,7 @@
             <i data-lucide="phone" class="w-7 h-7"></i>
           </div>
           <div class="pt-1">
-            <h4 class="font-bold text-lg text-dental-dark">Llámanos</h4>
+            <h4 class="font-bold text-lg text-dental-dark"><%= isEnglish ? "Call Us" : "Llámanos" %></h4>
             <p class="text-dental-brown/80 mt-1">+57 3008938020</p>
             <p class="text-dental-brown/80">dentalexpertos@hotmail.com</p>
           </div>
@@ -46,24 +57,27 @@
             <i data-lucide="clock" class="w-7 h-7"></i>
           </div>
           <div class="pt-1">
-             <h4 class="font-bold text-lg text-dental-dark">Horario de Atención</h4>
-             <p class="text-dental-brown/80 mt-1">Lunes a viernes: 8:00 a.m. - 7:00 p.m.</p>
-             <p class="text-dental-brown/80">Sabados: 8:00 a.m. - 3:00 p.m.</p>
-             <p class="text-dental-brown/80">No abrimos domingos ni festivos.</p>
-             <p class="text-dental-brown/80">Podemos ser flexibles en casos puntuales.</p>
+             <h4 class="font-bold text-lg text-dental-dark"><%= isEnglish ? "Opening Hours" : "Horario de Atención" %></h4>
+             <p class="text-dental-brown/80 mt-1"><%= isEnglish ? "Monday to Friday" : "Lunes a viernes" %>: 8:00 a.m. - 7:00 p.m.</p>
+             <p class="text-dental-brown/80"><%= isEnglish ? "Saturdays" : "Sábados" %>: 8:00 a.m. - 3:00 p.m.</p>
+             <p class="text-dental-brown/80"><%= isEnglish ? "Closed on Sundays and holidays." : "No abrimos domingos ni festivos." %></p>
+             <p class="text-dental-brown/80"><%= isEnglish ? "We can be flexible in specific cases." : "Podemos ser flexibles en casos puntuales." %></p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Contact Actions / Map image -->
     <div data-aos="fade-left" class="premium-card p-10 md:p-12 rounded-[2rem] text-center lg:text-left">
-      <h3 class="text-2xl font-serif text-dental-dark mb-4">Agenda de inmediato</h3>
-      <p class="text-dental-brown/80 mb-8 leading-relaxed">La forma más rápida de agendar o modificar tu cita es a través de nuestro WhatsApp, donde te atenderemos al instante.</p>
+      <h3 class="text-2xl font-serif text-dental-dark mb-4"><%= isEnglish ? "Book right away" : "Agenda de inmediato" %></h3>
+      <p class="text-dental-brown/80 mb-8 leading-relaxed">
+        <%= isEnglish
+          ? "The fastest way to book or modify your appointment is through WhatsApp, where we can assist you directly."
+          : "La forma más rápida de agendar o modificar tu cita es a través de nuestro WhatsApp, donde te atenderemos al instante." %>
+      </p>
       
-      <a href="https://wa.me/573008938020?text=Hola%20Dental%20Expertos%2C%20quiero%20agendar%20una%20cita" target="_blank" class="w-full bg-[#25D366] text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-[#20BE59] transform hover:-translate-y-1 transition-all flex items-center justify-center gap-3 mb-8 shadow-lg shadow-green-500/30">
+      <a href="<%= whatsappUrl() %>" target="_blank" class="w-full bg-[#25D366] text-white px-8 py-5 rounded-full font-bold text-lg hover:bg-[#20BE59] transform hover:-translate-y-1 transition-all flex items-center justify-center gap-3 mb-8 shadow-lg shadow-green-500/30">
         <i data-lucide="message-circle" class="w-6 h-6"></i>
-        Escribir por WhatsApp
+        <%= isEnglish ? "Write on WhatsApp" : "Escribir por WhatsApp" %>
       </a>
 
       <a href="<%= googleMapsUrl %>" target="_blank" rel="noopener noreferrer" class="w-full h-64 rounded-2xl overflow-hidden bg-dental-cream relative group block border border-dental-beige/70">
@@ -72,11 +86,10 @@
             <span class="block text-sm font-bold text-dental-dark">Dental Expertos</span>
             <span class="block text-xs text-dental-brown">Cra. 52 # 07-115, Guayabal</span>
           </span>
-          <span class="shrink-0 rounded-full bg-dental-dark px-3 py-2 text-xs font-semibold text-dental-ivory transition-colors group-hover:bg-dental-brown">Abrir</span>
+          <span class="shrink-0 rounded-full bg-dental-dark px-3 py-2 text-xs font-semibold text-dental-ivory transition-colors group-hover:bg-dental-brown"><%= isEnglish ? "Open" : "Abrir" %></span>
         </div>
-        <img src="/img/placeholders/map-guayabal.svg" alt="Mapa de ubicación de Dental Expertos en Guayabal" class="w-full h-full object-cover">
+        <img src="/img/placeholders/map-guayabal.svg" alt="<%= isEnglish ? 'Location map for Dental Expertos in Guayabal' : 'Mapa de ubicación de Dental Expertos en Guayabal' %>" class="w-full h-full object-cover">
       </a>
     </div>
-
   </div>
 </section>

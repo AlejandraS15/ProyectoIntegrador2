@@ -1,10 +1,7 @@
 <!-- HERO SECTION -->
 <section id="inicio" class="page-hero relative flex min-h-screen items-center bg-dental-cream pt-24 pb-16 md:pt-28">
-  <!-- Decorative Elements -->
   <div class="absolute top-[-10%] right-[-5%] w-[50%] h-[50%] bg-dental-beige/40 rounded-full blur-3xl"></div>
   <div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-dental-beige/30 rounded-full blur-3xl"></div>
-  
-  <!-- Animated accent line -->
   <div class="absolute top-32 left-0 w-64 h-1 bg-gradient-to-r from-dental-brown/0 via-dental-brown/60 to-transparent transform -skew-x-12"></div>
   <div class="ambient-band"></div>
 
@@ -12,35 +9,35 @@
     <div data-aos="fade-right">
       <div class="inline-flex items-center gap-2 px-4 py-2 bg-dental-beige/50 text-dental-brown text-xs font-bold tracking-widest uppercase rounded-full mb-6 backdrop-blur-sm border border-dental-beige">
         <span class="w-2 h-2 bg-dental-brown rounded-full animate-pulse"></span>
-        Estética Dental Especializada
+        <%= isEnglish ? "Specialized Aesthetic Dentistry" : "Estética Dental Especializada" %>
       </div>
       
       <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-dental-dark leading-[1.05] mb-5">
-        Tu Sonrisa Perfecta<br/><span class="text-dental-brown italic">Ya Existe</span>
+        <%= isEnglish ? "Your Perfect Smile" : "Tu Sonrisa Perfecta" %><br/><span class="text-dental-brown italic"><%= isEnglish ? "Already Exists" : "Ya Existe" %></span>
       </h1>
       
       <p class="text-lg text-dental-brown/80 mb-2 max-w-lg leading-relaxed">
-        <span class="font-semibold text-dental-dark">Nosotros solo la diseñamos para ti.</span>
+        <span class="font-semibold text-dental-dark"><%= isEnglish ? "We simply design it for you." : "Nosotros solo la diseñamos para ti." %></span>
       </p>
       <p class="text-base text-dental-brown/70 mb-10 max-w-lg leading-relaxed">
-        Con precisión artística, tecnología de punta y más de 15 años de experiencia, transformamos sonrisas en obras maestras. Cada detalle, cada proporción, cada reflejo cuenta.
+        <%= isEnglish ? "With artistic precision, advanced technology and more than 15 years of experience, we transform smiles into natural works of art. Every detail, proportion and reflection matters." : "Con precisión artística, tecnología de punta y más de 15 años de experiencia, transformamos sonrisas en obras maestras. Cada detalle, cada proporción, cada reflejo cuenta." %>
       </p>
       
       <div class="flex flex-col sm:flex-row flex-wrap gap-4 mt-8">
-        <a href="/tratamientos" class="premium-button premium-button--dark px-8 py-4 group">
-          Explorar Servicios
+        <a href="<%= localizedPath('/tratamientos') %>" class="premium-button premium-button--dark px-8 py-4 group">
+          <%= isEnglish ? "Explore Services" : "Explorar Servicios" %>
           <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
         </a>
-        <a href="/contacto" class="premium-button premium-button--light px-8 py-4">
-          Agendar Consulta
+        <a href="<%= localizedPath('/contacto') %>" class="premium-button premium-button--light px-8 py-4">
+          <%= isEnglish ? "Book Consultation" : "Agendar Consulta" %>
         </a>
       </div>
       
       <div class="mt-12 flex items-center gap-4">
         <div class="flex -space-x-4">
-          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-valeria.svg" alt="Paciente" />
-          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-carlos.svg" alt="Paciente" />
-          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-elena.svg" alt="Paciente" />
+          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-valeria.svg" alt="<%= isEnglish ? 'Patient' : 'Paciente' %>" />
+          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-carlos.svg" alt="<%= isEnglish ? 'Patient' : 'Paciente' %>" />
+          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-elena.svg" alt="<%= isEnglish ? 'Patient' : 'Paciente' %>" />
         </div>
         <div class="flex items-center gap-2 text-sm font-medium">
           <div class="flex text-[#F59E0B]">
@@ -50,7 +47,7 @@
             <i data-lucide="star" class="w-4 h-4 fill-current"></i>
             <i data-lucide="star" class="w-4 h-4 fill-current"></i>
           </div>
-          <span class="text-dental-brown">5.0 (200+ Reseñas)</span>
+          <span class="text-dental-brown">5.0 (200+ <%= isEnglish ? "Reviews" : "Reseñas" %>)</span>
         </div>
       </div>
     </div>
@@ -60,7 +57,7 @@
         <div class="absolute inset-0 bg-gradient-to-br from-dental-beige/20 to-transparent z-5"></div>
         <img 
           src="/img/clinic/Home.png" 
-          alt="Diseño de Sonrisa - Estética Dental"
+          alt="<%= isEnglish ? 'Smile design and aesthetic dentistry' : 'Diseño de Sonrisa - Estética Dental' %>"
           loading="lazy"
           onerror="this.src='/img/clinic/image.png';"
           class="w-full h-[420px] sm:h-[520px] lg:h-[600px] object-cover"
@@ -71,8 +68,8 @@
           <i data-lucide="shield-check" class="w-6 h-6"></i>
         </div>
         <div>
-          <p class="font-bold text-dental-dark">+15 Años</p>
-          <p class="text-xs text-dental-brown">De experiencia clínica</p>
+          <p class="font-bold text-dental-dark">+15 <%= isEnglish ? "Years" : "Años" %></p>
+          <p class="text-xs text-dental-brown"><%= isEnglish ? "Of clinical experience" : "De experiencia clínica" %></p>
         </div>
       </div>
     </div>
@@ -83,49 +80,31 @@
 <section id="servicios" class="py-24 bg-dental-ivory">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16" data-aos="fade-up">
-      <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Nuestras Especialidades Estéticas</span>
-      <h2 class="text-4xl md:text-5xl font-serif text-dental-dark">Servicios Destacados</h2>
+      <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block"><%= isEnglish ? "Our Aesthetic Specialties" : "Nuestras Especialidades Estéticas" %></span>
+      <h2 class="text-4xl md:text-5xl font-serif text-dental-dark"><%= isEnglish ? "Featured Services" : "Servicios Destacados" %></h2>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
-          <i data-lucide="sparkles" class="w-6 h-6"></i>
+      <% const homeServices = [
+        { icon: "sparkles", esTitle: "Diseño de Sonrisa", enTitle: "Smile Design", esCopy: "Sonrisa armónica y radiante diseñada exclusivamente para ti.", enCopy: "A harmonious, radiant smile designed exclusively for you." },
+        { icon: "users", esTitle: "Ortodoncia Estética", enTitle: "Aesthetic Orthodontics", esCopy: "Alineación perfecta con opciones discretas e invisibles.", enCopy: "Precise alignment with discreet and invisible options." },
+        { icon: "stethoscope", esTitle: "Rehabilitación Estética", enTitle: "Aesthetic Rehabilitation", esCopy: "Restauración de sonrisa con máximo cuidado y naturalidad.", enCopy: "Smile restoration with maximum care and naturalness." },
+        { icon: "shield-check", esTitle: "Implantes Estéticos", enTitle: "Aesthetic Implants", esCopy: "Dientes naturales y permanentes que lucen impecables.", enCopy: "Natural-looking permanent teeth with an impeccable finish." }
+      ]; %>
+      <% homeServices.forEach((service, index) => { %>
+        <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="<%= (index + 1) * 100 %>">
+          <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="<%= service.icon %>" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl mb-3 text-dental-dark"><%= isEnglish ? service.enTitle : service.esTitle %></h3>
+          <p class="text-sm text-dental-brown/80 leading-relaxed"><%= isEnglish ? service.enCopy : service.esCopy %></p>
         </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Diseño de Sonrisa</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Sonrisa armónica y radiante diseñada exclusivamente para ti.</p>
-      </div>
-
-      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="200">
-        <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
-          <i data-lucide="users" class="w-6 h-6"></i>
-        </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Ortodoncia Estética</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Alineación perfecta con opciones discretas e invisibles.</p>
-      </div>
-
-      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="300">
-        <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
-          <i data-lucide="stethoscope" class="w-6 h-6"></i>
-        </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Rehabilitación Estética</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Restauración de sonrisa con máximo cuidado y naturalidad.</p>
-      </div>
-
-      <div class="premium-card p-8 pb-12 rounded-[2rem] group" data-aos="fade-up" data-aos-delay="400">
-        <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6 group-hover:scale-110 transition-transform">
-          <i data-lucide="shield-check" class="w-6 h-6"></i>
-        </div>
-        <h3 class="font-serif text-xl mb-3 text-dental-dark">Implantes Estéticos</h3>
-        <p class="text-sm text-dental-brown/80 leading-relaxed">Dientes naturales y permanentes que lucen impecables.</p>
-      </div>
-
+      <% }) %>
     </div>
     
     <div class="mt-12 text-center" data-aos="fade-up">
-      <a href="/tratamientos" class="inline-flex items-center gap-2 text-dental-dark font-medium hover:text-dental-brown transition-colors border-b border-dental-dark pb-1 hover:border-dental-brown">
-        Ver todos los tratamientos
+      <a href="<%= localizedPath('/tratamientos') %>" class="inline-flex items-center gap-2 text-dental-dark font-medium hover:text-dental-brown transition-colors border-b border-dental-dark pb-1 hover:border-dental-brown">
+        <%= isEnglish ? "View all treatments" : "Ver todos los tratamientos" %>
         <i data-lucide="arrow-right" class="w-4 h-4"></i>
       </a>
     </div>
@@ -138,62 +117,36 @@
   
   <div class="max-w-7xl mx-auto px-6 relative z-10">
     <div class="grid lg:grid-cols-3 gap-16 items-center">
-      
       <div class="lg:col-span-1" data-aos="fade-right">
-        <span class="text-dental-beige text-xs font-bold tracking-widest uppercase mb-4 block">Nuestra Promesa</span>
-        <h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">Resultados que transforman</h2>
+        <span class="text-dental-beige text-xs font-bold tracking-widest uppercase mb-4 block"><%= isEnglish ? "Our Promise" : "Nuestra Promesa" %></span>
+        <h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight"><%= isEnglish ? "Results that transform" : "Resultados que transforman" %></h2>
         <p class="text-dental-ivory/70 mb-8 leading-relaxed">
-          Combinamos arte y ciencia para crear sonrisas que reflejan tu belleza natural. Cada detalle importa: proporción, color, armonía facial.
+          <%= isEnglish ? "We combine art and science to create smiles that reflect your natural beauty. Every detail matters: proportion, color and facial harmony." : "Combinamos arte y ciencia para crear sonrisas que reflejan tu belleza natural. Cada detalle importa: proporción, color, armonía facial." %>
         </p>
-        <a href="/nosotros" class="premium-button premium-button--light px-8 py-3 text-sm">
-          Conoce más de nosotros
+        <a href="<%= localizedPath('/nosotros') %>" class="premium-button premium-button--light px-8 py-3 text-sm">
+          <%= isEnglish ? "Learn more about us" : "Conoce más de nosotros" %>
         </a>
       </div>
 
       <div class="lg:col-span-2 grid sm:grid-cols-2 gap-8">
-        
-        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 shrink-0 bg-dental-brown/30 rounded-xl flex items-center justify-center text-dental-beige">
-            <i data-lucide="award" class="w-6 h-6"></i>
+        <% const promiseItems = [
+          { icon: "award", esTitle: "Especialistas Calificados", enTitle: "Qualified Specialists", esCopy: "Equipo médico con postgrados y constante formación internacional.", enCopy: "A medical team with postgraduate training and continuous international education." },
+          { icon: "monitor", esTitle: "Tecnología Moderna", enTitle: "Modern Technology", esCopy: "Equipos digitales de última generación para diagnósticos precisos.", enCopy: "Advanced digital equipment for precise diagnoses." },
+          { icon: "heart", esTitle: "Atención Personalizada", enTitle: "Personalized Care", esCopy: "Tratamientos diseñados exclusivamente para tus necesidades y confort.", enCopy: "Treatments designed around your needs, comfort and goals." },
+          { icon: "sofa", esTitle: "Instalaciones Cómodas", enTitle: "Comfortable Facilities", esCopy: "Ambiente diseñado cuidadosamente para tu relajación y tranquilidad.", enCopy: "A carefully designed environment for calm, comfort and confidence." }
+        ]; %>
+        <% promiseItems.forEach((item, index) => { %>
+          <div class="flex gap-4" data-aos="fade-up" data-aos-delay="<%= (index + 1) * 100 %>">
+            <div class="w-12 h-12 shrink-0 bg-dental-brown/30 rounded-xl flex items-center justify-center text-dental-beige">
+              <i data-lucide="<%= item.icon %>" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-2"><%= isEnglish ? item.enTitle : item.esTitle %></h4>
+              <p class="text-sm text-dental-ivory/60 leading-relaxed"><%= isEnglish ? item.enCopy : item.esCopy %></p>
+            </div>
           </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">Especialistas Calificados</h4>
-            <p class="text-sm text-dental-ivory/60 leading-relaxed">Equipo médico con postgrados y constante formación internacional.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 shrink-0 bg-dental-brown/30 rounded-xl flex items-center justify-center text-dental-beige">
-            <i data-lucide="monitor" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">Tecnología Moderna</h4>
-            <p class="text-sm text-dental-ivory/60 leading-relaxed">Equipos digitales de última generación para diagnósticos precisos.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-12 h-12 shrink-0 bg-dental-brown/30 rounded-xl flex items-center justify-center text-dental-beige">
-            <i data-lucide="heart" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">Atención Personalizada</h4>
-            <p class="text-sm text-dental-ivory/60 leading-relaxed">Tratamientos diseñados exclusivamente para tus necesidades y confort.</p>
-          </div>
-        </div>
-        
-        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="w-12 h-12 shrink-0 bg-dental-brown/30 rounded-xl flex items-center justify-center text-dental-beige">
-            <i data-lucide="sofa" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-lg mb-2">Instalaciones Cómodas</h4>
-            <p class="text-sm text-dental-ivory/60 leading-relaxed">Ambiente diseñado cuidadosamente para tu relajación y tranquilidad.</p>
-          </div>
-        </div>
-
+        <% }) %>
       </div>
-
     </div>
   </div>
 </section>
@@ -202,72 +155,37 @@
 <section id="testimonios" class="py-24 bg-dental-cream">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl font-serif text-dental-dark mb-4">Experiencias Reales</h2>
-      <p class="text-dental-brown/80 max-w-2xl mx-auto">Lo que dicen nuestros pacientes sobre el impacto que tuvo nuestro trabajo en sus vidas.</p>
+      <h2 class="text-4xl font-serif text-dental-dark mb-4"><%= isEnglish ? "Real Experiences" : "Experiencias Reales" %></h2>
+      <p class="text-dental-brown/80 max-w-2xl mx-auto"><%= isEnglish ? "What our patients say about the impact our work had on their lives." : "Lo que dicen nuestros pacientes sobre el impacto que tuvo nuestro trabajo en sus vidas." %></p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      
-      <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex text-[#F59E0B] mb-6">
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-        </div>
-        <p class="text-dental-dark mb-8 text-sm leading-relaxed italic">
-          "La atención en Dental Expertos es simplemente excepcional. Superaron mis expectativas con mi diseño de sonrisa, ahora me siento mucho más segura."
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="/img/placeholders/patient-valeria.svg" alt="Valeria" class="w-12 h-12 rounded-full object-cover bg-dental-beige">
-          <div>
-            <h4 class="font-bold text-dental-dark text-sm">Valeria Mendoza</h4>
-            <p class="text-xs text-dental-brown">Paciente de Diseño de Sonrisa</p>
+      <% const testimonials = [
+        { avatar: "/img/placeholders/patient-valeria.svg", name: "Valeria Mendoza", esRole: "Paciente de Diseño de Sonrisa", enRole: "Smile Design Patient", esQuote: "La atención en Dental Expertos es simplemente excepcional. Superaron mis expectativas con mi diseño de sonrisa, ahora me siento mucho más segura.", enQuote: "The care at Dental Expertos is simply exceptional. They exceeded my expectations with my smile design, and now I feel much more confident." },
+        { avatar: "/img/placeholders/patient-carlos.svg", name: "Carlos Ruiz", esRole: "Paciente de Implantes", enRole: "Implants Patient", esQuote: "Profesionalismo puro. El proceso de mis implantes fue indoloro y el resultado es tan natural que olvido que los tengo. Muy recomendados.", enQuote: "Pure professionalism. My implant process was painless and the result is so natural that I forget I have them. Highly recommended." },
+        { avatar: "/img/placeholders/patient-elena.svg", name: "Elena Santos", esRole: "Paciente de Ortodoncia", enRole: "Orthodontics Patient", esQuote: "Buscaba una clínica que entendiera la estética moderna y aquí la encontré. Mis brackets invisibles han sido la mejor decisión.", enQuote: "I was looking for a clinic that understood modern aesthetics, and I found it here. My invisible braces have been the best decision." }
+      ]; %>
+      <% testimonials.forEach((testimonial, index) => { %>
+        <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="<%= (index + 1) * 100 %>">
+          <div class="flex text-[#F59E0B] mb-6">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-dental-dark mb-8 text-sm leading-relaxed italic">
+            "<%= isEnglish ? testimonial.enQuote : testimonial.esQuote %>"
+          </p>
+          <div class="flex items-center gap-4">
+            <img src="<%= testimonial.avatar %>" alt="<%= testimonial.name %>" class="w-12 h-12 rounded-full object-cover bg-dental-beige">
+            <div>
+              <h4 class="font-bold text-dental-dark text-sm"><%= testimonial.name %></h4>
+              <p class="text-xs text-dental-brown"><%= isEnglish ? testimonial.enRole : testimonial.esRole %></p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex text-[#F59E0B] mb-6">
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-        </div>
-        <p class="text-dental-dark mb-8 text-sm leading-relaxed italic">
-          "Profesionalismo puro. El proceso de mis implantes fue indoloro y el resultado es tan natural que olvido que los tengo. Muy recomendados."
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="/img/placeholders/patient-carlos.svg" alt="Carlos" class="w-12 h-12 rounded-full object-cover bg-dental-beige">
-          <div>
-            <h4 class="font-bold text-dental-dark text-sm">Carlos Ruiz</h4>
-            <p class="text-xs text-dental-brown">Paciente de Implantes</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
-        <div class="flex text-[#F59E0B] mb-6">
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-        </div>
-        <p class="text-dental-dark mb-8 text-sm leading-relaxed italic">
-          "Buscaba una clínica que entendiera la estética moderna y aquí la encontré. Mis brackets invisibles han sido la mejor decisión."
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="/img/placeholders/patient-elena.svg" alt="Elena" class="w-12 h-12 rounded-full object-cover bg-dental-beige">
-          <div>
-            <h4 class="font-bold text-dental-dark text-sm">Elena Santos</h4>
-            <p class="text-xs text-dental-brown">Paciente de Ortodoncia</p>
-          </div>
-        </div>
-      </div>
-
+      <% }) %>
     </div>
   </div>
 </section>
@@ -280,18 +198,18 @@
       
       <div class="relative z-10">
         <h2 class="text-4xl md:text-5xl font-serif text-dental-ivory mb-6">
-          ¿Listo para transformar tu <span class="italic text-dental-beige">sonrisa</span>?
+          <%= isEnglish ? "Ready to transform your" : "¿Listo para transformar tu" %> <span class="italic text-dental-beige"><%= isEnglish ? "smile" : "sonrisa" %></span>?
         </h2>
         <p class="text-lg text-dental-ivory/80 mb-10 max-w-2xl mx-auto">
-          Agenda tu consulta de valoración y descubre cómo podemos ayudarte a lograr la sonrisa que siempre has deseado.
+          <%= isEnglish ? "Book your assessment and discover how we can help you achieve the smile you have always wanted." : "Agenda tu consulta de valoración y descubre cómo podemos ayudarte a lograr la sonrisa que siempre has deseado." %>
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="/contacto" class="premium-button premium-button--light px-8 py-4">
-            Agendar valoración
+          <a href="<%= localizedPath('/contacto') %>" class="premium-button premium-button--light px-8 py-4">
+            <%= isEnglish ? "Book assessment" : "Agendar valoración" %>
             <i data-lucide="calendar" class="w-5 h-5"></i>
           </a>
-          <a href="https://wa.me/573008938020?text=Hola%20Dental%20Expertos%2C%20quiero%20agendar%20una%20cita" target="_blank" class="premium-button border border-dental-ivory/30 bg-transparent px-8 py-4 text-dental-ivory hover:bg-dental-ivory/10">
-            Contactar por WhatsApp
+          <a href="<%= whatsappUrl() %>" target="_blank" class="premium-button border border-dental-ivory/30 bg-transparent px-8 py-4 text-dental-ivory hover:bg-dental-ivory/10">
+            <%= isEnglish ? "Contact on WhatsApp" : "Contactar por WhatsApp" %>
             <i data-lucide="message-circle" class="w-5 h-5"></i>
           </a>
         </div>

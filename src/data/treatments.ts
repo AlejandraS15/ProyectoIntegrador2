@@ -1,3 +1,4 @@
+import type { Language } from "../config/i18n.js";
 import type { TreatmentDetail } from "../types/treatments.js";
 
 export const treatmentDetails: TreatmentDetail[] = [
@@ -253,6 +254,268 @@ export const treatmentDetails: TreatmentDetail[] = [
   }
 ];
 
-export function findTreatmentBySlug(slug: string): TreatmentDetail | undefined {
-  return treatmentDetails.find((treatment) => treatment.slug === slug);
+const englishTreatmentDetails: TreatmentDetail[] = [
+  {
+    benefits: [
+      "Harmony between teeth, lips and face.",
+      "Personalized aesthetic plan before starting.",
+      "Natural, luminous and proportionate results."
+    ],
+    duration: "Initial assessment of 45 to 60 minutes. The complete plan may take 2 to 4 appointments depending on the case.",
+    expectedResults: [
+      "A more balanced and expressive smile.",
+      "Improved dental shape, color and proportions.",
+      "More confidence when smiling and speaking."
+    ],
+    eyebrow: "Personalized cosmetic dentistry",
+    faqs: [
+      {
+        answer: "Not always. Smile design can combine cleaning, whitening, bonding, veneers or other procedures depending on the diagnosis.",
+        question: "Do I always need veneers?"
+      },
+      {
+        answer: "The team evaluates color, shape, bite, gums and facial harmony before recommending a plan.",
+        question: "How do you know which design suits me?"
+      },
+      {
+        answer: "It depends on the selected material, your habits and regular checkups. The assessment defines the best option.",
+        question: "How long does the result last?"
+      }
+    ],
+    heroImage: "/assets/results/case-1-after.jpg",
+    icon: "sparkles",
+    process: [
+      {
+        description: "We review your goals, photographs, dental condition, gums and bite.",
+        title: "Aesthetic assessment"
+      },
+      {
+        description: "We define proportions, color and the treatments needed to achieve a harmonious smile.",
+        title: "Smile plan"
+      },
+      {
+        description: "We complete treatment in phases, caring for function, naturalness and comfort.",
+        title: "Transformation"
+      }
+    ],
+    seoDescription: "Smile design in Medellin with aesthetic assessment, personalized planning and natural results at Dental Expertos Guayabal.",
+    seoKeywords: "smile design medellin, smile design consultation, aesthetic dental clinic guayabal",
+    slug: "diseno-de-sonrisa",
+    summary: "A comprehensive aesthetic plan to create a harmonious, natural smile that fits your face.",
+    title: "Smile Design",
+    whatsappText: "Hello Dental Expertos, I would like an assessment for smile design."
+  },
+  {
+    benefits: [
+      "Fast improvement in dental shape, color and texture.",
+      "Natural finish according to your face and smile tone.",
+      "Ideal for fractures, stains or worn teeth."
+    ],
+    duration: "Between 2 and 3 appointments after the assessment, depending on the material and complexity of the case.",
+    expectedResults: [
+      "Teeth with a more uniform shape.",
+      "A brighter and more stable color.",
+      "An aesthetic smile without losing naturalness."
+    ],
+    eyebrow: "Aesthetic veneers",
+    faqs: [
+      {
+        answer: "Not in every case. The indication depends on your teeth, bite, color and expectations.",
+        question: "Are veneers for everyone?"
+      },
+      {
+        answer: "Composite and ceramic veneers have different indications. Your dentist will guide you according to durability, budget and expected result.",
+        question: "Composite or ceramic?"
+      },
+      {
+        answer: "With good habits and checkups, they can remain in excellent condition. Avoiding hard objects helps a lot.",
+        question: "Do they require special care?"
+      }
+    ],
+    heroImage: "/assets/results/case-3-after.jpg",
+    icon: "gem",
+    process: [
+      {
+        description: "We evaluate color, shape, bite and available space for a stable result.",
+        title: "Diagnosis"
+      },
+      {
+        description: "We define material, shade, shape and number of teeth to treat.",
+        title: "Design"
+      },
+      {
+        description: "We apply or bond the veneers and make fine adjustments to shine, shape and bite.",
+        title: "Placement"
+      }
+    ],
+    seoDescription: "Dental veneers in Medellin to improve color, shape and smile harmony with a natural finish at Dental Expertos.",
+    seoKeywords: "dental veneers medellin, composite veneers medellin, cosmetic dentistry guayabal",
+    slug: "carillas",
+    summary: "Veneers to transform dental color, shape and proportion with an elegant, natural appearance.",
+    title: "Dental Veneers",
+    whatsappText: "Hello Dental Expertos, I would like information about dental veneers."
+  },
+  {
+    benefits: [
+      "Dental alignment with discreet options.",
+      "Aesthetic and functional bite improvement.",
+      "Follow-up plan according to your progress."
+    ],
+    duration: "The assessment takes about 45 minutes. Complete treatment can vary from 8 to 24 months depending on the case.",
+    expectedResults: [
+      "Better aligned teeth.",
+      "A more organized and functional smile.",
+      "Better force distribution when biting."
+    ],
+    eyebrow: "Discreet alignment",
+    faqs: [
+      {
+        answer: "It depends on the diagnosis. During the assessment we review whether aesthetic braces, aligners or another alternative applies.",
+        question: "Can I use an invisible option?"
+      },
+      {
+        answer: "Timing depends on crowding, bite, age, checkups and biological response.",
+        question: "How long does orthodontic treatment take?"
+      },
+      {
+        answer: "Yes. Aesthetic orthodontics seeks alignment while caring for function and stability.",
+        question: "Does it also improve my bite?"
+      }
+    ],
+    heroImage: "/assets/results/case-2-after.jpg",
+    icon: "align-center",
+    process: [
+      {
+        description: "We analyze alignment, bite, space, photographs and aesthetic needs.",
+        title: "Initial study"
+      },
+      {
+        description: "We define the ideal system and movement sequence.",
+        title: "Orthodontic plan"
+      },
+      {
+        description: "We complete checkups to adjust forces and review progress.",
+        title: "Follow-up"
+      }
+    ],
+    seoDescription: "Aesthetic orthodontics in Medellin with discreet options to align your smile at Dental Expertos Guayabal.",
+    seoKeywords: "aesthetic orthodontics medellin, aesthetic braces medellin, dental alignment guayabal",
+    slug: "ortodoncia-estetica",
+    summary: "Discreet options to align your teeth while caring for aesthetics, function and comfort.",
+    title: "Aesthetic Orthodontics",
+    whatsappText: "Hello Dental Expertos, I would like information about aesthetic orthodontics."
+  },
+  {
+    benefits: [
+      "A brighter smile in little time.",
+      "Professional and controlled procedure.",
+      "Ideal before events or as part of a smile design."
+    ],
+    duration: "A prior assessment and one clinical session depending on sensitivity, initial shade and aesthetic goal.",
+    expectedResults: [
+      "A lighter dental shade.",
+      "A fresher, more youthful appearance.",
+      "A better aesthetic base for other treatments."
+    ],
+    eyebrow: "Professional whitening",
+    faqs: [
+      {
+        answer: "Temporary sensitivity may occur. That is why we evaluate your case before starting.",
+        question: "Does it cause sensitivity?"
+      },
+      {
+        answer: "It depends on your initial shade, habits and dental response. The assessment helps set realistic expectations.",
+        question: "How many shades can I whiten?"
+      },
+      {
+        answer: "If there are cavities, inflammation or old restorations, they may need to be treated first.",
+        question: "Can I do it right away?"
+      }
+    ],
+    heroImage: "/assets/results/case-4-after.jpg",
+    icon: "lightbulb",
+    process: [
+      {
+        description: "We review dental health, sensitivity and current shade.",
+        title: "Assessment"
+      },
+      {
+        description: "We protect tissues and apply the protocol indicated for your case.",
+        title: "Clinical session"
+      },
+      {
+        description: "We give you recommendations to care for the result.",
+        title: "Maintenance"
+      }
+    ],
+    seoDescription: "Professional dental whitening in Medellin for a brighter, well-cared-for smile at Dental Expertos.",
+    seoKeywords: "dental whitening medellin, professional teeth whitening, white smile medellin",
+    slug: "blanqueamiento",
+    summary: "A professional treatment to brighten your smile in a controlled and aesthetic way.",
+    title: "Dental Whitening",
+    whatsappText: "Hello Dental Expertos, I would like information about dental whitening."
+  },
+  {
+    benefits: [
+      "Tooth replacement with a natural appearance.",
+      "Improved function, smile and confidence.",
+      "Comprehensive plan from diagnosis to final restoration."
+    ],
+    duration: "The assessment takes about 60 minutes. The full process depends on diagnosis, healing and restoration.",
+    expectedResults: [
+      "A fixed tooth with a natural appearance.",
+      "Improved chewing ability.",
+      "A more complete and stable smile."
+    ],
+    eyebrow: "Implants and rehabilitation",
+    faqs: [
+      {
+        answer: "First we review bone, gums, general health and expectations. Not every case is solved the same way.",
+        question: "How do I know if I am a candidate?"
+      },
+      {
+        answer: "The team explains phases, anesthesia and care so the process feels as comfortable as possible.",
+        question: "Does the procedure hurt?"
+      },
+      {
+        answer: "It depends on healing, grafting needs and the type of restoration. This is defined during the assessment.",
+        question: "How long does treatment take?"
+      }
+    ],
+    heroImage: "/img/about/nosotros.png",
+    icon: "shield-check",
+    process: [
+      {
+        description: "We evaluate bone, gums, bite and aesthetic expectations.",
+        title: "Comprehensive diagnosis"
+      },
+      {
+        description: "We define surgical timing, restoration and care.",
+        title: "Clinical plan"
+      },
+      {
+        description: "We place the final restoration seeking function and naturalness.",
+        title: "Rehabilitation"
+      }
+    ],
+    seoDescription: "Aesthetic dental implants in Medellin with comprehensive diagnosis, rehabilitation and natural restorations at Dental Expertos.",
+    seoKeywords: "dental implants medellin, aesthetic implants medellin, oral rehabilitation guayabal",
+    slug: "implantes-esteticos",
+    summary: "Solutions to replace missing teeth with stability, function and natural aesthetics.",
+    title: "Aesthetic Implants",
+    whatsappText: "Hello Dental Expertos, I would like information about aesthetic implants."
+  }
+];
+
+const treatmentDetailsByLanguage: Record<Language, TreatmentDetail[]> = {
+  en: englishTreatmentDetails,
+  es: treatmentDetails
+};
+
+export function getTreatmentDetails(language: Language = "es"): TreatmentDetail[] {
+  return treatmentDetailsByLanguage[language];
+}
+
+export function findTreatmentBySlug(slug: string, language: Language = "es"): TreatmentDetail | undefined {
+  return getTreatmentDetails(language).find((treatment) => treatment.slug === slug);
 }
