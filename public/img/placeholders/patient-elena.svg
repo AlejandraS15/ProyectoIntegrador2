@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Avatar de paciente</title>
+  <rect width="160" height="160" rx="80" fill="#5D4037"/>
+  <circle cx="80" cy="64" r="30" fill="#F5F5DC"/>
+  <path d="M32 144c9-32 27-48 48-48s39 16 48 48" fill="#1A0F0A" opacity="0.78"/>
+  <text x="80" y="88" text-anchor="middle" fill="#5D4037" font-family="Georgia, serif" font-size="42" font-weight="700">E</text>
+</svg>

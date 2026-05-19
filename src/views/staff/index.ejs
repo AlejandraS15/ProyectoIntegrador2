@@ -1,81 +1,153 @@
+<% const doctors = [
+  {
+    id: "isabella",
+    name: "Dra. Isabella Lopez",
+    image: "/img/staff/isabella-lopez.jpg",
+    imageClass: "doctor-card__image--isabella",
+    specialtyEs: "Odontología Estética",
+    specialtyEn: "Aesthetic Dentistry",
+    shortEs: "Profesional apasionada, creativa e innovadora, enfocada en diseños de sonrisa de alta estética.",
+    shortEn: "A passionate, creative and innovative professional focused on high-aesthetic smile design.",
+    quoteEs: "Soy odontóloga estética. Mi energía y dedicación son contagiosas; soy auténtica, empática y fiel a mis valores.",
+    quoteEn: "I am an aesthetic dentist. My energy and dedication are contagious; I am authentic, empathetic and true to my values.",
+    bioEs: "Disfruto actualizarme constantemente para mejorar mis habilidades personales y profesionales e inspirar a mis pacientes. Mi enfoque se centra en crear sonrisas naturales que reflejen la esencia única de cada persona.",
+    bioEn: "I enjoy constantly updating my personal and professional skills so I can inspire my patients. My focus is creating natural smiles that reflect each person's unique essence.",
+    sectionTitleEs: "Formación Destacada",
+    sectionTitleEn: "Featured Training",
+    bulletsEs: ["Diplomado de alta estética.", "Curso de resina estratificada y alta estética con Dra. Laura Ochoa.", "Formación en Pardoux con Dra. Daniela Alcalde.", "Curso de estratificación en carillas cerámicas."],
+    bulletsEn: ["Advanced aesthetics diploma.", "Layered resin and high-aesthetic dentistry course with Dr. Laura Ochoa.", "Pardoux training with Dr. Daniela Alcalde.", "Ceramic veneer layering course."]
+  },
+  {
+    id: "yenny",
+    name: "Dra. Yenny Madrigal",
+    image: "/img/staff/yenny-madrigal.jpg",
+    imageClass: "doctor-card__image--yenny",
+    specialtyEs: "Ortodoncia y Estética",
+    specialtyEn: "Orthodontics and Aesthetics",
+    shortEs: "Odontóloga con trayectoria en evolución constante y especialización en ortodoncia desde 2016.",
+    shortEn: "A dentist with an ever-evolving career and orthodontic specialization since 2016.",
+    quoteEs: "Desde mi graduación en 2009 he enfocado mi carrera en ortodoncia y en el arte de los diseños de sonrisa en resina y cerámica.",
+    quoteEn: "Since graduating in 2009, I have focused my career on orthodontics and the art of composite and ceramic smile design.",
+    bioEs: "Odontóloga con trayectoria en evolución constante y especialización en ortodoncia desde 2016. Mi práctica ha sido fortalecida por la guía de mentores de alto nivel, permitiéndome ofrecer tratamientos que transforman vidas.",
+    bioEn: "My practice has been strengthened by guidance from high-level mentors, allowing me to offer treatments that improve smiles and transform lives.",
+    sectionTitleEs: "Mentores y Referentes",
+    sectionTitleEn: "Mentors and References",
+    bulletsEs: ["Patto Mora", "Martin Prato", "Cristian Quevedo", "Felipe Bezerra", "Daniela Alcalde"],
+    bulletsEn: ["Patto Mora", "Martin Prato", "Cristian Quevedo", "Felipe Bezerra", "Daniela Alcalde"]
+  },
+  {
+    id: "yised",
+    name: "Dra. Yised Hernandez",
+    image: "/img/staff/yised-hernandez.jpg",
+    imageClass: "doctor-card__image--yised",
+    specialtyEs: "Especialista en Estética",
+    specialtyEn: "Aesthetic Specialist",
+    shortEs: "Comprometida con la ética profesional, la excelencia clínica y la mejor experiencia para cada paciente.",
+    shortEn: "Committed to professional ethics, clinical excellence and the best experience for every patient.",
+    quoteEs: "Comprometida con la ética profesional, la excelencia clínica y la mejor experiencia para cada paciente.",
+    quoteEn: "Committed to professional ethics, clinical excellence and the best experience for every patient.",
+    bioEs: "Cuento con 7 años de experiencia y formación continua en odontología estética para entregar resultados de alto nivel. Mi objetivo diario es brindar atención honesta, amable y técnicamente impecable.",
+    bioEn: "I have 7 years of experience and continuous training in aesthetic dentistry to deliver high-level results. My daily goal is to provide honest, kind and technically excellent care.",
+    sectionTitleEs: "Capacitaciones Principales",
+    sectionTitleEn: "Main Training",
+    bulletsEs: ["Diplomado de estética.", "Cursos de estratificación con resina de alta estética.", "Curso intensivo de carillas indirectas y laminados cerámicos.", "Curso de rehabilitación sobre implantes."],
+    bulletsEn: ["Aesthetics diploma.", "High-aesthetic resin layering courses.", "Intensive course in indirect veneers and ceramic laminates.", "Implant rehabilitation course."]
+  }
+]; %>
+
 <!-- HERO STAFF -->
-<section class="pt-32 pb-16 bg-dental-ivory relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
-    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Nuestros Especialistas</span>
-    <h1 class="text-5xl font-serif text-dental-dark mb-6">Conoce al Equipo Médico</h1>
-    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">Profesionales altamente capacitados y comprometidos con devolverte la seguridad al sonreír.</p>
+<section class="page-hero relative overflow-hidden bg-dental-ivory pt-32 pb-16">
+  <div class="section-container text-center" data-aos="fade-up">
+    <span class="mb-2 block text-sm font-bold uppercase tracking-widest text-dental-brown">
+      <%= isEnglish ? "Our Specialists" : "Nuestros Especialistas" %>
+    </span>
+    <h1 class="mb-6 text-5xl text-dental-dark">
+      <%= isEnglish ? "Meet the Main Medical Team" : "Conoce al Equipo Médico Principal" %>
+    </h1>
+    <p class="mx-auto max-w-3xl text-lg text-dental-brown/80">
+      <%= isEnglish
+        ? "Three doctors lead Dental Expertos with clinical precision, aesthetic sensitivity and warm care from the very first consultation."
+        : "Tres doctoras lideran Dental Expertos con precisión clínica, sensibilidad estética y un trato humano que se siente desde la primera consulta." %>
+    </p>
   </div>
 </section>
 
 <!-- STAFF GRID -->
-<section class="py-16 bg-dental-cream">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <!-- Doctor 1 -->
-      <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="100">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dra. María Especialista</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Ortodoncia</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Más de 10 años de experiencia creando sonrisas perfectas y armónicas.</p>
-      </div>
-
-       <!-- Doctor 2 -->
-       <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dr. Carlos Cirujano</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Implantología Oral</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Especialista en recuperación integral de piezas dentales perdidas.</p>
-      </div>
-
-      <!-- Doctor 3 -->
-      <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="300">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dra. Ana Estética</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Diseño de Sonrisa</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Apasionada por la armonía facial y la estética dental moderna.</p>
-      </div>
-
-      <!-- Doctor 4 -->
-      <div class="bg-white rounded-[2rem] overflow-hidden premium-shadow group text-center pb-8 border border-dental-beige/40" data-aos="fade-up" data-aos-delay="400">
-        <div class="relative w-full h-72 mb-6 overflow-hidden bg-slate-100">
-           <img src="/img/default.svg" alt="Doctor Especialista" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-             <div class="flex gap-3 text-white">
-               <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-               <i data-lucide="mail" class="w-5 h-5 cursor-pointer hover:text-dental-beige"></i>
-             </div>
-           </div>
-        </div>
-        <h3 class="text-xl font-serif text-dental-dark mb-1 px-4">Dr. Roberto General</h3>
-        <p class="text-sm text-dental-brown font-bold mb-3 px-4 uppercase tracking-wide">Odontología General</p>
-        <p class="text-sm text-dental-brown/70 px-6 line-clamp-2">Atención cálida, humana y preventiva enfocada en toda la familia.</p>
-      </div>
-
+<section class="bg-dental-cream py-16 relative">
+  <div class="section-container">
+    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <% doctors.forEach((doctor, index) => { %>
+        <article class="doctor-card group" data-aos="fade-up" data-aos-delay="<%= 100 + index * 80 %>">
+          <button type="button" class="doctor-card__trigger" data-modal-target="modal-<%= doctor.id %>" aria-label="<%= isEnglish ? 'View full profile for ' : 'Ver perfil completo de ' %><%= doctor.name %>">
+            <div class="doctor-card__media">
+              <img
+                src="<%= doctor.image %>"
+                alt="<%= doctor.name %>"
+                class="doctor-card__image <%= doctor.imageClass %>"
+                onerror="this.onerror=null;this.src='/img/placeholders/dental-avatar.svg';"
+              />
+              <div class="doctor-card__overlay">
+                <div class="doctor-card__overlay-content">
+                  <span class="doctor-card__overlay-title"><%= isEnglish ? "View Career" : "Ver Trayectoria" %></span>
+                  <p class="doctor-card__overlay-copy"><%= isEnglish ? "Click for details" : "Click para detalles" %></p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 text-left bg-white transition-colors group-hover:bg-dental-ivory/30">
+              <h2 class="font-serif text-2xl text-dental-dark mb-1 group-hover:text-dental-gold transition-colors"><%= doctor.name %></h2>
+              <p class="text-xs font-bold uppercase tracking-widest text-dental-gold mb-4"><%= isEnglish ? doctor.specialtyEn : doctor.specialtyEs %></p>
+              <p class="text-dental-brown/70 leading-relaxed mb-6 line-clamp-3">
+                <%= isEnglish ? doctor.shortEn : doctor.shortEs %>
+              </p>
+              <span class="inline-flex items-center text-sm font-medium text-dental-gold group-hover:text-dental-brown transition-colors">
+                <%= isEnglish ? "View full profile" : "Ver perfil completo" %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </span>
+            </div>
+          </button>
+        </article>
+      <% }) %>
     </div>
   </div>
 </section>
+
+<!-- MODALS -->
+<div id="modal-container">
+  <% doctors.forEach((doctor) => { %>
+    <div id="modal-<%= doctor.id %>" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-<%= doctor.id %>-title">
+      <div class="modal-content mx-4 max-h-[90vh] overflow-y-auto">
+        <button type="button" data-modal-close="modal-<%= doctor.id %>" class="modal-close-btn shadow-md hover:shadow-lg" aria-label="<%= isEnglish ? 'Close modal' : 'Cerrar modal' %> <%= doctor.name %>">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+        <div class="md:flex">
+          <div class="md:w-2/5 modal-profile__image-wrap">
+            <img src="<%= doctor.image %>" class="modal-profile__image modal-profile__image--<%= doctor.id %>" onerror="this.onerror=null;this.src='/img/placeholders/dental-avatar.svg';" alt="<%= isEnglish ? 'Profile for ' : 'Perfil ' %><%= doctor.name %>">
+          </div>
+          <div class="md:w-3/5 p-8 md:p-12 bg-white">
+            <span class="inline-block px-3 py-1 rounded-full bg-dental-cream text-dental-brown text-xs font-bold tracking-widest uppercase mb-4"><%= isEnglish ? doctor.specialtyEn : doctor.specialtyEs %></span>
+            <h2 id="modal-<%= doctor.id %>-title" class="font-serif text-3xl md:text-4xl text-dental-dark mb-6"><%= doctor.name %></h2>
+            <div class="prose prose-brown max-w-none text-dental-brown/80 space-y-6 max-h-[24rem] overflow-y-auto pr-2">
+              <p class="text-lg leading-relaxed font-light italic border-l-4 border-dental-brown pl-4 bg-dental-ivory/20 py-2">
+                "<%= isEnglish ? doctor.quoteEn : doctor.quoteEs %>"
+              </p>
+              <p><%= isEnglish ? doctor.bioEn : doctor.bioEs %></p>
+              <div class="profile-section">
+                <h3 class="profile-section__title"><%= isEnglish ? doctor.sectionTitleEn : doctor.sectionTitleEs %></h3>
+                <ul class="profile-section__list">
+                  <% (isEnglish ? doctor.bulletsEn : doctor.bulletsEs).forEach((item) => { %>
+                    <li><%= item %></li>
+                  <% }) %>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-100 flex justify-end">
+              <a href="<%= whatsappUrl(isEnglish ? `Hello Dental Expertos, I would like to book an appointment with ${doctor.name}.` : `Hola Dental Expertos, quisiera agendar una cita con ${doctor.name}.`) %>" target="_blank" class="inline-flex items-center px-6 py-3 rounded-full bg-dental-dark text-dental-ivory font-medium hover:bg-dental-brown transition-colors shadow-lg">
+                <%= isEnglish ? "Book Appointment" : "Agendar Cita" %>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

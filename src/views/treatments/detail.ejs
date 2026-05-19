@@ -1,0 +1,129 @@
+<section class="page-hero relative overflow-hidden bg-dental-ivory pt-32 pb-20">
+  <div class="absolute inset-x-0 top-0 h-44 bg-dental-cream"></div>
+  <div class="section-container relative z-10 grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+    <div data-aos="fade-right">
+      <a href="<%= localizedPath('/tratamientos') %>" class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-dental-brown transition-colors hover:text-dental-dark">
+        <i data-lucide="arrow-left" class="h-4 w-4"></i>
+        <%= isEnglish ? "Back to treatments" : "Volver a tratamientos" %>
+      </a>
+      <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-dental-beige bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-widest text-dental-brown">
+        <i data-lucide="<%= treatment.icon %>" class="h-4 w-4"></i>
+        <%= treatment.eyebrow %>
+      </span>
+      <h1 class="max-w-3xl text-5xl text-dental-dark md:text-6xl"><%= treatment.title %></h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-dental-brown/80"><%= treatment.summary %></p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="<%= whatsappUrl(treatment.whatsappText) %>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-dental-dark px-8 py-4 font-semibold text-dental-ivory transition-colors hover:bg-dental-brown">
+          <%= isEnglish ? "Book via WhatsApp" : "Agendar por WhatsApp" %>
+          <i data-lucide="message-circle" class="h-5 w-5"></i>
+        </a>
+        <a href="<%= localizedPath('/resultados') %>" class="inline-flex items-center justify-center gap-2 rounded-full border border-dental-beige bg-white px-8 py-4 font-semibold text-dental-dark transition-colors hover:bg-dental-cream">
+          <%= isEnglish ? "View results" : "Ver resultados" %>
+          <i data-lucide="arrow-right" class="h-5 w-5"></i>
+        </a>
+      </div>
+    </div>
+
+    <div data-aos="zoom-in" data-aos-delay="150">
+      <div class="image-frame overflow-hidden rounded-[2rem] border-8 border-white bg-white">
+        <img src="<%= treatment.heroImage %>" alt="<%= treatment.title %>" class="h-[28rem] w-full object-cover" loading="lazy" onerror="this.onerror=null;this.src='/img/placeholders/dental-preview.svg';">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dental-cream py-16">
+  <div class="section-container grid gap-6 lg:grid-cols-3">
+    <article class="premium-card rounded-3xl p-8" data-aos="fade-up">
+      <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-dental-beige text-dental-brown">
+        <i data-lucide="clock" class="h-6 w-6"></i>
+      </div>
+      <h2 class="text-2xl text-dental-dark"><%= isEnglish ? "Approximate duration" : "Duración aproximada" %></h2>
+      <p class="mt-4 text-sm leading-relaxed text-dental-brown/80"><%= treatment.duration %></p>
+    </article>
+
+    <article class="premium-card rounded-3xl p-8 lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-dental-beige text-dental-brown">
+        <i data-lucide="sparkles" class="h-6 w-6"></i>
+      </div>
+      <h2 class="text-2xl text-dental-dark"><%= isEnglish ? "Main benefits" : "Beneficios principales" %></h2>
+      <ul class="mt-5 grid gap-3 sm:grid-cols-2">
+        <% treatment.benefits.forEach((benefit) => { %>
+          <li class="flex gap-3 text-sm leading-relaxed text-dental-brown/80">
+            <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-dental-brown"></i>
+            <span><%= benefit %></span>
+          </li>
+        <% }) %>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="bg-dental-ivory py-20">
+  <div class="section-container">
+    <div class="mb-12 max-w-3xl" data-aos="fade-up">
+      <span class="text-sm font-bold uppercase tracking-widest text-dental-brown"><%= isEnglish ? "Process" : "Proceso" %></span>
+      <h2 class="mt-3 text-4xl text-dental-dark"><%= isEnglish ? "How we work on your case" : "Cómo trabajamos tu caso" %></h2>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      <% treatment.process.forEach((step, index) => { %>
+        <article class="premium-card rounded-3xl p-8" data-aos="fade-up" data-aos-delay="<%= Math.min(index * 100, 300) %>">
+          <span class="mb-8 flex h-11 w-11 items-center justify-center rounded-full bg-dental-dark text-sm font-bold text-dental-ivory">0<%= index + 1 %></span>
+          <h3 class="text-2xl text-dental-dark"><%= step.title %></h3>
+          <p class="mt-4 text-sm leading-relaxed text-dental-brown/80"><%= step.description %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dental-dark py-20 text-dental-ivory">
+  <div class="section-container grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+    <div data-aos="fade-right">
+      <span class="text-sm font-bold uppercase tracking-widest text-dental-beige"><%= isEnglish ? "Expected results" : "Resultados esperados" %></span>
+      <h2 class="mt-3 text-4xl"><%= isEnglish ? "What you can achieve" : "Qué puedes lograr" %></h2>
+      <p class="mt-5 text-dental-ivory/70"><%= isEnglish ? "Each case is defined during consultation. This guide helps you understand the aesthetic and functional goal of the treatment." : "Cada caso se define en consulta. Esta guía te ayuda a entender el objetivo estético y funcional del tratamiento." %></p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-3" data-aos="fade-up">
+      <% treatment.expectedResults.forEach((result) => { %>
+        <div class="rounded-3xl border border-dental-ivory/10 bg-white/5 p-6">
+          <i data-lucide="star" class="mb-5 h-5 w-5 text-dental-beige"></i>
+          <p class="text-sm leading-relaxed text-dental-ivory/80"><%= result %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dental-cream py-20">
+  <div class="section-container grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+    <div data-aos="fade-right">
+      <span class="text-sm font-bold uppercase tracking-widest text-dental-brown"><%= isEnglish ? "Frequently asked questions" : "Preguntas frecuentes" %></span>
+      <h2 class="mt-3 text-4xl text-dental-dark"><%= isEnglish ? "Before booking" : "Antes de agendar" %></h2>
+    </div>
+    <div class="grid gap-4" data-aos="fade-up">
+      <% treatment.faqs.forEach((faq) => { %>
+        <details class="premium-card group rounded-2xl p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-dental-dark">
+            <span><%= faq.question %></span>
+            <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed text-dental-brown/80"><%= faq.answer %></p>
+        </details>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dental-ivory py-16">
+  <div class="section-container">
+    <div class="rounded-[2rem] bg-dental-dark px-8 py-12 text-center premium-shadow md:px-14">
+      <h2 class="text-4xl text-dental-ivory"><%= isEnglish ? "Book an assessment for" : "Agenda una valoración para" %> <span class="italic text-dental-beige"><%= treatment.title.toLowerCase() %></span></h2>
+      <p class="mx-auto mt-5 max-w-2xl text-dental-ivory/75"><%= isEnglish ? "Tell us what you would like to improve and our team will guide you through the next step." : "Cuéntanos qué te gustaría mejorar y nuestro equipo te orientará con el siguiente paso." %></p>
+      <a href="<%= whatsappUrl(treatment.whatsappText) %>" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-dental-beige px-8 py-4 font-semibold text-dental-dark transition-colors hover:bg-white">
+        <%= isEnglish ? "Message us on WhatsApp" : "Escribir por WhatsApp" %>
+        <i data-lucide="message-circle" class="h-5 w-5"></i>
+      </a>
+    </div>
+  </div>
+</section>

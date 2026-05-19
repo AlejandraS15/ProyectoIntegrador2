@@ -1,19 +1,17 @@
 import type { Request, Response } from "express";
+
+import type { Language } from "../config/i18n.js";
 import { getSeoMetadata } from "../config/seo.js";
+import ResultsService from "../services/resultsService.js";
 
 class ResultsController {
   public static index(_request: Request, response: Response): void {
-
-    const cases = [
-      {
-        before: "/assets/before1.png",
-        after: "/assets/after1.png",
-      }
-    ];
+    const language = response.locals.language as Language;
+    const { cases } = ResultsService.getPageData(language);
 
     response.render("results/index", {
-      seo: getSeoMetadata("results"),
-      cases
+      cases,
+      seo: getSeoMetadata("results", language)
     });
   }
 }

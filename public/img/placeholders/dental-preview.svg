@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Dental Expertos</title>
+  <desc id="desc">Imagen de respaldo de la marca Dental Expertos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF5"/>
+      <stop offset="0.52" stop-color="#F5F5DC"/>
+      <stop offset="1" stop-color="#5D4037"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="18%" r="58%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M958 0 1200 0 1200 630 742 630C874 522 937 395 925 249 918 162 929 79 958 0Z" fill="#1A0F0A" opacity="0.12"/>
+  <g fill="none" stroke="#5D4037" stroke-width="2" opacity="0.2">
+    <path d="M110 470C270 360 418 350 555 438S831 533 1045 382"/>
+    <path d="M142 518C310 405 459 400 590 486S852 573 1078 430"/>
+  </g>
+  <g transform="translate(156 164)">
+    <circle cx="78" cy="78" r="78" fill="#1A0F0A"/>
+    <path d="M78 33c20 30 46 45 46 75 0 25-20 44-46 44s-46-19-46-44c0-30 26-45 46-75Z" fill="#F5F5DC"/>
+    <path d="M55 104c13 10 34 10 46 0" stroke="#5D4037" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="156" y="390" fill="#1A0F0A" font-family="Georgia, serif" font-size="68" font-weight="700">Dental Expertos</text>
+  <text x="160" y="448" fill="#5D4037" font-family="Arial, sans-serif" font-size="28" letter-spacing="8">CLINICA ODONTOLOGICA</text>
+</svg>

@@ -1,26 +1,37 @@
 <!-- HERO ABOUT -->
-<section class="pt-32 pb-16 bg-dental-cream relative overflow-hidden">
-  <div class="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('/img/default.svg')] bg-cover bg-center"></div>
-  <div class="max-w-7xl mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
-    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Nuestra Clínica</span>
-    <h1 class="text-5xl font-serif text-dental-dark mb-6">Sobre Nosotros</h1>
-    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">Conoce nuestra historia, nuestra misión y la filosofía que nos guía todos los días para cuidar tu sonrisa.</p>
+<section class="page-hero pt-32 pb-16 bg-dental-cream relative overflow-hidden">
+  <div class="section-container relative z-10 text-center" data-aos="fade-up">
+    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">
+      <%= isEnglish ? "Our Clinic" : "Nuestra Clínica" %>
+    </span>
+    <h1 class="text-5xl font-serif text-dental-dark mb-6">
+      <%= isEnglish ? "About Us" : "Sobre Nosotros" %>
+    </h1>
+    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">
+      <%= isEnglish
+        ? "Learn about our story, our mission and the philosophy that guides us every day as we care for your smile."
+        : "Conoce nuestra historia, nuestra misión y la filosofía que nos guía todos los días para cuidar tu sonrisa." %>
+    </p>
   </div>
 </section>
 
 <!-- MISION Y VISION -->
 <section class="py-20 bg-dental-ivory">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+  <div class="section-container grid md:grid-cols-2 gap-16 items-center">
     <div data-aos="fade-right">
       <div class="mb-10">
         <div class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown">
             <i data-lucide="target" class="w-5 h-5"></i>
           </div>
-          <h2 class="text-3xl font-serif text-dental-dark">Nuestra Misión</h2>
+          <h2 class="text-3xl font-serif text-dental-dark">
+            <%= isEnglish ? "Our Mission" : "Nuestra Misión" %>
+          </h2>
         </div>
         <p class="text-dental-brown/80 leading-relaxed bg-white p-6 rounded-2xl border border-dental-beige premium-shadow">
-          Brindar atención odontológica de la más alta calidad, con un enfoque cálido y personalizado. Queremos que cada paciente se sienta seguro, comprendido y cómodo, utilizando la última tecnología para garantizar resultados estéticos y funcionales duraderos.
+          <%= isEnglish
+            ? "To transform smiles through dental artistry and advanced technology. Every treatment is designed to enhance our patients' natural beauty, giving them confidence and long-lasting results."
+            : "Transformar sonrisas a través del arte dental y tecnología de punta. Cada tratamiento es diseñado para potenciar la belleza natural de nuestros pacientes, brindándoles confianza y resultados que duran." %>
         </p>
       </div>
       
@@ -29,22 +40,30 @@
           <div class="w-10 h-10 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown">
             <i data-lucide="eye" class="w-5 h-5"></i>
           </div>
-          <h2 class="text-3xl font-serif text-dental-dark">Nuestra Visión</h2>
+          <h2 class="text-3xl font-serif text-dental-dark">
+            <%= isEnglish ? "Our Vision" : "Nuestra Visión" %>
+          </h2>
         </div>
         <p class="text-dental-brown/80 leading-relaxed bg-white p-6 rounded-2xl border border-dental-beige premium-shadow">
-          Aspiramos a ser la clínica dental de referencia en nuestra ciudad, reconocida por nuestra excelencia clínica, nuestro compromiso ético y la constante innovación en tratamientos dentales, transformando positivamente la calidad de vida de nuestra comunidad.
+          <%= isEnglish
+            ? "To be a reference clinic in smile design and aesthetic dentistry, recognized for the precision of our work, constant innovation and the power of inspiring smiles."
+            : "Ser la clínica de referencia en diseño de sonrisa y estética dental, reconocida por la precisión de nuestro trabajo, la innovación constante y por transformar vidas a través de sonrisas que inspiran." %>
         </p>
       </div>
     </div>
     
     <div data-aos="zoom-in" data-aos-delay="200">
-      <div class="relative rounded-[2rem] overflow-hidden premium-shadow border-8 border-white">
+      <div class="image-frame relative rounded-[2rem] border-8 border-white">
         <div class="absolute inset-0 bg-dental-dark/10 z-10 hover:bg-transparent transition-colors duration-500"></div>
-        <img src="/img/default.svg" alt="Instalaciones de la clínica" class="w-full h-[600px] object-cover bg-slate-100">
+        <img src="/img/about/nosotros.png" alt="<%= isEnglish ? 'Clinic facilities' : 'Instalaciones de la clínica' %>" class="w-full h-[420px] sm:h-[520px] lg:h-[600px] object-cover bg-slate-100" onerror="this.onerror=null;this.src='/img/placeholders/dental-preview.svg';">
         
         <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-6 py-4 rounded-2xl z-20 premium-shadow max-w-[80%]">
-          <p class="font-serif text-dental-dark font-bold text-lg mb-1">Cuidado al detalle</p>
-          <p class="text-sm text-dental-brown">Cada rincón está pensado para tu tranquilidad.</p>
+          <p class="font-serif text-dental-dark font-bold text-lg mb-1">
+            <%= isEnglish ? "We Design Smiles" : "Diseñamos Sonrisas" %>
+          </p>
+          <p class="text-sm text-dental-brown">
+            <%= isEnglish ? "With art, science and passion." : "Con arte, ciencia y pasión." %>
+          </p>
         </div>
       </div>
     </div>

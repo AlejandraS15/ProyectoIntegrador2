@@ -1,11 +1,17 @@
 <meta name="description" content="<%= seo.description %>" />
+<% if (seo.keywords) { %>
+<meta name="keywords" content="<%= seo.keywords %>" />
+<% } %>
+<link rel="canonical" href="<%= canonicalUrl %>" />
 <meta property="og:description" content="<%= seo.description %>" />
-<meta property="og:image" content="<%= seo.imageUrl || defaultImageUrl %>" />
+<meta property="og:image" content="<%= absoluteImageUrl(seo.imageUrl || defaultImageUrl) %>" />
 <meta property="og:site_name" content="<%= siteName %>" />
 <meta property="og:title" content="<%= seo.title %>" />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="<%= canonicalUrl %>" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="<%= seo.description %>" />
-<meta name="twitter:image" content="<%= seo.imageUrl || defaultImageUrl %>" />
+<meta name="twitter:image" content="<%= absoluteImageUrl(seo.imageUrl || defaultImageUrl) %>" />
 <meta name="twitter:title" content="<%= seo.title %>" />
+<script type="application/ld+json"><%- JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c") %></script>
 <title><%= seo.title %> | <%= siteName %></title>

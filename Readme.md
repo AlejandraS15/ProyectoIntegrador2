@@ -1,5 +1,7 @@
 # ProyectoIntegrador2
 
+## Descripcion del negocio
+
 Sitio institucional odontológico desarrollado con renderizado del lado del servidor para presentar información clave de la clínica y apoyar la captación de clientes.
 
 ## Stack Tecnológico

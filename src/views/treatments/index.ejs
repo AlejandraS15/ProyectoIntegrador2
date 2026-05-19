@@ -1,107 +1,65 @@
 <!-- HERO TREATMENTS -->
-<section class="pt-32 pb-16 bg-dental-ivory relative overflow-hidden">
+<section class="page-hero pt-32 pb-16 bg-dental-ivory relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
-    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">Cuidado Integral</span>
-    <h1 class="text-5xl font-serif text-dental-dark mb-6">Nuestros Tratamientos</h1>
-    <p class="text-lg text-dental-brown/80 max-w-2xl mx-auto">Descubre nuestra amplia gama de especialidades odontológicas diseñadas para devolverte la salud y la estética dental.</p>
+    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">
+      <%= isEnglish ? "Premium Aesthetic Solutions" : "Soluciones Estéticas Premium" %>
+    </span>
+    <h1 class="text-5xl font-serif text-dental-dark mb-6">
+      <%= isEnglish ? "Specialized Aesthetic Procedures" : "Procedimientos Estéticos Especializados" %>
+    </h1>
+    <p class="text-lg text-dental-brown/80 max-w-3xl mx-auto">
+      <%= isEnglish
+        ? "Each procedure is designed to enhance your smile with naturalness and harmony. Meet with our team to discover the ideal aesthetic solution for you."
+        : "Cada procedimiento está diseñado para potenciar tu sonrisa con naturalidad y armonía. Consulta con nuestro equipo para descubrir la solución estética perfecta para ti." %>
+    </p>
   </div>
 </section>
 
 <!-- TREATMENTS GRID -->
 <section class="py-16 bg-dental-cream">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Tratamiento 1 -->
-      <div class="bg-white rounded-3xl overflow-hidden premium-shadow group" data-aos="fade-up" data-aos-delay="100">
-        <div class="relative h-48 overflow-hidden bg-slate-100 p-4">
-           <img src="/img/default.svg" alt="Odontología Preventiva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
-        </div>
-        <div class="p-8">
-          <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
-            <i data-lucide="shield" class="w-6 h-6"></i>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      <% treatments.forEach((treatment, index) => { %>
+        <div class="premium-card flex h-full flex-col rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="<%= Math.min((index % 3) * 100 + 100, 300) %>">
+          <div class="relative h-48 shrink-0 overflow-hidden bg-slate-100 p-4">
+            <img
+              src="<%= treatment.heroImage %>"
+              alt="<%= treatment.title %>"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='/img/placeholders/dental-preview.svg';"
+            >
           </div>
-          <h3 class="text-2xl font-serif text-dental-dark mb-3">Odontología Preventiva</h3>
-          <ul class="space-y-2 text-sm text-dental-brown/80 mb-6">
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Limpieza profunda (Profilaxis)</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Aplicación de flúor y sellantes</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Revisiones periódicas</li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- Tratamiento 2 -->
-      <div class="bg-white rounded-3xl overflow-hidden premium-shadow group" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative h-48 overflow-hidden bg-slate-100 p-4">
-           <img src="/img/default.svg" alt="Estética Dental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
-        </div>
-        <div class="p-8">
-          <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
-            <i data-lucide="sparkles" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-2xl font-serif text-dental-dark mb-3">Estética Dental</h3>
-          <ul class="space-y-2 text-sm text-dental-brown/80 mb-6">
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Diseño de sonrisa</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Blanqueamiento dental</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Carillas de porcelana</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- Tratamiento 3 -->
-      <div class="bg-white rounded-3xl overflow-hidden premium-shadow group" data-aos="fade-up" data-aos-delay="300">
-        <div class="relative h-48 overflow-hidden bg-slate-100 p-4">
-           <img src="/img/default.svg" alt="Rehabilitación e Implantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
-        </div>
-        <div class="p-8">
-          <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
-            <i data-lucide="wrench" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-2xl font-serif text-dental-dark mb-3">Rehabilitación e Implantes</h3>
-          <ul class="space-y-2 text-sm text-dental-brown/80 mb-6">
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Implantes dentales</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Coronas y puentes</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Prótesis fijas y removibles</li>
-          </ul>
-        </div>
-      </div>
+          <div class="flex flex-1 flex-col p-8">
+            <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
+              <i data-lucide="<%= treatment.icon %>" class="w-6 h-6"></i>
+            </div>
 
-      <!-- Tratamiento 4 -->
-      <div class="bg-white rounded-3xl overflow-hidden premium-shadow group" data-aos="fade-up" data-aos-delay="100">
-        <div class="relative h-48 overflow-hidden bg-slate-100 p-4">
-           <img src="/img/default.svg" alt="Ortodoncia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
-        </div>
-        <div class="p-8">
-          <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
-            <i data-lucide="users" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-2xl font-serif text-dental-dark mb-3">Ortodoncia</h3>
-          <ul class="space-y-2 text-sm text-dental-brown/80 mb-6">
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Brackets tradicionales y estéticos</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Alineadores invisibles</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Ortopedia maxilar</li>
-          </ul>
-        </div>
-      </div>
+            <h3 class="text-2xl font-serif text-dental-dark mb-3"><%= treatment.title %></h3>
 
-      <!-- Tratamiento 5 -->
-      <div class="bg-white rounded-3xl overflow-hidden premium-shadow group" data-aos="fade-up" data-aos-delay="200">
-        <div class="relative h-48 overflow-hidden bg-slate-100 p-4">
-           <img src="/img/default.svg" alt="Periodoncia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl">
-        </div>
-        <div class="p-8">
-          <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
-            <i data-lucide="activity" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-2xl font-serif text-dental-dark mb-3">Periodoncia y Endodoncia</h3>
-          <ul class="space-y-2 text-sm text-dental-brown/80 mb-6">
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Tratamiento de encías</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Cirugía periodontal</li>
-            <li><i data-lucide="check" class="w-4 h-4 inline mr-1 text-dental-brown"></i> Tratamiento de conductos (Endodoncia)</li>
-          </ul>
-        </div>
-      </div>
+            <ul class="space-y-2 text-sm text-dental-brown/80 mb-8">
+              <% treatment.benefits.slice(0, 3).forEach((benefit) => { %>
+                <li class="flex gap-2 leading-relaxed">
+                  <i data-lucide="check" class="mt-0.5 w-4 h-4 shrink-0 text-dental-brown"></i>
+                  <span><%= benefit %></span>
+                </li>
+              <% }) %>
+            </ul>
 
+            <div class="mt-auto">
+              <a href="<%= whatsappUrl(treatment.whatsappText) %>" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-dental-dark px-5 py-3 text-sm font-semibold text-dental-ivory transition-colors hover:bg-dental-brown">
+                <span><%= isEnglish ? "Request assessment" : "Pedir valoración" %></span>
+                <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
+              </a>
+              <a href="<%= localizedPath('/tratamientos/' + treatment.slug) %>" class="mt-3 inline-flex min-h-8 w-full items-center justify-center gap-2 text-sm font-semibold text-dental-brown transition-colors hover:text-dental-dark">
+                <span><%= isEnglish ? "View details" : "Ver detalles" %></span>
+                <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
     </div>
   </div>
 </section>
@@ -109,10 +67,17 @@
 <!-- CALL TO ACTION MINI -->
 <section class="py-16 bg-dental-dark">
   <div class="max-w-4xl mx-auto px-6 text-center" data-aos="zoom-in">
-    <h2 class="text-3xl font-serif text-dental-ivory mb-4">¿No estás seguro de qué tratamiento necesitas?</h2>
-    <p class="text-dental-beige/80 mb-8">Agenda una consulta de valoración inicial. Nuestro equipo experto evaluará tu caso y diseñará un plan personalizado para ti.</p>
-    <a href="/contacto" class="inline-flex items-center gap-2 bg-dental-beige text-dental-dark px-8 py-3 rounded-full font-medium hover:bg-white transition-colors">
-      Agendar Valoración <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    <h2 class="text-3xl font-serif text-dental-ivory mb-4">
+      <%= isEnglish ? "What is your aesthetic goal?" : "¿Cuál es tu objetivo estético?" %>
+    </h2>
+    <p class="text-dental-beige/80 mb-8">
+      <%= isEnglish
+        ? "Book an assessment. We will evaluate your case and design the ideal aesthetic plan for your smile."
+        : "Agenda una consulta de valoración. Evaluaremos tu caso y diseñaremos el plan estético perfecto para tu sonrisa." %>
+    </p>
+    <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like to book an aesthetic assessment.' : 'Hola Dental Expertos, quiero agendar una valoración estética.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--light px-8 py-3">
+      <%= isEnglish ? "Book consultation" : "Agendar Consulta" %>
+      <i data-lucide="message-circle" class="w-4 h-4"></i>
     </a>
   </div>
 </section>
