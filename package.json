@@ -1,0 +1,39 @@
+{
+  "name": "proyectointegrador2",
+  "version": "1.0.0",
+  "description": "Este es el primer commit",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "dev:css": "tailwindcss -i ./src/assets/css/input.css -o ./public/css/styles.css --watch",
+    "build": "tsc -p tsconfig.json && node scripts/copy-static.mjs && npm run build:css",
+    "build:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/public/css/styles.css --minify",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandraS15/ProyectoIntegrador2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AlejandraS15/ProyectoIntegrador2/issues"
+  },
+  "homepage": "https://github.com/AlejandraS15/ProyectoIntegrador2#readme",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.6",
+    "@types/express-ejs-layouts": "^2.5.4",
+    "@types/node": "^25.5.0",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
