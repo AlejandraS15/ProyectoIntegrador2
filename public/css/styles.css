@@ -2079,12 +2079,6 @@ a,
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.-space-x-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(-1rem * var(--tw-space-x-reverse));
-  margin-left: calc(-1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .overflow-hidden{
   overflow: hidden;
 }
@@ -2135,10 +2129,6 @@ a,
 
 .border-8{
   border-width: 8px;
-}
-
-.border-2{
-  border-width: 2px;
 }
 
 .border-b{
@@ -2345,10 +2335,6 @@ a,
 
 .bg-center{
   background-position: center;
-}
-
-.fill-current{
-  fill: currentColor;
 }
 
 .object-contain{
@@ -2695,11 +2681,6 @@ a,
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#F59E0B\]{
-  --tw-text-opacity: 1;
-  color: rgb(245 158 11 / var(--tw-text-opacity, 1));
 }
 
 .antialiased{

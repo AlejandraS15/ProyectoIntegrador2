@@ -1,83 +1,224 @@
+<% const materialGroups = isEnglish
+  ? [
+      {
+        icon: "layers",
+        title: "Composite Resin",
+        copy: "A versatile option completed directly in clinic. It can be used for micro design, flat design or layered design.",
+        items: ["Micro design", "Flat design", "Layered design"]
+      },
+      {
+        icon: "gem",
+        title: "Ceramic",
+        copy: "A lab-made option planned with digital scanning and try-ins until the shape, shade and fit are precise.",
+        items: ["Flat design", "Layered design", "Approx. 8 days"]
+      }
+    ]
+  : [
+      {
+        icon: "layers",
+        title: "Resina",
+        copy: "Una opción versátil que se realiza directamente en clínica. Permite microdiseño, diseño plano o diseño estratificado.",
+        items: ["Microdiseño", "Diseño plano", "Diseño estratificado"]
+      },
+      {
+        icon: "gem",
+        title: "Cerámica",
+        copy: "Una opción elaborada en laboratorio, planeada con escaneo digital y pruebas hasta lograr forma, color y ajuste precisos.",
+        items: ["Diseño plano", "Diseño estratificado", "Aprox. 8 días"]
+      }
+    ]; %>
+
+<% const treatmentFlow = isEnglish
+  ? [
+      { icon: "search-check", title: "Assessment", copy: "We review shade, edges, proportions and the patient aesthetic goal." },
+      { icon: "palette", title: "Material choice", copy: "We define whether resin or ceramic is the best path for the case." },
+      { icon: "sparkles", title: "Smile design", copy: "We complete the procedure in clinic or with lab support, depending on the selected material." }
+    ]
+  : [
+      { icon: "search-check", title: "Valoración", copy: "Revisamos color, bordes, proporciones y el objetivo estético del paciente." },
+      { icon: "palette", title: "Elección del material", copy: "Definimos si la mejor ruta para el caso es resina o cerámica." },
+      { icon: "sparkles", title: "Diseño de sonrisa", copy: "Realizamos el procedimiento en clínica o con apoyo de laboratorio según el material elegido." }
+    ]; %>
+
 <!-- HERO TREATMENTS -->
-<section class="page-hero pt-32 pb-16 bg-dental-ivory relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
-    <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block">
-      <%= isEnglish ? "Premium Aesthetic Solutions" : "Soluciones Estéticas Premium" %>
-    </span>
-    <h1 class="text-5xl font-serif text-dental-dark mb-6">
-      <%= isEnglish ? "Specialized Aesthetic Procedures" : "Procedimientos Estéticos Especializados" %>
-    </h1>
-    <p class="text-lg text-dental-brown/80 max-w-3xl mx-auto">
-      <%= isEnglish
-        ? "Each procedure is designed to enhance your smile with naturalness and harmony. Meet with our team to discover the ideal aesthetic solution for you."
-        : "Cada procedimiento está diseñado para potenciar tu sonrisa con naturalidad y armonía. Consulta con nuestro equipo para descubrir la solución estética perfecta para ti." %>
-    </p>
+<section class="page-hero relative overflow-hidden bg-dental-ivory pt-32 pb-16">
+  <div class="section-container grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+    <div data-aos="fade-right">
+      <span class="section-kicker">
+        <%= isEnglish ? "Smile design options" : "Opciones de diseño de sonrisa" %>
+      </span>
+      <h1 class="max-w-4xl text-5xl text-dental-dark md:text-6xl">
+        <%= isEnglish ? "Composite resin or ceramic: your smile, designed with intention" : "Resina o cerámica: tu sonrisa diseñada con intención" %>
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-dental-brown/80">
+        <%= isEnglish
+          ? "We organize smile design into clear alternatives so you can understand the material, finish and expected timing before booking your assessment."
+          : "Organizamos el diseño de sonrisa en alternativas claras para que entiendas el material, el acabado y el tiempo estimado antes de agendar tu valoración." %>
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like an assessment for smile design.' : 'Hola Dental Expertos, quiero una valoración para diseño de sonrisa.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--dark px-8 py-4">
+          <%= isEnglish ? "Book assessment" : "Agendar valoración" %>
+          <i data-lucide="message-circle" class="h-5 w-5"></i>
+        </a>
+        <a href="#opciones-diseno" class="premium-button premium-button--light px-8 py-4">
+          <%= isEnglish ? "See options" : "Ver opciones" %>
+          <i data-lucide="arrow-down" class="h-5 w-5"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mx-auto w-full max-w-md" data-aos="zoom-in" data-aos-delay="100">
+      <div class="image-frame overflow-hidden rounded-[2rem] border-8 border-white bg-white">
+        <img src="/img/tratamientos/influencer-tratamientos.jpeg" alt="<%= isEnglish ? 'Influencer showing an aesthetic smile result' : 'Influencer mostrando resultado de sonrisa estética' %>" class="h-[34rem] w-full object-cover object-[center_18%]" loading="eager" onerror="this.onerror=null;this.src='/img/placeholders/dental-preview.svg';">
+      </div>
+      <div class="mt-4 rounded-2xl border border-dental-brown/10 bg-white/90 p-5 backdrop-blur-md premium-shadow">
+        <p class="text-xs font-bold uppercase tracking-widest text-dental-brown"><%= isEnglish ? "Main materials" : "Materiales principales" %></p>
+        <div class="mt-3 grid grid-cols-2 gap-3 text-sm font-semibold text-dental-dark">
+          <span class="rounded-xl bg-dental-cream px-4 py-3"><%= isEnglish ? "Composite resin" : "Resina" %></span>
+          <span class="rounded-xl bg-dental-cream px-4 py-3"><%= isEnglish ? "Ceramic" : "Cerámica" %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="bg-dental-cream py-16">
+  <div class="section-container">
+    <div class="mb-10 max-w-3xl" data-aos="fade-up">
+      <span class="section-kicker"><%= isEnglish ? "Two materials" : "Dos materiales" %></span>
+      <h2 class="text-4xl text-dental-dark"><%= isEnglish ? "Different finishes for different smile goals" : "Diferentes acabados para diferentes objetivos de sonrisa" %></h2>
+    </div>
+    <div class="grid gap-6 lg:grid-cols-2">
+      <% materialGroups.forEach((group, index) => { %>
+        <article class="premium-card rounded-3xl p-8" data-aos="fade-up" data-aos-delay="<%= index * 100 %>">
+          <div class="mb-6 flex items-start justify-between gap-6">
+            <div>
+              <h3 class="text-3xl text-dental-dark"><%= group.title %></h3>
+              <p class="mt-4 max-w-xl text-sm leading-relaxed text-dental-brown/80"><%= group.copy %></p>
+            </div>
+            <div class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-dental-beige text-dental-brown">
+              <i data-lucide="<%= group.icon %>" class="h-6 w-6"></i>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <% group.items.forEach((item) => { %>
+              <span class="rounded-full border border-dental-brown/10 bg-dental-ivory px-4 py-2 text-xs font-bold uppercase tracking-widest text-dental-brown"><%= item %></span>
+            <% }) %>
+          </div>
+        </article>
+      <% }) %>
+    </div>
   </div>
 </section>
 
 <!-- TREATMENTS GRID -->
-<section class="py-16 bg-dental-cream">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+<section id="opciones-diseno" class="bg-dental-ivory py-20">
+  <div class="section-container">
+    <div class="mb-12 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end" data-aos="fade-up">
+      <div>
+        <span class="section-kicker"><%= isEnglish ? "Available options" : "Opciones disponibles" %></span>
+        <h2 class="text-4xl text-dental-dark"><%= isEnglish ? "Choose the type of smile design" : "Elige el tipo de diseño de sonrisa" %></h2>
+      </div>
+      <p class="text-base leading-relaxed text-dental-brown/80">
+        <%= isEnglish
+          ? "Each option has a different scope: from refining the edges of the anterior teeth to a lab-made ceramic design with several try-ins."
+          : "Cada opción tiene un alcance diferente: desde perfeccionar los bordes de los dientes anteriores hasta un diseño en cerámica elaborado en laboratorio con varias pruebas." %>
+      </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
       <% treatments.forEach((treatment, index) => { %>
-        <div class="premium-card flex h-full flex-col rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="<%= Math.min((index % 3) * 100 + 100, 300) %>">
-          <div class="relative h-48 shrink-0 overflow-hidden bg-slate-100 p-4">
+        <article class="premium-card flex h-full flex-col rounded-3xl overflow-hidden group" data-aos="fade-up" data-aos-delay="<%= Math.min(index * 80, 320) %>">
+          <div class="relative h-52 shrink-0 overflow-hidden bg-slate-100">
             <img
               src="<%= treatment.heroImage %>"
               alt="<%= treatment.title %>"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               onerror="this.onerror=null;this.src='/img/placeholders/dental-preview.svg';"
             >
+            <div class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-dental-brown backdrop-blur">
+              <%= treatment.eyebrow %>
+            </div>
           </div>
 
-          <div class="flex flex-1 flex-col p-8">
-            <div class="w-12 h-12 bg-dental-beige rounded-xl flex items-center justify-center text-dental-brown mb-4">
-              <i data-lucide="<%= treatment.icon %>" class="w-6 h-6"></i>
+          <div class="flex flex-1 flex-col p-6">
+            <div class="mb-4 flex items-center justify-between gap-4">
+              <div class="grid h-11 w-11 place-items-center rounded-2xl bg-dental-beige text-dental-brown">
+                <i data-lucide="<%= treatment.icon %>" class="h-5 w-5"></i>
+              </div>
+              <span class="text-xs font-bold text-dental-brown/60">0<%= index + 1 %></span>
             </div>
 
-            <h3 class="text-2xl font-serif text-dental-dark mb-3"><%= treatment.title %></h3>
+            <h3 class="text-2xl text-dental-dark"><%= treatment.title %></h3>
+            <p class="mt-3 text-sm leading-relaxed text-dental-brown/75"><%= treatment.summary %></p>
 
-            <ul class="space-y-2 text-sm text-dental-brown/80 mb-8">
+            <ul class="mt-5 space-y-2 text-sm text-dental-brown/80">
               <% treatment.benefits.slice(0, 3).forEach((benefit) => { %>
                 <li class="flex gap-2 leading-relaxed">
-                  <i data-lucide="check" class="mt-0.5 w-4 h-4 shrink-0 text-dental-brown"></i>
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-dental-brown"></i>
                   <span><%= benefit %></span>
                 </li>
               <% }) %>
             </ul>
 
-            <div class="mt-auto">
-              <a href="<%= whatsappUrl(treatment.whatsappText) %>" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-dental-dark px-5 py-3 text-sm font-semibold text-dental-ivory transition-colors hover:bg-dental-brown">
-                <span><%= isEnglish ? "Request assessment" : "Pedir valoración" %></span>
-                <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
-              </a>
-              <a href="<%= localizedPath('/tratamientos/' + treatment.slug) %>" class="mt-3 inline-flex min-h-8 w-full items-center justify-center gap-2 text-sm font-semibold text-dental-brown transition-colors hover:text-dental-dark">
-                <span><%= isEnglish ? "View details" : "Ver detalles" %></span>
-                <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+            <div class="mt-auto pt-6">
+              <a href="<%= localizedPath('/tratamientos/' + treatment.slug) %>" class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-dental-dark px-5 py-3 text-sm font-semibold text-dental-ivory transition-colors hover:bg-dental-brown">
+                <span><%= isEnglish ? "View process" : "Ver proceso" %></span>
+                <i data-lucide="arrow-right" class="h-4 w-4 shrink-0"></i>
               </a>
             </div>
           </div>
-        </div>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bg-dental-dark py-20 text-dental-ivory">
+  <div class="section-container grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+    <div data-aos="fade-right">
+      <span class="text-sm font-bold uppercase tracking-widest text-dental-beige"><%= isEnglish ? "How it starts" : "Cómo empieza" %></span>
+      <h2 class="mt-3 text-4xl"><%= isEnglish ? "A clear route before changing your smile" : "Una ruta clara antes de cambiar tu sonrisa" %></h2>
+      <p class="mt-5 text-dental-ivory/70">
+        <%= isEnglish
+          ? "The best smile design is chosen after reviewing your case, not from a generic formula."
+          : "El mejor diseño de sonrisa se elige después de revisar tu caso, no desde una fórmula genérica." %>
+      </p>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3" data-aos="fade-up">
+      <% treatmentFlow.forEach((step, index) => { %>
+        <article class="rounded-3xl border border-dental-ivory/10 bg-white/5 p-6">
+          <div class="mb-6 flex items-center justify-between">
+            <i data-lucide="<%= step.icon %>" class="h-6 w-6 text-dental-beige"></i>
+            <span class="text-xs font-bold text-dental-ivory/50">0<%= index + 1 %></span>
+          </div>
+          <h3 class="text-xl"><%= step.title %></h3>
+          <p class="mt-4 text-sm leading-relaxed text-dental-ivory/75"><%= step.copy %></p>
+        </article>
       <% }) %>
     </div>
   </div>
 </section>
 
 <!-- CALL TO ACTION MINI -->
-<section class="py-16 bg-dental-dark">
-  <div class="max-w-4xl mx-auto px-6 text-center" data-aos="zoom-in">
-    <h2 class="text-3xl font-serif text-dental-ivory mb-4">
-      <%= isEnglish ? "What is your aesthetic goal?" : "¿Cuál es tu objetivo estético?" %>
-    </h2>
-    <p class="text-dental-beige/80 mb-8">
-      <%= isEnglish
-        ? "Book an assessment. We will evaluate your case and design the ideal aesthetic plan for your smile."
-        : "Agenda una consulta de valoración. Evaluaremos tu caso y diseñaremos el plan estético perfecto para tu sonrisa." %>
-    </p>
-    <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like to book an aesthetic assessment.' : 'Hola Dental Expertos, quiero agendar una valoración estética.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--light px-8 py-3">
-      <%= isEnglish ? "Book consultation" : "Agendar Consulta" %>
-      <i data-lucide="message-circle" class="w-4 h-4"></i>
-    </a>
+<section class="bg-dental-cream py-16">
+  <div class="section-container">
+    <div class="rounded-[2rem] bg-white px-8 py-12 text-center premium-shadow md:px-14" data-aos="zoom-in">
+      <h2 class="text-4xl text-dental-dark">
+        <%= isEnglish ? "Ready to know which design fits your smile?" : "¿Lista para saber qué diseño va con tu sonrisa?" %>
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-dental-brown/75">
+        <%= isEnglish
+          ? "Book an aesthetic assessment and we will guide you between micro design, resin design or ceramic design."
+          : "Agenda una valoración estética y te orientamos entre microdiseño, diseño en resina o diseño en cerámica." %>
+      </p>
+      <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like to book a smile design assessment.' : 'Hola Dental Expertos, quiero agendar una valoración para diseño de sonrisa.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--dark mt-8 px-8 py-4">
+        <%= isEnglish ? "Message us on WhatsApp" : "Escribir por WhatsApp" %>
+        <i data-lucide="message-circle" class="h-5 w-5"></i>
+      </a>
+    </div>
   </div>
 </section>

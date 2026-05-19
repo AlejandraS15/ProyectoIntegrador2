@@ -24,57 +24,110 @@ const sharedCases: Array<Pick<ResultCase, "after" | "before" | "image">> = [
   }
 ];
 
-const localizedCopy: Record<Language, Array<Pick<ResultCase, "afterLabel" | "beforeLabel" | "description" | "title">>> = {
+type ResultCopy = Pick<
+  ResultCase,
+  | "afterLabel"
+  | "beforeLabel"
+  | "category"
+  | "description"
+  | "duration"
+  | "objective"
+  | "result"
+  | "title"
+  | "treatment"
+>;
+
+const localizedCopy: Record<Language, ResultCopy[]> = {
   en: [
     {
       afterLabel: "After",
       beforeLabel: "Before",
-      description: "Complete smile design with proportion and facial harmony analysis. A natural, radiant result.",
-      title: "Smile Design"
+      category: "Smile design",
+      description: "Selected case with a natural aesthetic approach, improving color, shape and dental proportion.",
+      duration: "2 to 3 appointments",
+      objective: "Improve harmony, shade and dental shape",
+      result: "A more uniform, balanced and natural smile",
+      title: "Natural Smile Design",
+      treatment: "Smile Design"
     },
     {
       afterLabel: "After",
       beforeLabel: "Before",
-      description: "Comprehensive aesthetic transformation combining rehabilitation techniques for a balanced smile.",
-      title: "Complete Smile"
+      category: "Aesthetic design",
+      description: "Aesthetic smile design planned to refine shape, shade and the visible smile line.",
+      duration: "2 to 4 appointments",
+      objective: "Refine shape and visible proportions",
+      result: "A more defined smile with a polished finish",
+      title: "Aesthetic smile design",
+      treatment: "Smile Design"
     },
     {
       afterLabel: "After",
       beforeLabel: "Before",
-      description: "Restoration with high-quality aesthetic veneers. Improved color, shape and proportions.",
-      title: "Composite Veneers"
+      category: "Smile design",
+      description: "Smile design focused on a brighter tone, natural proportions and a clean aesthetic finish.",
+      duration: "1 to 3 sessions",
+      objective: "Balance color and smile harmony",
+      result: "A lighter, fresher and more radiant smile",
+      title: "Luminous smile design",
+      treatment: "Smile Design"
     },
     {
       afterLabel: "After",
       beforeLabel: "Before",
-      description: "Professional high-impact whitening. A brighter, fresher smile in one session.",
-      title: "Dental Whitening"
+      category: "Aesthetic design",
+      description: "Aesthetic case focused on improving visual order, smile balance and natural symmetry.",
+      duration: "According to diagnosis",
+      objective: "Improve alignment and dental symmetry",
+      result: "A more ordered and harmonious smile",
+      title: "Smile harmonization",
+      treatment: "Aesthetic Design"
     }
   ],
   es: [
     {
       afterLabel: "Después",
       beforeLabel: "Antes",
-      description: "Diseño completo de sonrisa con análisis de proporción y armonía facial. Resultado natural y radiante.",
-      title: "Diseño de Sonrisa"
+      category: "Diseño de sonrisa",
+      description: "Caso seleccionado con enfoque estético natural, mejorando color, forma y proporción dental.",
+      duration: "2 a 3 citas",
+      objective: "Mejorar armonía, color y forma dental",
+      result: "Sonrisa más uniforme, equilibrada y natural",
+      title: "Diseño de sonrisa natural",
+      treatment: "Diseño de sonrisa"
     },
     {
       afterLabel: "Después",
       beforeLabel: "Antes",
-      description: "Transformación estética integral combinando técnicas de rehabilitación para una sonrisa equilibrada.",
-      title: "Sonrisa Integral"
+      category: "Diseño estético",
+      description: "Diseño estético de sonrisa planeado para refinar forma, color y línea visible de sonrisa.",
+      duration: "2 a 4 citas",
+      objective: "Refinar forma y proporciones visibles",
+      result: "Sonrisa más definida con acabado pulido",
+      title: "Diseño estético de sonrisa",
+      treatment: "Diseño de sonrisa"
     },
     {
       afterLabel: "Después",
       beforeLabel: "Antes",
-      description: "Restauración con carillas estéticas de alta calidad. Cambio de color, forma y proporciones.",
-      title: "Carillas en Resina"
+      category: "Diseño de sonrisa",
+      description: "Diseño de sonrisa enfocado en un tono más luminoso, proporciones naturales y acabado limpio.",
+      duration: "1 a 3 sesiones",
+      objective: "Equilibrar color y armonía de sonrisa",
+      result: "Sonrisa más luminosa, fresca y radiante",
+      title: "Diseño de sonrisa luminoso",
+      treatment: "Diseño de sonrisa"
     },
     {
       afterLabel: "Después",
       beforeLabel: "Antes",
-      description: "Blanqueamiento profesional de máxima potencia. Sonrisa más joven y radiante en una sesión.",
-      title: "Blanqueamiento Dental"
+      category: "Diseño estético",
+      description: "Caso estético enfocado en mejorar orden visual, balance de sonrisa y simetría natural.",
+      duration: "Según diagnóstico",
+      objective: "Mejorar alineación y simetría dental",
+      result: "Sonrisa más ordenada y armónica",
+      title: "Armonización de sonrisa",
+      treatment: "Diseño estético"
     }
   ]
 };

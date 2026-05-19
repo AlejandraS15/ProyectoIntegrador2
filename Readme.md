@@ -68,9 +68,10 @@ ProyectoIntegrador2
 │   │   ├── AboutController.ts
 │   │   ├── ContactController.ts
 │   │   ├── HomeController.ts
-│   │   ├── MediaController.ts
 │   │   ├── StaffController.ts
 │   │   └── TreatmentController.ts
+│   ├── app.ts
+│   ├── index.ts
 │   ├── routes/
 │   │   └── index.ts
 │   ├── types/
@@ -84,9 +85,6 @@ ProyectoIntegrador2
 │   │   │   └── index.ejs
 │   │   ├── layouts/
 │   │   │   └── app.ejs
-│   │   ├── media/
-│   │   │   ├── before-after.ejs
-│   │   │   └── facilities.ejs
 │   │   ├── partials/
 │   │   │   ├── footer.ejs
 │   │   │   ├── header.ejs
@@ -95,12 +93,14 @@ ProyectoIntegrador2
 │   │   │   └── index.ejs
 │   │   └── treatments/
 │   │       └── index.ejs
+├── api/
 │   └── index.ts
 ├── .gitignore
 ├── copilot-instructions.md
 ├── package-lock.json
 ├── package.json
 ├── README.md
+├── vercel.json
 ├── tailwind.config.cjs
 └── tsconfig.json
 ```
