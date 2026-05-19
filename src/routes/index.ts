@@ -3,7 +3,6 @@ import { Router } from "express";
 import AboutController from "../controllers/AboutController.js";
 import ContactController from "../controllers/ContactController.js";
 import HomeController from "../controllers/HomeController.js";
-import MediaController from "../controllers/MediaController.js";
 import ResultsController from "../controllers/ResultsController.js";
 import StaffController from "../controllers/StaffController.js";
 import TreatmentController from "../controllers/TreatmentController.js";
@@ -13,10 +12,8 @@ const localizedRouter = Router();
 
 function registerRoutes(target: Router): void {
   target.get("/", HomeController.index);
-  target.get("/antes-y-despues", MediaController.beforeAfter);
   target.get("/contacto", ContactController.index);
   target.get("/equipo", StaffController.index);
-  target.get("/instalaciones", MediaController.facilities);
   target.get("/nosotros", AboutController.index);
   target.get("/tratamientos", TreatmentController.index);
   target.get("/tratamientos/:slug", TreatmentController.show);

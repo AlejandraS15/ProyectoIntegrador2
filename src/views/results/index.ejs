@@ -1,48 +1,99 @@
 <% const featuredCase = cases[0]; %>
-<% const secondaryCases = cases.slice(1); %>
+<% const galleryCases = cases.slice(1); %>
+<% const trustBadges = isEnglish
+  ? ["Real cases", "Natural results", "Personalized plan", "Interactive before & after"]
+  : ["Casos reales", "Resultados naturales", "Plan personalizado", "Antes y después interactivo"]; %>
+<% const quickLinks = isEnglish
+  ? [
+      { href: "/", label: "Home" },
+      { href: "/nosotros", label: "About Us" },
+      { href: "/tratamientos", label: "Treatments" },
+      { href: "/resultados", label: "Results" },
+      { href: "/equipo", label: "Team" },
+      { href: "/contacto", label: "Book assessment" }
+    ]
+  : [
+      { href: "/", label: "Inicio" },
+      { href: "/nosotros", label: "Nosotros" },
+      { href: "/tratamientos", label: "Tratamientos" },
+      { href: "/resultados", label: "Resultados" },
+      { href: "/equipo", label: "Equipo" },
+      { href: "/contacto", label: "Agendar valoración" }
+    ]; %>
+<% const processSteps = isEnglish
+  ? [
+      { icon: "search-check", title: "Initial assessment", copy: "We evaluate your smile, expectations, bite and aesthetic possibilities." },
+      { icon: "palette", title: "Personalized design", copy: "We define shade, shape, material and the clinical route for your case." },
+      { icon: "sparkles", title: "Treatment", copy: "We complete each phase with precision, comfort and a natural aesthetic goal." },
+      { icon: "badge-check", title: "Final result", copy: "We review details, polish the finish and guide you on how to care for your smile." }
+    ]
+  : [
+      { icon: "search-check", title: "Valoración inicial", copy: "Evaluamos tu sonrisa, expectativas, mordida y posibilidades estéticas." },
+      { icon: "palette", title: "Diseño personalizado", copy: "Definimos color, forma, material y la ruta clínica adecuada para tu caso." },
+      { icon: "sparkles", title: "Tratamiento", copy: "Realizamos cada fase con precisión, comodidad y un objetivo estético natural." },
+      { icon: "badge-check", title: "Resultado final", copy: "Revisamos detalles, pulimos el acabado y te orientamos sobre el cuidado de tu sonrisa." }
+    ]; %>
 
-<section class="results-hero page-hero relative overflow-hidden bg-dental-ivory pt-32 pb-16">
-  <div class="section-container relative z-10 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+<section class="results-hero page-hero relative overflow-hidden bg-dental-ivory pt-32 pb-20">
+  <div class="section-container relative z-10 grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
     <div data-aos="fade-right">
-      <span class="mb-3 block text-xs font-semibold uppercase tracking-[0.18em] text-dental-brown">
-        <%= isEnglish ? "Transformation Gallery" : "Galería de Transformaciones" %>
+      <span class="section-kicker">
+        <%= isEnglish ? "Selected clinical cases" : "Casos clínicos seleccionados" %>
       </span>
-      <h1 class="max-w-2xl text-4xl text-dental-dark sm:text-5xl lg:text-6xl">
-        <%= isEnglish ? "Real smile transformations" : "Transformaciones reales de sonrisa" %>
+      <h1 class="max-w-4xl text-5xl text-dental-dark md:text-6xl">
+        <%= isEnglish ? "Real results, smiles that inspire confidence" : "Resultados reales, sonrisas que inspiran confianza" %>
       </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-dental-brown/80">
+        <%= isEnglish
+          ? "Explore selected before-and-after cases with natural finishes, personalized treatments and an aesthetic plan designed around each patient."
+          : "Explora casos seleccionados de antes y después con acabados naturales, tratamientos personalizados y un plan estético diseñado para cada paciente." %>
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like to book an aesthetic assessment.' : 'Hola Dental Expertos, quiero agendar una valoración estética.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--dark px-8 py-4">
+          <%= isEnglish ? "Book assessment" : "Agenda tu valoración" %>
+          <i data-lucide="message-circle" class="h-5 w-5"></i>
+        </a>
+        <a href="#casos-destacados" class="premium-button premium-button--light px-8 py-4">
+          <%= isEnglish ? "View results" : "Ver resultados" %>
+          <i data-lucide="arrow-down" class="h-5 w-5"></i>
+        </a>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-2" aria-label="<%= isEnglish ? 'Trust badges' : 'Sellos de confianza' %>">
+        <% trustBadges.forEach((badge) => { %>
+          <span class="rounded-full border border-dental-brown/10 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-widest text-dental-brown backdrop-blur"><%= badge %></span>
+        <% }) %>
+      </div>
     </div>
 
-    <div class="results-hero__panel" data-aos="fade-left" data-aos-delay="120">
-      <p>
-        <%= isEnglish
-          ? "A curated selection of before-and-after cases. Move each divider to compare the change with precision."
-          : "Una selección curada de casos antes y después. Mueve cada divisor para comparar el cambio con precisión." %>
-      </p>
-      <div class="results-hero__chips" aria-hidden="true">
-        <span><%= isEnglish ? "Real cases" : "Casos reales" %></span>
-        <span><%= isEnglish ? "Natural finish" : "Acabado natural" %></span>
-        <span><%= isEnglish ? "Slide to compare" : "Desliza para comparar" %></span>
-      </div>
+    <div class="results-hero-preview" data-aos="zoom-in" data-aos-delay="120">
+      <%- include("../partials/beforeAfter", {
+        after: featuredCase.after,
+        afterLabel: featuredCase.afterLabel,
+        before: featuredCase.before,
+        beforeLabel: featuredCase.beforeLabel,
+        compact: false,
+        image: featuredCase.image
+      }) %>
     </div>
   </div>
 </section>
 
-<section class="results-gallery relative overflow-hidden bg-dental-cream pb-24 pt-8">
-  <div class="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-dental-ivory to-transparent"></div>
-  <div class="pointer-events-none absolute -left-24 top-28 h-80 w-80 rounded-full border border-dental-brown/10"></div>
-  <div class="pointer-events-none absolute -right-24 bottom-24 h-96 w-96 rounded-full border border-dental-brown/10"></div>
+<section id="casos-destacados" class="bg-dental-cream py-20">
+  <div class="section-container">
+    <div class="mb-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end" data-aos="fade-up">
+      <div>
+        <span class="section-kicker"><%= isEnglish ? "Featured case" : "Caso destacado" %></span>
+        <h2 class="text-4xl text-dental-dark"><%= isEnglish ? "A closer look at a natural transformation" : "Una mirada más cercana a una transformación natural" %></h2>
+      </div>
+      <p class="text-base leading-relaxed text-dental-brown/80">
+        <%= isEnglish
+          ? "This placeholder case shows how the final structure will present real clinical details once the full patient information is available."
+          : "Este caso placeholder muestra cómo se presentará la información clínica real cuando estén disponibles todos los datos del paciente." %>
+      </p>
+    </div>
 
-  <div class="section-container relative z-10">
-    <div class="results-editorial">
-      <article class="results-showcase" data-aos="fade-up">
-        <div class="results-showcase__header">
-          <div>
-            <span><%= isEnglish ? "Featured case" : "Caso destacado" %></span>
-            <h2><%= featuredCase.title %></h2>
-          </div>
-          <strong>01</strong>
-        </div>
-
+    <div class="grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-stretch">
+      <article class="results-featured-case" data-aos="fade-up">
         <%- include("../partials/beforeAfter", {
           after: featuredCase.after,
           afterLabel: featuredCase.afterLabel,
@@ -53,13 +104,49 @@
         }) %>
       </article>
 
-      <div class="results-side">
-        <% secondaryCases.forEach((c, index) => { %>
-          <article class="results-mini" data-aos="fade-up" data-aos-delay="<%= 120 + index * 80 %>">
-            <div class="results-mini__header">
-              <span>0<%= index + 2 %></span>
-              <h2><%= c.title %></h2>
-            </div>
+      <aside class="results-case-panel" data-aos="fade-up" data-aos-delay="120">
+        <span class="rounded-full bg-dental-cream px-4 py-2 text-xs font-bold uppercase tracking-widest text-dental-brown"><%= featuredCase.category %></span>
+        <h3 class="mt-6 text-3xl text-dental-dark"><%= featuredCase.title %></h3>
+        <dl class="mt-8 grid gap-4">
+          <div>
+            <dt><%= isEnglish ? "Treatment" : "Tratamiento" %></dt>
+            <dd><%= featuredCase.treatment %></dd>
+          </div>
+          <div>
+            <dt><%= isEnglish ? "Goal" : "Objetivo" %></dt>
+            <dd><%= featuredCase.objective %></dd>
+          </div>
+          <div>
+            <dt><%= isEnglish ? "Result" : "Resultado" %></dt>
+            <dd><%= featuredCase.result %></dd>
+          </div>
+          <div>
+            <dt><%= isEnglish ? "Estimated time" : "Tiempo estimado" %></dt>
+            <dd><%= featuredCase.duration %></dd>
+          </div>
+        </dl>
+        <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like a result similar to the featured case.' : 'Hola Dental Expertos, quiero un resultado similar al caso destacado.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--dark mt-8 w-full px-6 py-4">
+          <%= isEnglish ? "I want a similar result" : "Quiero un resultado similar" %>
+          <i data-lucide="message-circle" class="h-5 w-5"></i>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dental-ivory py-20">
+  <div class="section-container">
+    <div class="mb-10 max-w-3xl" data-aos="fade-up">
+      <div class="max-w-3xl">
+        <span class="section-kicker"><%= isEnglish ? "Result gallery" : "Galería de resultados" %></span>
+        <h2 class="text-4xl text-dental-dark"><%= isEnglish ? "Aesthetic smile designs with natural finishes" : "Diseños de sonrisa con acabado estético y natural" %></h2>
+      </div>
+    </div>
+
+    <div class="results-grid">
+      <% galleryCases.forEach((c, index) => { %>
+        <article id="resultado-<%= index + 2 %>" class="result-card" data-aos="fade-up" data-aos-delay="<%= Math.min(index * 70, 280) %>">
+          <div class="result-card__media">
             <%- include("../partials/beforeAfter", {
               after: c.after,
               afterLabel: c.afterLabel,
@@ -68,9 +155,63 @@
               compact: true,
               image: c.image
             }) %>
-          </article>
-        <% }) %>
-      </div>
+          </div>
+          <div class="result-card__body">
+            <h3 class="text-2xl text-dental-dark"><%= c.title %></h3>
+            <a href="#resultado-<%= index + 2 %>" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-dental-brown transition-colors hover:text-dental-dark">
+              <%= isEnglish ? "View result" : "Ver resultado" %>
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-dental-dark py-20 text-dental-ivory">
+  <div class="section-container grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+    <div data-aos="fade-right">
+      <span class="text-sm font-bold uppercase tracking-widest text-dental-beige"><%= isEnglish ? "Clinical route" : "Proceso general" %></span>
+      <h2 class="mt-3 text-4xl"><%= isEnglish ? "Every result starts with a careful plan" : "Cada resultado empieza con un plan cuidadoso" %></h2>
+      <p class="mt-5 text-dental-ivory/70">
+        <%= isEnglish
+          ? "The exact path changes by case, but the goal is always the same: a natural, stable and confident smile."
+          : "La ruta exacta cambia según cada caso, pero el objetivo siempre es el mismo: una sonrisa natural, estable y segura." %>
+      </p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
+      <% processSteps.forEach((step, index) => { %>
+        <article class="results-process-card">
+          <div class="mb-6 flex items-center justify-between">
+            <i data-lucide="<%= step.icon %>" class="h-6 w-6 text-dental-beige"></i>
+            <span>0<%= index + 1 %></span>
+          </div>
+          <h3><%= step.title %></h3>
+          <p><%= step.copy %></p>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dental-cream py-16">
+  <div class="section-container">
+    <div class="rounded-[2rem] bg-white px-8 py-12 text-center premium-shadow md:px-14" data-aos="zoom-in">
+      <span class="section-kicker"><%= isEnglish ? "Your smile can be next" : "Tu sonrisa puede ser la próxima" %></span>
+      <h2 class="mx-auto max-w-3xl text-4xl text-dental-dark">
+        <%= isEnglish ? "Want to know what result is possible for your smile?" : "¿Quieres saber qué resultado es posible para tu sonrisa?" %>
+      </h2>
+      <p class="mx-auto mt-5 max-w-2xl text-dental-brown/75">
+        <%= isEnglish
+          ? "Book an assessment and our team will guide you with realistic options according to your case."
+          : "Agenda una valoración y nuestro equipo te orientará con opciones realistas según tu caso." %>
+      </p>
+      <a href="<%= whatsappUrl(isEnglish ? 'Hello Dental Expertos, I would like to book an appointment after seeing the results.' : 'Hola Dental Expertos, quiero agendar una cita después de ver los resultados.') %>" target="_blank" rel="noopener noreferrer" class="premium-button premium-button--dark mt-8 px-8 py-4">
+        <%= isEnglish ? "Book appointment" : "Agenda tu cita" %>
+        <i data-lucide="message-circle" class="h-5 w-5"></i>
+      </a>
     </div>
   </div>
 </section>
