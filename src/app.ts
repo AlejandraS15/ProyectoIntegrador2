@@ -4,6 +4,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 
 import { attachI18nLocals } from "./config/i18n.js";
+import { getChatbotKnowledge } from "./data/chatbotKnowledge.js";
 import { getTreatmentDetails } from "./data/treatments.js";
 import indexRouter from "./routes/index.js";
 
@@ -39,6 +40,7 @@ export function createApp(): express.Express {
   app.locals.siteName = "Dental Expertos";
 
   app.use(expressEjsLayouts);
+  app.use(express.json({ limit: "24kb" }));
 
   app.get("/robots.txt", (request, response) => {
     const baseUrl = (baseSiteUrl || `${request.protocol}://${request.get("host")}`).replace(/\/$/, "");
@@ -105,6 +107,15 @@ ${urlEntries.join("\n")}
       return `${baseUrl}${url.startsWith("/") ? url : `/${url}`}`;
     };
     response.locals.canonicalUrl = canonicalUrl;
+    const chatbotKnowledge = getChatbotKnowledge(response.locals.language);
+    const chatbotWhatsAppUrl = `https://wa.me/${chatbotKnowledge.contact.whatsappNumber}?text=${encodeURIComponent(chatbotKnowledge.booking.whatsappText)}`;
+    response.locals.chatbotKnowledgeJson = JSON.stringify({
+      ...chatbotKnowledge,
+      booking: {
+        ...chatbotKnowledge.booking,
+        whatsappUrl: chatbotWhatsAppUrl
+      }
+    }).replace(/</g, "\\u003c");
     response.locals.localBusinessSchema = {
       "@context": "https://schema.org",
       "@id": `${baseUrl}/#dentist`,

@@ -1,0 +1,53 @@
+<script>
+  window.DentalChatbotConfig = <%- chatbotKnowledgeJson %>;
+</script>
+
+<section id="clinic-chatbot" class="clinic-chatbot" data-chatbot aria-label="<%= isEnglish ? 'Dental Expertos virtual assistant' : 'Asistente virtual de Dental Expertos' %>">
+  <div class="clinic-chatbot__panel" data-chatbot-panel aria-hidden="true">
+    <div class="clinic-chatbot__header">
+      <div class="clinic-chatbot__brand">
+        <span class="clinic-chatbot__avatar" aria-hidden="true">
+          <i data-lucide="sparkles"></i>
+        </span>
+        <span>
+          <strong>Dental Expertos</strong>
+          <small><%= isEnglish ? "Virtual assistant" : "Asistente virtual" %></small>
+        </span>
+      </div>
+      <div class="clinic-chatbot__header-actions">
+        <span class="clinic-chatbot__mode" title="<%= isEnglish ? 'Hybrid mode: rules protect the scope and Gemini improves the wording when the API key is active.' : 'Modo hibrido: las reglas protegen el alcance y Gemini mejora la redaccion cuando la API key esta activa.' %>">
+          <i data-lucide="bot"></i>
+          <span><%= isEnglish ? "AI + rules" : "IA + reglas" %></span>
+        </span>
+        <button type="button" class="clinic-chatbot__close" data-chatbot-close aria-label="<%= isEnglish ? 'Close chat' : 'Cerrar chat' %>">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="clinic-chatbot__status" aria-live="polite">
+      <span><%= isEnglish ? "Current mode" : "Modo actual" %></span>
+      <strong data-chatbot-status><%= isEnglish ? "Hybrid ready" : "Hibrido listo" %></strong>
+    </div>
+
+    <div class="clinic-chatbot__body">
+      <div class="clinic-chatbot__messages" data-chatbot-messages role="log" aria-live="polite"></div>
+    </div>
+    <div class="clinic-chatbot__quick-actions-wrap">
+      <span class="clinic-chatbot__quick-label"><%= isEnglish ? "Quick questions" : "Preguntas rápidas" %></span>
+      <div class="clinic-chatbot__quick-actions" data-chatbot-quick-actions></div>
+    </div>
+
+    <form class="clinic-chatbot__form" data-chatbot-form>
+      <input data-chatbot-input type="text" autocomplete="off" placeholder="<%= isEnglish ? 'Ask about treatments, hours or booking' : 'Pregunta por tratamientos, horarios o citas' %>" aria-label="<%= isEnglish ? 'Chat message' : 'Mensaje para el chat' %>">
+      <button type="submit" aria-label="<%= isEnglish ? 'Send message' : 'Enviar mensaje' %>">
+        <i data-lucide="send"></i>
+      </button>
+    </form>
+  </div>
+
+  <button type="button" class="clinic-chatbot__toggle" data-chatbot-toggle aria-expanded="false" aria-controls="clinic-chatbot" aria-label="<%= isEnglish ? 'Open Dental Expertos chat' : 'Abrir chat de Dental Expertos' %>">
+    <i data-lucide="message-circle"></i>
+    <span class="clinic-chatbot__pulse" aria-hidden="true"></span>
+  </button>
+</section>

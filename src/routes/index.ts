@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 import AboutController from "../controllers/AboutController.js";
+import ChatbotController from "../controllers/ChatbotController.js";
 import ContactController from "../controllers/ContactController.js";
 import HomeController from "../controllers/HomeController.js";
 import ResultsController from "../controllers/ResultsController.js";
@@ -11,6 +12,7 @@ const router = Router();
 const localizedRouter = Router();
 
 function registerRoutes(target: Router): void {
+  target.post("/api/chatbot", ChatbotController.reply);
   target.get("/", HomeController.index);
   target.get("/contacto", ContactController.index);
   target.get("/equipo", StaffController.index);

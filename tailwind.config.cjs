@@ -1,5 +1,13 @@
 module.exports = {
-  content: ["./src/views/**/*.ejs"],
+  content: ["./src/views/**/*.ejs", "./public/js/**/*.js"],
+  safelist: [
+    "clinic-chatbot__message",
+    "clinic-chatbot__message--bot",
+    "clinic-chatbot__message--user",
+    "clinic-chatbot__cta-text",
+    "clinic-chatbot__booking-link",
+    "clinic-chatbot__typing"
+  ],
   theme: {
     extend: {
       colors: {
