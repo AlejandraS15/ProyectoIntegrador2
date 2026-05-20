@@ -1,53 +1,36 @@
 # ProyectoIntegrador2
-
-## Descripcion del negocio
-
-Sitio institucional odontológico desarrollado con renderizado del lado del servidor para presentar información clave de la clínica y apoyar la captación de clientes.
-
-## Stack Tecnológico
-
+## Business Description
+Institutional dental website developed with server-side rendering to present key clinic information and support client acquisition.
+## Tech Stack
 - Express
 - TypeScript (ESM)
 - EJS
 - express-ejs-layouts
 - Tailwind CSS
-
-## Scripts principales
-
-- `npm run dev`: inicia el servidor SSR en desarrollo
-- `npm run dev:css`: compila Tailwind en modo watch hacia `public/css/styles.css`
-- `npm run build`: compila TypeScript, copia vistas y archivos estáticos, y genera los assets necesarios para `dist`
-- `npm run start`: ejecuta la aplicación en modo producción
-
-## Instalación y ejecución
-
-1. Instalar dependencias:
-
+## Main Scripts
+- `npm run dev`: starts the SSR server in development mode
+- `npm run dev:css`: compiles Tailwind in watch mode to `public/css/styles.css`
+- `npm run build`: compiles TypeScript, copies views and static files, and generates the necessary assets for `dist`
+- `npm run start`: runs the application in production mode
+## Installation and Setup
+1. Install dependencies:
 ```bash
 npm install
 ```
-
-2. Ejecutar Tailwind en desarrollo:
-
+2. Run Tailwind in development:
 ```bash
 npm run dev:css
 ```
-
-3. Ejecutar el servidor:
-
+3. Start the server:
 ```bash
 npm run dev
 ```
-
-## Build de producción
-
+## Production Build
 ```bash
 npm run build
 npm run start
 ```
-
-## Estructura de carpetas
-
+## Folder Structure
 ```txt
 ProyectoIntegrador2
 ├── dist/
@@ -104,36 +87,25 @@ ProyectoIntegrador2
 ├── tailwind.config.cjs
 └── tsconfig.json
 ```
-
-## Decisión de arquitectura
-
-Se eligió una arquitectura simple y plana para facilitar la mantenibilidad y el crecimiento incremental por commits pequeños. Dado que se trata de un sitio institucional sin lógica de negocio compleja en esta etapa, se priorizó claridad sobre sobreingeniería.
-
-Principios base de la estructura:
-
-- un único archivo de rutas
-- un controller por sección
-- vistas separadas por dominio de contenido
-- partials reutilizables para layout y SEO
-
-## Alcance actual
-
-En esta etapa inicial el proyecto incluye:
-
-- estructura SSR base con Express
-- layout general con EJS
-- rutas públicas principales
-- metadata SEO básica
-- vistas mínimas por sección
-
-Aún no incluye:
-
-- base de datos
-- reservas en línea
-- panel administrativo
-- formularios persistentes
-- lógica de negocio compleja
-
-## Nota del proyecto
-
-Este proyecto corresponde a una página institucional odontológica orientada a SEO y captación de clientes. Su propósito es presentar información relevante de la clínica, sus tratamientos, su equipo profesional y sus espacios, con una base técnica limpia y mantenible para seguir creciendo.
+## Architecture Decision
+A simple and flat architecture was chosen to facilitate maintainability and incremental growth through small commits. Since this is an institutional site without complex business logic at this stage, clarity was prioritized over over-engineering.
+Core structural principles:
+- a single routes file
+- one controller per section
+- views separated by content domain
+- reusable partials for layout and SEO
+## Current Scope
+At this initial stage the project includes:
+- base SSR structure with Express
+- general layout with EJS
+- main public routes
+- basic SEO metadata
+- minimal views per section
+Not yet included:
+- database
+- online reservations
+- admin panel
+- persistent forms
+- complex business logic
+## Project Note
+This project corresponds to an SEO-oriented institutional dental page aimed at client acquisition. Its purpose is to present relevant clinic information, its treatments, professional team and spaces, with a clean and maintainable technical foundation to keep growing.
