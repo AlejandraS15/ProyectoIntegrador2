@@ -233,6 +233,7 @@
     border: 1px solid rgba(93, 64, 55, 0.18);
     background: #f5f5dc;
     isolation: isolate;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.58);
   }
 
   .before-after__panel {
@@ -257,23 +258,43 @@
     top: 0.9rem;
     z-index: 4;
     border-radius: 9999px;
-    padding: 0.35rem 0.7rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
+    padding: 0.42rem 0.75rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #fff;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 24px -18px rgba(26, 15, 10, 0.58);
   }
 
   .before-after__badge--left {
     left: 0.9rem;
-    background: rgba(26, 15, 10, 0.62);
+    background: rgba(26, 15, 10, 0.68);
   }
 
   .before-after__badge--right {
     right: 0.9rem;
-    background: rgba(93, 64, 55, 0.82);
+    background: rgba(93, 64, 55, 0.88);
+  }
+
+  .before-after__hint {
+    position: absolute;
+    left: 50%;
+    bottom: 0.9rem;
+    z-index: 5;
+    transform: translateX(-50%);
+    border-radius: 9999px;
+    padding: 0.45rem 0.8rem;
+    background: rgba(255, 253, 245, 0.9);
+    color: rgba(93, 64, 55, 0.86);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 16px 34px -24px rgba(26, 15, 10, 0.54);
+    backdrop-filter: blur(10px);
   }
 
   .before-after__divider {
@@ -282,10 +303,12 @@
     bottom: 0;
     left: var(--ba-position, 50%);
     z-index: 5;
-    width: 2px;
+    width: 3px;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 0 1px rgba(26, 15, 10, 0.1);
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.96) 18%, rgba(255, 255, 255, 0.96) 82%, transparent);
+    box-shadow:
+      0 0 0 1px rgba(26, 15, 10, 0.08),
+      0 0 24px rgba(255, 253, 245, 0.72);
     pointer-events: none;
   }
 
@@ -299,9 +322,12 @@
     place-items: center;
     transform: translate(-50%, -50%);
     border-radius: 9999px;
-    border: 2px solid rgba(255, 255, 255, 0.95);
-    background: rgba(26, 15, 10, 0.82);
-    box-shadow: 0 8px 24px -8px rgba(26, 15, 10, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.96);
+    background:
+      radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.96), rgba(255, 253, 245, 0.92) 42%, rgba(191, 167, 106, 0.9));
+    box-shadow:
+      0 12px 28px -12px rgba(26, 15, 10, 0.72),
+      0 0 0 7px rgba(255, 253, 245, 0.24);
   }
 
   .before-after__handle::before,
@@ -311,8 +337,8 @@
     top: 50%;
     width: 0.45rem;
     height: 0.45rem;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-top: 2px solid rgba(26, 15, 10, 0.78);
+    border-right: 2px solid rgba(26, 15, 10, 0.78);
     transform-origin: center;
   }
 
@@ -343,6 +369,18 @@
     opacity: 0.04;
     outline: 2px dashed rgba(26, 15, 10, 0.55);
     outline-offset: -4px;
+  }
+
+  .before-after-card {
+    transition:
+      transform 420ms var(--ease-premium),
+      box-shadow 420ms var(--ease-premium),
+      border-color 420ms var(--ease-premium);
+  }
+
+  .before-after-card:hover,
+  .before-after-card:focus-within {
+    border-color: rgba(191, 167, 106, 0.42);
   }
 
   .before-after-card--compact {
@@ -568,6 +606,13 @@
     right: 0.55rem;
   }
 
+  .before-after--compact .before-after__hint {
+    bottom: 0.55rem;
+    padding: 0.3rem 0.55rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
+  }
+
   .before-after--compact .before-after__handle {
     height: 2rem;
     width: 2rem;
@@ -585,6 +630,95 @@
 
   .before-after--compact .before-after__handle::after {
     right: 0.52rem;
+  }
+
+  .results-hero-preview .before-after-card,
+  .results-featured-case .before-after-card {
+    @apply border-0 bg-transparent p-0 shadow-none;
+  }
+
+  .results-hero-preview .before-after__media {
+    aspect-ratio: 16 / 11;
+    border-radius: 2rem;
+  }
+
+  .results-featured-case {
+    @apply relative overflow-hidden rounded-[2rem] bg-white p-4;
+    border: 1px solid rgba(93, 64, 55, 0.12);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.88) inset,
+      0 34px 88px -54px rgba(26, 15, 10, 0.58);
+  }
+
+  .results-featured-case .before-after__media {
+    aspect-ratio: 16 / 10;
+    border-radius: 1.45rem;
+  }
+
+  .results-case-panel {
+    @apply rounded-[2rem] bg-white p-8;
+    border: 1px solid rgba(93, 64, 55, 0.12);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.84) inset,
+      0 28px 70px -52px rgba(26, 15, 10, 0.5);
+  }
+
+  .results-case-panel dt {
+    @apply text-xs font-bold uppercase tracking-widest text-dental-brown/60;
+  }
+
+  .results-case-panel dd {
+    @apply mt-1 text-sm leading-relaxed text-dental-dark;
+  }
+
+  .results-grid {
+    @apply grid gap-6 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .result-card {
+    @apply relative flex min-h-full flex-col overflow-hidden rounded-[1.5rem] bg-white;
+    border: 1px solid rgba(93, 64, 55, 0.12);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.82) inset,
+      0 24px 64px -48px rgba(26, 15, 10, 0.45);
+    transition:
+      transform 420ms var(--ease-premium),
+      box-shadow 420ms var(--ease-premium),
+      border-color 420ms var(--ease-premium),
+      opacity 260ms var(--ease-premium);
+  }
+
+  .result-card:hover,
+  .result-card:focus-within {
+    transform: translateY(-0.35rem);
+    border-color: rgba(191, 167, 106, 0.48);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.9) inset,
+      0 34px 86px -48px rgba(26, 15, 10, 0.54);
+  }
+
+  .result-card__media {
+    @apply p-3 pb-0;
+  }
+
+  .result-card__body {
+    @apply flex flex-1 flex-col p-6 pt-5;
+  }
+
+  .results-process-card {
+    @apply rounded-3xl border border-dental-ivory/10 bg-white/5 p-6;
+  }
+
+  .results-process-card span {
+    @apply text-xs font-bold text-dental-ivory/50;
+  }
+
+  .results-process-card h3 {
+    @apply text-xl text-dental-ivory;
+  }
+
+  .results-process-card p {
+    @apply mt-4 text-sm leading-relaxed text-dental-ivory/75;
   }
 
   .doctor-card {
@@ -625,11 +759,6 @@
   .doctor-card__image--yenny,
   .modal-profile__image--yenny {
     object-position: center 12%;
-  }
-
-  .doctor-card__image--yised,
-  .modal-profile__image--yised {
-    object-position: center 18%;
   }
 
   .doctor-card:hover .doctor-card__image {
@@ -708,6 +837,459 @@
     object-position: center 16%;
   }
 
+  .clinic-chatbot {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 60;
+    font-family: Inter, sans-serif;
+  }
+
+  .clinic-chatbot__toggle {
+    position: relative;
+    display: grid;
+    width: 4rem;
+    height: 4rem;
+    place-items: center;
+    border-radius: 9999px;
+    color: var(--dental-ivory);
+    background: var(--dental-dark);
+    box-shadow: 0 22px 48px -24px rgba(26, 15, 10, 0.72);
+    transition:
+      transform 300ms var(--ease-premium),
+      background-color 300ms var(--ease-premium),
+      box-shadow 300ms var(--ease-premium);
+  }
+
+  .clinic-chatbot__toggle:hover,
+  .clinic-chatbot__toggle:focus-visible {
+    transform: translateY(-2px);
+    background: var(--dental-brown);
+    box-shadow: 0 26px 54px -24px rgba(93, 64, 55, 0.68);
+  }
+
+  .clinic-chatbot__toggle svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .clinic-chatbot__pulse {
+    position: absolute;
+    right: 0.45rem;
+    top: 0.45rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 2px solid var(--dental-dark);
+    border-radius: 9999px;
+    background: #25d366;
+  }
+
+  .clinic-chatbot__panel {
+    position: absolute;
+    right: 0;
+    bottom: 5.25rem;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+    width: 25rem;
+    max-width: calc(100vw - 2rem);
+    height: min(38rem, calc(100vh - 6.5rem));
+    max-height: 38rem;
+    overflow: hidden;
+    contain: layout paint;
+    border: 1px solid rgba(93, 64, 55, 0.16);
+    border-radius: 1.5rem;
+    background: #fffdf8;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.86) inset,
+      0 34px 90px -46px rgba(26, 15, 10, 0.62);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1rem) scale(0.98);
+    transition:
+      opacity 240ms var(--ease-premium),
+      transform 300ms var(--ease-premium);
+  }
+
+  .clinic-chatbot__panel.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  .clinic-chatbot__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.95rem 1rem;
+    color: var(--dental-ivory);
+    background:
+      linear-gradient(135deg, rgba(26, 15, 10, 0.98), rgba(93, 64, 55, 0.94)),
+      var(--dental-dark);
+  }
+
+  .clinic-chatbot__header-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .clinic-chatbot__brand {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .clinic-chatbot__brand strong,
+  .clinic-chatbot__brand small {
+    display: block;
+  }
+
+  .clinic-chatbot__brand strong {
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    line-height: 1.1;
+  }
+
+  .clinic-chatbot__brand small {
+    margin-top: 0.18rem;
+    color: rgba(255, 253, 245, 0.72);
+    font-size: 0.78rem;
+  }
+
+  .clinic-chatbot__mode {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid rgba(245, 245, 220, 0.18);
+    border-radius: 9999px;
+    padding: 0.36rem 0.58rem;
+    color: rgba(255, 253, 245, 0.84);
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 0.68rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .clinic-chatbot__status {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 0.38rem;
+    min-height: 3.25rem;
+    border-bottom: 1px solid rgba(93, 64, 55, 0.08);
+    padding: 0.62rem 0.95rem;
+    color: rgba(93, 64, 55, 0.72);
+    background: #fffaf0;
+    font-size: 0.74rem;
+    font-weight: 700;
+  }
+
+  .clinic-chatbot__status span {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .clinic-chatbot__status strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 0;
+    border-radius: 9999px;
+    padding: 0.42rem 0.72rem;
+    color: var(--dental-brown);
+    background: #ffffff;
+    border: 1px solid rgba(93, 64, 55, 0.12);
+    font-size: 0.76rem;
+    font-weight: 900;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .clinic-chatbot__status strong[data-mode="gemini"] {
+    color: #0b6b36;
+    background: rgba(37, 211, 102, 0.18);
+    border-color: rgba(37, 211, 102, 0.34);
+  }
+
+  .clinic-chatbot__status strong[data-mode="local"] {
+    color: var(--dental-brown);
+    background: rgba(245, 245, 220, 0.88);
+    border-color: rgba(93, 64, 55, 0.14);
+  }
+
+  .clinic-chatbot__mode svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    color: var(--dental-beige);
+  }
+
+  .clinic-chatbot__avatar {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 9999px;
+    background: rgba(245, 245, 220, 0.14);
+    color: var(--dental-beige);
+  }
+
+  .clinic-chatbot__avatar svg,
+  .clinic-chatbot__close svg,
+  .clinic-chatbot__form button svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .clinic-chatbot__close {
+    display: grid;
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 9999px;
+    color: var(--dental-ivory);
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 220ms var(--ease-premium);
+  }
+
+  .clinic-chatbot__close:hover,
+  .clinic-chatbot__close:focus-visible {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .clinic-chatbot__body {
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    background:
+      linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(253, 251, 247, 0.98)),
+      radial-gradient(circle at 20% 0%, rgba(191, 167, 106, 0.1), transparent 13rem);
+  }
+
+  .clinic-chatbot__messages {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.72rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0.85rem;
+    overscroll-behavior: contain;
+  }
+
+  .clinic-chatbot__message {
+    box-sizing: border-box;
+    min-width: 0;
+    width: fit-content;
+    max-width: calc(100% - 0.5rem);
+    inline-size: auto;
+    max-inline-size: 100%;
+    border-radius: 1.05rem;
+    padding: 0.82rem 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .clinic-chatbot__message::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.38rem;
+    font-size: 0.66rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .clinic-chatbot__message p {
+    display: block;
+    max-width: 100%;
+    max-inline-size: 100%;
+    margin: 0;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .clinic-chatbot__message p + p {
+    margin-top: 0.55rem;
+  }
+
+  .clinic-chatbot__message--bot {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: calc(100% - 0.5rem);
+    border-bottom-left-radius: 0.35rem;
+    border: 1px solid rgba(93, 64, 55, 0.16);
+    color: var(--dental-dark);
+    background: #ffffff;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.9) inset,
+      0 14px 30px -24px rgba(26, 15, 10, 0.46);
+  }
+
+  .clinic-chatbot__message--bot::before {
+    color: rgba(93, 64, 55, 0.7);
+  }
+
+  .clinic-chatbot__message--user {
+    align-self: flex-end;
+    max-width: calc(100% - 2.25rem);
+    border-bottom-right-radius: 0.35rem;
+    color: var(--dental-ivory);
+    background: linear-gradient(135deg, var(--dental-brown), var(--dental-dark));
+    box-shadow: 0 14px 28px -24px rgba(26, 15, 10, 0.72);
+  }
+
+  .clinic-chatbot__message--user::before {
+    color: rgba(255, 253, 245, 0.72);
+    text-align: right;
+  }
+
+  .clinic-chatbot__cta-text {
+    margin-top: 0.7rem !important;
+    color: rgba(93, 64, 55, 0.88);
+    font-weight: 600;
+  }
+
+  .clinic-chatbot__booking-link {
+    display: inline-flex;
+    min-height: 2.35rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.8rem;
+    border-radius: 9999px;
+    padding: 0.55rem 0.9rem;
+    color: #ffffff;
+    background: #25d366;
+    font-size: 0.82rem;
+    font-weight: 700;
+    transition: background-color 220ms var(--ease-premium), transform 220ms var(--ease-premium);
+  }
+
+  .clinic-chatbot__booking-link:hover,
+  .clinic-chatbot__booking-link:focus-visible {
+    transform: translateY(-1px);
+    background: #20be59;
+  }
+
+  .clinic-chatbot__typing {
+    align-self: flex-start;
+    border-radius: 9999px;
+    padding: 0.55rem 0.8rem;
+    color: rgba(93, 64, 55, 0.7);
+    background: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .clinic-chatbot__quick-actions-wrap {
+    min-height: auto;
+    border-top: 1px solid rgba(93, 64, 55, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -14px 30px -28px rgba(26, 15, 10, 0.34);
+  }
+
+  .clinic-chatbot__quick-label {
+    display: block;
+    padding: 0.52rem 0.9rem 0;
+    color: rgba(93, 64, 55, 0.62);
+    font-size: 0.64rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .clinic-chatbot__quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    overflow: hidden;
+    padding: 0.46rem 0.9rem 0.66rem;
+  }
+
+  .clinic-chatbot__quick-actions button {
+    min-width: 0;
+    max-width: 100%;
+    border: 1px solid rgba(93, 64, 55, 0.12);
+    border-radius: 9999px;
+    padding: 0.48rem 0.72rem;
+    color: var(--dental-brown);
+    background: var(--dental-ivory);
+    font-size: 0.76rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition:
+      border-color 220ms var(--ease-premium),
+      background-color 220ms var(--ease-premium),
+      color 220ms var(--ease-premium);
+  }
+
+  .clinic-chatbot__quick-actions button:hover,
+  .clinic-chatbot__quick-actions button:focus-visible {
+    border-color: rgba(93, 64, 55, 0.28);
+    color: var(--dental-dark);
+    background: #ffffff;
+  }
+
+  .clinic-chatbot__form {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.55rem;
+    padding: 0.75rem;
+    border-top: 1px solid rgba(93, 64, 55, 0.08);
+    background: #ffffff;
+  }
+
+  .clinic-chatbot__form input {
+    min-width: 0;
+    flex: 1 1 auto;
+    border: 1px solid rgba(93, 64, 55, 0.16);
+    border-radius: 9999px;
+    padding: 0.72rem 0.9rem;
+    color: var(--dental-dark);
+    background: var(--dental-cream);
+    font-size: 0.9rem;
+  }
+
+  .clinic-chatbot__form input::placeholder {
+    color: rgba(93, 64, 55, 0.58);
+  }
+
+  .clinic-chatbot__form button {
+    display: grid;
+    width: 2.65rem;
+    height: 2.65rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 9999px;
+    color: var(--dental-ivory);
+    background: var(--dental-dark);
+    transition: background-color 220ms var(--ease-premium), transform 220ms var(--ease-premium);
+  }
+
+  .clinic-chatbot__form button:hover,
+  .clinic-chatbot__form button:focus-visible {
+    transform: translateY(-1px);
+    background: var(--dental-brown);
+  }
+
   .profile-section {
     @apply rounded-2xl border border-dental-brown/15 bg-dental-ivory/40 px-4 py-3;
   }
@@ -724,6 +1306,56 @@
   @media (max-width: 640px) {
     .section-container {
       @apply px-5;
+    }
+
+    .clinic-chatbot {
+      right: 1rem;
+      bottom: 1rem;
+    }
+
+    .clinic-chatbot__toggle {
+      width: 3.65rem;
+      height: 3.65rem;
+    }
+
+    .clinic-chatbot__panel {
+      right: 0;
+      bottom: 4.6rem;
+      width: calc(100vw - 1.25rem);
+      max-width: calc(100vw - 1.25rem);
+      height: min(36rem, calc(100vh - 5.75rem));
+      border-radius: 1.25rem;
+    }
+
+    .clinic-chatbot__header {
+      padding: 0.85rem 0.9rem;
+    }
+
+    .clinic-chatbot__mode {
+      display: none;
+    }
+
+    .clinic-chatbot__status {
+      gap: 0.38rem;
+      padding: 0.55rem 0.85rem;
+    }
+
+    .clinic-chatbot__quick-actions-wrap {
+      min-height: 4.9rem;
+    }
+
+    .clinic-chatbot__message {
+      max-width: calc(100% - 0.25rem);
+    }
+
+    .clinic-chatbot__message--user {
+      max-width: calc(100% - 2rem);
+    }
+
+    .clinic-chatbot__quick-actions {
+      grid-template-columns: 1fr;
+      max-height: 6.7rem;
+      overflow-y: auto;
     }
 
     .before-after__media {

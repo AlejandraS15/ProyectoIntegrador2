@@ -34,24 +34,6 @@
     sectionTitleEn: "Mentors and References",
     bulletsEs: ["Patto Mora", "Martin Prato", "Cristian Quevedo", "Felipe Bezerra", "Daniela Alcalde"],
     bulletsEn: ["Patto Mora", "Martin Prato", "Cristian Quevedo", "Felipe Bezerra", "Daniela Alcalde"]
-  },
-  {
-    id: "yised",
-    name: "Dra. Yised Hernandez",
-    image: "/img/staff/yised-hernandez.jpg",
-    imageClass: "doctor-card__image--yised",
-    specialtyEs: "Especialista en Estética",
-    specialtyEn: "Aesthetic Specialist",
-    shortEs: "Comprometida con la ética profesional, la excelencia clínica y la mejor experiencia para cada paciente.",
-    shortEn: "Committed to professional ethics, clinical excellence and the best experience for every patient.",
-    quoteEs: "Comprometida con la ética profesional, la excelencia clínica y la mejor experiencia para cada paciente.",
-    quoteEn: "Committed to professional ethics, clinical excellence and the best experience for every patient.",
-    bioEs: "Cuento con 7 años de experiencia y formación continua en odontología estética para entregar resultados de alto nivel. Mi objetivo diario es brindar atención honesta, amable y técnicamente impecable.",
-    bioEn: "I have 7 years of experience and continuous training in aesthetic dentistry to deliver high-level results. My daily goal is to provide honest, kind and technically excellent care.",
-    sectionTitleEs: "Capacitaciones Principales",
-    sectionTitleEn: "Main Training",
-    bulletsEs: ["Diplomado de estética.", "Cursos de estratificación con resina de alta estética.", "Curso intensivo de carillas indirectas y laminados cerámicos.", "Curso de rehabilitación sobre implantes."],
-    bulletsEn: ["Aesthetics diploma.", "High-aesthetic resin layering courses.", "Intensive course in indirect veneers and ceramic laminates.", "Implant rehabilitation course."]
   }
 ]; %>
 
@@ -66,8 +48,8 @@
     </h1>
     <p class="mx-auto max-w-3xl text-lg text-dental-brown/80">
       <%= isEnglish
-        ? "Three doctors lead Dental Expertos with clinical precision, aesthetic sensitivity and warm care from the very first consultation."
-        : "Tres doctoras lideran Dental Expertos con precisión clínica, sensibilidad estética y un trato humano que se siente desde la primera consulta." %>
+        ? "Two doctors lead Dental Expertos with clinical precision, aesthetic sensitivity and warm care from the very first consultation."
+        : "Dos doctoras lideran Dental Expertos con precisión clínica, sensibilidad estética y un trato humano que se siente desde la primera consulta." %>
     </p>
   </div>
 </section>
@@ -75,7 +57,7 @@
 <!-- STAFF GRID -->
 <section class="bg-dental-cream py-16 relative">
   <div class="section-container">
-    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 xl:grid-cols-3">
+    <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
       <% doctors.forEach((doctor, index) => { %>
         <article class="doctor-card group" data-aos="fade-up" data-aos-delay="<%= 100 + index * 80 %>">
           <button type="button" class="doctor-card__trigger" data-modal-target="modal-<%= doctor.id %>" aria-label="<%= isEnglish ? 'View full profile for ' : 'Ver perfil completo de ' %><%= doctor.name %>">

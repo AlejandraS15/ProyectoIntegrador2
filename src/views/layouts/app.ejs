@@ -19,9 +19,11 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="<%= whatsappUrl() %>" target="_blank" rel="noopener noreferrer"
-        class="fixed bottom-8 right-8 z-50 hidden bg-[#25D366] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 sm:flex items-center justify-center">
+        class="fixed bottom-8 right-28 z-50 hidden bg-[#25D366] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 sm:flex items-center justify-center">
       <i data-lucide="message-circle" class="w-7 h-7"></i>
     </a>
+
+    <%- include("../partials/chatbot") %>
 
     <!-- Scripts -->
     <script defer src="https://unpkg.com/lucide@latest"></script>

@@ -4,506 +4,406 @@ import type { TreatmentDetail } from "../types/treatments.js";
 export const treatmentDetails: TreatmentDetail[] = [
   {
     benefits: [
-      "Armonia entre dientes, labios y rostro.",
-      "Plan estetico personalizado antes de iniciar.",
-      "Resultados naturales, luminosos y proporcionados."
+      "Diagnóstico estético para elegir entre resina o cerámica.",
+      "Plan según forma, color, proporción y expectativas del paciente.",
+      "Opciones de acabado plano o estratificado según el caso."
     ],
-    duration: "Valoracion inicial de 45 a 60 minutos. El plan completo puede tomar de 2 a 4 citas segun el caso.",
+    duration: "La valoración define el material, el número de dientes y las fases necesarias. Algunas opciones se realizan en 2 horas y otras requieren laboratorio.",
     expectedResults: [
-      "Sonrisa mas equilibrada y expresiva.",
-      "Mejor forma, color y proporcion dental.",
-      "Mayor seguridad al sonreir y hablar."
+      "Sonrisa más armónica y luminosa.",
+      "Mejor proporción entre dientes, labios y rostro.",
+      "Resultado personalizado según el material elegido."
     ],
-    eyebrow: "Estetica dental personalizada",
+    eyebrow: "Diseño estético personalizado",
     faqs: [
       {
-        answer: "No siempre. El diseno puede combinar limpieza, blanqueamiento, resinas, carillas u otros procedimientos segun el diagnostico.",
-        question: "¿Siempre necesito carillas?"
+        answer: "Trabajamos diseños en resina y en cerámica. En resina puede ser microdiseño, diseño plano o diseño estratificado. En cerámica puede ser plano o estratificado.",
+        question: "¿Qué tipos de diseño manejan?"
       },
       {
-        answer: "El equipo evalua color, forma, mordida, encia y armonia facial antes de recomendar un plan.",
-        question: "¿Como saben que diseno me queda bien?"
+        answer: "Depende del resultado que buscas, el estado de tus dientes, el tiempo disponible y la recomendación clínica durante la valoración.",
+        question: "¿Cómo elijo entre resina y cerámica?"
       },
       {
-        answer: "Depende del material elegido, tus habitos y los controles periodicos. La valoracion define la opcion mas conveniente.",
-        question: "¿Cuanto dura el resultado?"
+        answer: "No siempre. Primero revisamos color, forma, bordes, mordida y expectativas para indicar una opción que se vea estética y natural.",
+        question: "¿Todos necesitan el mismo diseño?"
       }
     ],
     heroImage: "/assets/results/case-1-after.jpg",
     icon: "sparkles",
     process: [
       {
-        description: "Revisamos tus objetivos, fotografias, estado dental, encia y mordida.",
-        title: "Valoracion estetica"
+        description: "Revisamos tu sonrisa, tono dental, bordes, proporciones y objetivo estético.",
+        title: "Valoración"
       },
       {
-        description: "Definimos proporciones, color y tratamientos necesarios para lograr una sonrisa armonica.",
-        title: "Plan de sonrisa"
+        description: "Elegimos material, acabado y alcance del tratamiento: microdiseño, resina o cerámica.",
+        title: "Plan de diseño"
       },
       {
-        description: "Realizamos el tratamiento por fases, cuidando funcion, naturalidad y confort.",
-        title: "Transformacion"
+        description: "Realizamos el procedimiento en clínica o coordinamos el proceso con laboratorio si es cerámica.",
+        title: "Transformación"
       }
     ],
-    seoDescription: "Diseño de sonrisa en Medellín con valoración estética, plan personalizado y resultados naturales en Dental Expertos Guayabal.",
-    seoKeywords: "diseño de sonrisa medellin, valoracion diseño de sonrisa, clinica odontologica estetica guayabal",
+    seoDescription: "Diseños de sonrisa en Medellín en resina y cerámica: microdiseño, diseño plano y diseño estratificado en Dental Expertos.",
+    seoKeywords: "diseño de sonrisa medellin, diseño en resina medellin, diseño en ceramica medellin, microdiseño dental",
     slug: "diseno-de-sonrisa",
-    summary: "Un plan estetico integral para crear una sonrisa armonica, natural y coherente con tu rostro.",
+    summary: "Diseños de sonrisa en resina y cerámica, pensados para transformar forma, color y armonía dental de manera personalizada.",
     title: "Diseño de Sonrisa",
-    whatsappText: "Hola Dental Expertos, quiero una valoracion para diseño de sonrisa."
+    whatsappText: "Hola Dental Expertos, quiero una valoración para diseño de sonrisa."
   },
   {
     benefits: [
-      "Mejora rapida de forma, color y textura dental.",
-      "Acabado natural segun tu rostro y tono de sonrisa.",
-      "Opcion ideal para fracturas, manchas o dientes desgastados."
+      "Se realiza en resina.",
+      "Trabaja los bordes de los 6 dientes anteriores.",
+      "Incluye 3 sesiones previas de aclaramiento dental."
     ],
-    duration: "Entre 2 y 3 citas despues de la valoracion, segun el material y la complejidad del caso.",
+    duration: "Después de las 3 sesiones de aclaramiento, el microdiseño se realiza aproximadamente en 2 horas.",
     expectedResults: [
-      "Dientes con forma mas uniforme.",
-      "Color mas claro y estable.",
-      "Sonrisa estetica sin perder naturalidad."
+      "Bordes más definidos y armónicos.",
+      "Sonrisa más limpia y luminosa.",
+      "Cambio sutil sin cubrir toda la superficie del diente."
     ],
-    eyebrow: "Carillas esteticas",
+    eyebrow: "Resina | cambio sutil",
     faqs: [
       {
-        answer: "No en todos los casos. La indicacion depende de tus dientes, mordida, color y expectativas.",
-        question: "¿Las carillas son para todos?"
+        answer: "El microdiseño se enfoca en los bordes de los 6 dientes anteriores, ideal para mejorar pequeños detalles de forma y longitud.",
+        question: "¿Qué dientes se trabajan?"
       },
       {
-        answer: "Las carillas en resina y ceramica tienen indicaciones distintas. La doctora te orienta segun durabilidad, presupuesto y resultado esperado.",
-        question: "¿Resina o ceramica?"
+        answer: "Sí. Antes del procedimiento se realizan 3 sesiones de aclaramiento dental para lograr una base de color más estética.",
+        question: "¿Incluye aclaramiento?"
       },
       {
-        answer: "Con buenos habitos y controles, pueden conservarse muy bien. Evitar morder objetos duros ayuda mucho.",
-        question: "¿Requieren cuidados especiales?"
-      }
-    ],
-    heroImage: "/assets/results/case-3-after.jpg",
-    icon: "gem",
-    process: [
-      {
-        description: "Evaluamos color, forma, mordida y espacio disponible para un resultado estable.",
-        title: "Diagnostico"
-      },
-      {
-        description: "Definimos material, tono, forma y numero de dientes a tratar.",
-        title: "Diseño"
-      },
-      {
-        description: "Aplicamos o cementamos las carillas y hacemos ajustes finos de brillo, forma y mordida.",
-        title: "Colocacion"
-      }
-    ],
-    seoDescription: "Carillas dentales en Medellín para mejorar color, forma y armonía de la sonrisa con acabado natural en Dental Expertos.",
-    seoKeywords: "carillas dentales medellin, carillas en resina medellin, estetica dental guayabal",
-    slug: "carillas",
-    summary: "Carillas para transformar color, forma y proporcion dental con una apariencia elegante y natural.",
-    title: "Carillas Dentales",
-    whatsappText: "Hola Dental Expertos, quiero informacion sobre carillas dentales."
-  },
-  {
-    benefits: [
-      "Alineacion dental con opciones discretas.",
-      "Mejora estetica y funcional de la mordida.",
-      "Plan de seguimiento segun tu evolucion."
-    ],
-    duration: "La valoracion toma cerca de 45 minutos. El tratamiento completo puede variar de 8 a 24 meses segun el caso.",
-    expectedResults: [
-      "Dientes mejor alineados.",
-      "Sonrisa mas ordenada y funcional.",
-      "Mejor distribucion de fuerzas al morder."
-    ],
-    eyebrow: "Alineacion discreta",
-    faqs: [
-      {
-        answer: "Depende del diagnostico. En valoracion se revisa si aplican brackets esteticos, alineadores u otra alternativa.",
-        question: "¿Puedo usar una opcion invisible?"
-      },
-      {
-        answer: "El tiempo depende de apiñamiento, mordida, edad, controles y respuesta biologica.",
-        question: "¿Cuanto tarda la ortodoncia?"
-      },
-      {
-        answer: "Si. La ortodoncia estetica busca alinear sin descuidar funcion y estabilidad.",
-        question: "¿Tambien mejora la mordida?"
-      }
-    ],
-    heroImage: "/assets/results/case-2-after.jpg",
-    icon: "align-center",
-    process: [
-      {
-        description: "Analizamos alineacion, mordida, espacio, fotografias y necesidades esteticas.",
-        title: "Estudio inicial"
-      },
-      {
-        description: "Definimos el sistema ideal y la secuencia de movimientos.",
-        title: "Plan ortodontico"
-      },
-      {
-        description: "Realizamos controles para ajustar fuerzas y revisar avances.",
-        title: "Seguimiento"
-      }
-    ],
-    seoDescription: "Ortodoncia estética en Medellín con opciones discretas para alinear tu sonrisa en Dental Expertos Guayabal.",
-    seoKeywords: "ortodoncia estetica medellin, brackets esteticos medellin, alineacion dental guayabal",
-    slug: "ortodoncia-estetica",
-    summary: "Opciones discretas para alinear tus dientes cuidando estetica, funcion y comodidad.",
-    title: "Ortodoncia Estética",
-    whatsappText: "Hola Dental Expertos, quiero informacion sobre ortodoncia estetica."
-  },
-  {
-    benefits: [
-      "Sonrisa mas luminosa en poco tiempo.",
-      "Procedimiento profesional y controlado.",
-      "Ideal antes de eventos o como parte de un diseño de sonrisa."
-    ],
-    duration: "Una valoracion previa y una sesion clinica segun sensibilidad, tono inicial y objetivo estetico.",
-    expectedResults: [
-      "Color dental mas claro.",
-      "Apariencia mas fresca y juvenil.",
-      "Mejor base estetica para otros tratamientos."
-    ],
-    eyebrow: "Aclaramiento profesional",
-    faqs: [
-      {
-        answer: "Puede presentarse sensibilidad temporal. Por eso se evalua tu caso antes de iniciar.",
-        question: "¿Produce sensibilidad?"
-      },
-      {
-        answer: "Depende del color inicial, habitos y respuesta dental. La valoracion permite estimar expectativas realistas.",
-        question: "¿Cuantos tonos puedo aclarar?"
-      },
-      {
-        answer: "Si existen caries, inflamacion o restauraciones antiguas, puede ser necesario tratarlas primero.",
-        question: "¿Puedo hacerlo de inmediato?"
+        answer: "No. Es una alternativa más conservadora porque no cubre toda la superficie dental, sino principalmente los bordes.",
+        question: "¿Es igual a un diseño completo?"
       }
     ],
     heroImage: "/assets/results/case-4-after.jpg",
-    icon: "lightbulb",
+    icon: "wand-sparkles",
     process: [
       {
-        description: "Revisamos salud dental, sensibilidad y tono actual.",
-        title: "Valoracion"
+        description: "Preparamos el color de la sonrisa con 3 sesiones de aclaramiento dental.",
+        title: "Aclaramiento"
       },
       {
-        description: "Protegemos tejidos y aplicamos el protocolo indicado para tu caso.",
-        title: "Sesion clinica"
+        description: "Definimos la forma de los bordes en los 6 dientes anteriores.",
+        title: "Diseño de bordes"
       },
       {
-        description: "Te entregamos recomendaciones para cuidar el resultado.",
-        title: "Mantenimiento"
+        description: "Aplicamos resina, pulimos y ajustamos los detalles finales en una cita de aproximadamente 2 horas.",
+        title: "Acabado"
       }
     ],
-    seoDescription: "Blanqueamiento dental profesional en Medellín para una sonrisa más luminosa y cuidada en Dental Expertos.",
-    seoKeywords: "blanqueamiento dental medellin, aclaramiento dental profesional, sonrisa blanca medellin",
-    slug: "blanqueamiento",
-    summary: "Un tratamiento profesional para aclarar tu sonrisa de forma controlada y estetica.",
-    title: "Blanqueamiento Dental",
-    whatsappText: "Hola Dental Expertos, quiero informacion sobre blanqueamiento dental."
+    seoDescription: "Microdiseño dental en resina en Medellín con aclaramiento previo y trabajo en bordes de los dientes anteriores.",
+    seoKeywords: "microdiseño dental medellin, microdiseño en resina, aclaramiento dental medellin",
+    slug: "microdiseno-en-resina",
+    summary: "Una opción en resina para perfeccionar los bordes de los 6 dientes anteriores con aclaramiento previo.",
+    title: "Microdiseño en Resina",
+    whatsappText: "Hola Dental Expertos, quiero información sobre microdiseño en resina."
   },
   {
     benefits: [
-      "Reposicion dental con apariencia natural.",
-      "Mejora de funcion, sonrisa y seguridad.",
-      "Plan integral desde diagnostico hasta restauracion final."
+      "Cubre la superficie del diente con el color elegido por el paciente.",
+      "Puede realizarse como diseño plano o diseño estratificado.",
+      "Se realiza aproximadamente en 2 horas."
     ],
-    duration: "La valoracion toma cerca de 60 minutos. El proceso completo depende de diagnostico, cicatrizacion y restauracion.",
+    duration: "El diseño en resina se realiza aproximadamente en 2 horas, según el número de dientes y el acabado elegido.",
     expectedResults: [
-      "Diente fijo con apariencia natural.",
-      "Mejor capacidad para masticar.",
-      "Sonrisa mas completa y estable."
+      "Cambio visible de color y forma.",
+      "Sonrisa más uniforme.",
+      "Resultado estético en una cita corta."
     ],
-    eyebrow: "Implantes y rehabilitacion",
+    eyebrow: "Resina | plano o estratificado",
     faqs: [
       {
-        answer: "Primero se revisa hueso, encia, salud general y expectativas. No todos los casos se resuelven igual.",
-        question: "¿Como se si soy candidato?"
+        answer: "En este diseño se cubre la superficie del diente con el color elegido por el paciente para mejorar forma, tono y armonía.",
+        question: "¿Qué se hace en el diente?"
       },
       {
-        answer: "El equipo te explica fases, anestesia y cuidados para que el proceso sea lo mas comodo posible.",
-        question: "¿El procedimiento duele?"
+        answer: "Sí. Según el caso se puede hacer diseño plano o estratificado, buscando el acabado que mejor se adapte a la sonrisa.",
+        question: "¿Tiene variantes?"
       },
       {
-        answer: "Depende de cicatrizacion, necesidad de injertos y tipo de restauracion. Se define en la valoracion.",
-        question: "¿Cuanto tarda el tratamiento?"
+        answer: "Usualmente se realiza en aproximadamente 2 horas, aunque puede variar según el número de dientes a tratar.",
+        question: "¿Cuánto tarda?"
       }
     ],
-    heroImage: "/img/about/nosotros.png",
-    icon: "shield-check",
+    heroImage: "/assets/results/case-3-after.jpg",
+    icon: "layers",
     process: [
       {
-        description: "Evaluamos hueso, encia, mordida y expectativas esteticas.",
-        title: "Diagnostico integral"
+        description: "Elegimos el color y el tipo de acabado: plano o estratificado.",
+        title: "Selección estética"
       },
       {
-        description: "Definimos tiempos quirurgicos, restauracion y cuidados.",
-        title: "Plan clinico"
+        description: "Cubrimos la superficie del diente con resina según el diseño acordado.",
+        title: "Aplicación"
       },
       {
-        description: "Colocamos la restauracion final buscando funcion y naturalidad.",
-        title: "Rehabilitacion"
+        description: "Pulimos, ajustamos forma y revisamos la armonía final de la sonrisa.",
+        title: "Pulido final"
       }
     ],
-    seoDescription: "Implantes estéticos en Medellín con diagnóstico integral, rehabilitación y restauraciones naturales en Dental Expertos.",
-    seoKeywords: "implantes dentales medellin, implantes esteticos medellin, rehabilitacion oral guayabal",
-    slug: "implantes-esteticos",
-    summary: "Soluciones para recuperar dientes perdidos con estabilidad, funcion y estetica natural.",
-    title: "Implantes Estéticos",
-    whatsappText: "Hola Dental Expertos, quiero informacion sobre implantes esteticos."
+    seoDescription: "Diseño de sonrisa en resina en Medellín: diseño plano o estratificado con cambio de color y forma dental.",
+    seoKeywords: "diseño en resina medellin, diseño plano en resina, diseño estratificado en resina",
+    slug: "diseno-en-resina",
+    summary: "Diseño en resina para cubrir la superficie dental con el color elegido y un acabado plano o estratificado.",
+    title: "Diseño en Resina",
+    whatsappText: "Hola Dental Expertos, quiero información sobre diseño de sonrisa en resina."
+  },
+  {
+    benefits: [
+      "Se realiza con escaneo digital.",
+      "El caso se envía al laboratorio para fabricar las piezas.",
+      "Incluye varias pruebas hasta lograr el resultado perfecto."
+    ],
+    duration: "Usualmente requiere aproximadamente 8 días, porque incluye escaneo, laboratorio y pruebas clínicas.",
+    expectedResults: [
+      "Acabado de alta estética.",
+      "Diseño plano o estratificado según el caso.",
+      "Resultado preciso con proceso de laboratorio."
+    ],
+    eyebrow: "Cerámica | laboratorio",
+    faqs: [
+      {
+        answer: "Primero se realiza un escaneo, luego el caso se envía al laboratorio y se hacen pruebas hasta que el resultado quede perfecto.",
+        question: "¿Cómo es el proceso?"
+      },
+      {
+        answer: "Sí. En cerámica puede hacerse diseño plano o diseño estratificado, según la estética que se busque.",
+        question: "¿También tiene variantes?"
+      },
+      {
+        answer: "Usualmente toma alrededor de 8 días por el trabajo de laboratorio y las pruebas necesarias.",
+        question: "¿Por qué tarda más?"
+      }
+    ],
+    heroImage: "/assets/results/case-2-after.jpg",
+    icon: "gem",
+    process: [
+      {
+        description: "Realizamos el escaneo de la sonrisa para planear las piezas con precisión.",
+        title: "Escaneo"
+      },
+      {
+        description: "Enviamos el diseño al laboratorio para elaborar la cerámica.",
+        title: "Laboratorio"
+      },
+      {
+        description: "Probamos, ajustamos y finalizamos cuando el diseño se vea y se sienta perfecto.",
+        title: "Pruebas"
+      }
+    ],
+    seoDescription: "Diseño de sonrisa en cerámica en Medellín con escaneo digital, laboratorio y pruebas estéticas.",
+    seoKeywords: "diseño en ceramica medellin, carillas ceramicas medellin, diseño de sonrisa ceramica",
+    slug: "diseno-en-ceramica",
+    summary: "Diseño en cerámica con escaneo, laboratorio y pruebas para lograr un resultado estético de alta precisión.",
+    title: "Diseño en Cerámica",
+    whatsappText: "Hola Dental Expertos, quiero información sobre diseño de sonrisa en cerámica."
   }
 ];
 
 const englishTreatmentDetails: TreatmentDetail[] = [
   {
     benefits: [
-      "Harmony between teeth, lips and face.",
-      "Personalized aesthetic plan before starting.",
-      "Natural, luminous and proportionate results."
+      "Aesthetic diagnosis to choose between composite resin or ceramic.",
+      "A plan based on shape, shade, proportions and patient expectations.",
+      "Flat or layered finish options depending on the case."
     ],
-    duration: "Initial assessment of 45 to 60 minutes. The complete plan may take 2 to 4 appointments depending on the case.",
+    duration: "The assessment defines the material, number of teeth and required phases. Some options are completed in 2 hours and others require lab work.",
     expectedResults: [
-      "A more balanced and expressive smile.",
-      "Improved dental shape, color and proportions.",
-      "More confidence when smiling and speaking."
+      "A more harmonious and luminous smile.",
+      "Better proportion between teeth, lips and face.",
+      "A personalized result according to the selected material."
     ],
-    eyebrow: "Personalized cosmetic dentistry",
+    eyebrow: "Personalized aesthetic design",
     faqs: [
       {
-        answer: "Not always. Smile design can combine cleaning, whitening, bonding, veneers or other procedures depending on the diagnosis.",
-        question: "Do I always need veneers?"
+        answer: "We offer composite resin and ceramic smile designs. Composite can be micro design, flat design or layered design. Ceramic can be flat or layered.",
+        question: "What types of design do you offer?"
       },
       {
-        answer: "The team evaluates color, shape, bite, gums and facial harmony before recommending a plan.",
-        question: "How do you know which design suits me?"
+        answer: "It depends on the result you want, your dental condition, available time and the clinical recommendation during assessment.",
+        question: "How do I choose between resin and ceramic?"
       },
       {
-        answer: "It depends on the selected material, your habits and regular checkups. The assessment defines the best option.",
-        question: "How long does the result last?"
+        answer: "Not always. We first review shade, shape, edges, bite and expectations to recommend an aesthetic and natural option.",
+        question: "Does everyone need the same design?"
       }
     ],
     heroImage: "/assets/results/case-1-after.jpg",
     icon: "sparkles",
     process: [
       {
-        description: "We review your goals, photographs, dental condition, gums and bite.",
-        title: "Aesthetic assessment"
+        description: "We review your smile, tooth shade, edges, proportions and aesthetic goal.",
+        title: "Assessment"
       },
       {
-        description: "We define proportions, color and the treatments needed to achieve a harmonious smile.",
-        title: "Smile plan"
+        description: "We choose the material, finish and treatment scope: micro design, resin or ceramic.",
+        title: "Design plan"
       },
       {
-        description: "We complete treatment in phases, caring for function, naturalness and comfort.",
+        description: "We complete the procedure in clinic or coordinate the lab process when ceramic is selected.",
         title: "Transformation"
       }
     ],
-    seoDescription: "Smile design in Medellin with aesthetic assessment, personalized planning and natural results at Dental Expertos Guayabal.",
-    seoKeywords: "smile design medellin, smile design consultation, aesthetic dental clinic guayabal",
+    seoDescription: "Smile design in Medellin with composite resin and ceramic options: micro design, flat design and layered design at Dental Expertos.",
+    seoKeywords: "smile design medellin, composite smile design medellin, ceramic veneers medellin, dental micro design",
     slug: "diseno-de-sonrisa",
-    summary: "A comprehensive aesthetic plan to create a harmonious, natural smile that fits your face.",
+    summary: "Composite resin and ceramic smile designs created to transform dental shape, shade and harmony in a personalized way.",
     title: "Smile Design",
     whatsappText: "Hello Dental Expertos, I would like an assessment for smile design."
   },
   {
     benefits: [
-      "Fast improvement in dental shape, color and texture.",
-      "Natural finish according to your face and smile tone.",
-      "Ideal for fractures, stains or worn teeth."
+      "Made with composite resin.",
+      "Focuses on the edges of the 6 anterior teeth.",
+      "Includes 3 previous dental whitening sessions."
     ],
-    duration: "Between 2 and 3 appointments after the assessment, depending on the material and complexity of the case.",
+    duration: "After the 3 whitening sessions, the micro design is completed in approximately 2 hours.",
     expectedResults: [
-      "Teeth with a more uniform shape.",
-      "A brighter and more stable color.",
-      "An aesthetic smile without losing naturalness."
+      "More defined and harmonious edges.",
+      "A cleaner and brighter smile.",
+      "A subtle change without covering the entire tooth surface."
     ],
-    eyebrow: "Aesthetic veneers",
+    eyebrow: "Resin | subtle change",
     faqs: [
       {
-        answer: "Not in every case. The indication depends on your teeth, bite, color and expectations.",
-        question: "Are veneers for everyone?"
+        answer: "Micro design focuses on the edges of the 6 anterior teeth, ideal for improving small details in shape and length.",
+        question: "Which teeth are treated?"
       },
       {
-        answer: "Composite and ceramic veneers have different indications. Your dentist will guide you according to durability, budget and expected result.",
-        question: "Composite or ceramic?"
+        answer: "Yes. Before the procedure, 3 dental whitening sessions are completed to create a better aesthetic shade base.",
+        question: "Does it include whitening?"
       },
       {
-        answer: "With good habits and checkups, they can remain in excellent condition. Avoiding hard objects helps a lot.",
-        question: "Do they require special care?"
-      }
-    ],
-    heroImage: "/assets/results/case-3-after.jpg",
-    icon: "gem",
-    process: [
-      {
-        description: "We evaluate color, shape, bite and available space for a stable result.",
-        title: "Diagnosis"
-      },
-      {
-        description: "We define material, shade, shape and number of teeth to treat.",
-        title: "Design"
-      },
-      {
-        description: "We apply or bond the veneers and make fine adjustments to shine, shape and bite.",
-        title: "Placement"
-      }
-    ],
-    seoDescription: "Dental veneers in Medellin to improve color, shape and smile harmony with a natural finish at Dental Expertos.",
-    seoKeywords: "dental veneers medellin, composite veneers medellin, cosmetic dentistry guayabal",
-    slug: "carillas",
-    summary: "Veneers to transform dental color, shape and proportion with an elegant, natural appearance.",
-    title: "Dental Veneers",
-    whatsappText: "Hello Dental Expertos, I would like information about dental veneers."
-  },
-  {
-    benefits: [
-      "Dental alignment with discreet options.",
-      "Aesthetic and functional bite improvement.",
-      "Follow-up plan according to your progress."
-    ],
-    duration: "The assessment takes about 45 minutes. Complete treatment can vary from 8 to 24 months depending on the case.",
-    expectedResults: [
-      "Better aligned teeth.",
-      "A more organized and functional smile.",
-      "Better force distribution when biting."
-    ],
-    eyebrow: "Discreet alignment",
-    faqs: [
-      {
-        answer: "It depends on the diagnosis. During the assessment we review whether aesthetic braces, aligners or another alternative applies.",
-        question: "Can I use an invisible option?"
-      },
-      {
-        answer: "Timing depends on crowding, bite, age, checkups and biological response.",
-        question: "How long does orthodontic treatment take?"
-      },
-      {
-        answer: "Yes. Aesthetic orthodontics seeks alignment while caring for function and stability.",
-        question: "Does it also improve my bite?"
-      }
-    ],
-    heroImage: "/assets/results/case-2-after.jpg",
-    icon: "align-center",
-    process: [
-      {
-        description: "We analyze alignment, bite, space, photographs and aesthetic needs.",
-        title: "Initial study"
-      },
-      {
-        description: "We define the ideal system and movement sequence.",
-        title: "Orthodontic plan"
-      },
-      {
-        description: "We complete checkups to adjust forces and review progress.",
-        title: "Follow-up"
-      }
-    ],
-    seoDescription: "Aesthetic orthodontics in Medellin with discreet options to align your smile at Dental Expertos Guayabal.",
-    seoKeywords: "aesthetic orthodontics medellin, aesthetic braces medellin, dental alignment guayabal",
-    slug: "ortodoncia-estetica",
-    summary: "Discreet options to align your teeth while caring for aesthetics, function and comfort.",
-    title: "Aesthetic Orthodontics",
-    whatsappText: "Hello Dental Expertos, I would like information about aesthetic orthodontics."
-  },
-  {
-    benefits: [
-      "A brighter smile in little time.",
-      "Professional and controlled procedure.",
-      "Ideal before events or as part of a smile design."
-    ],
-    duration: "A prior assessment and one clinical session depending on sensitivity, initial shade and aesthetic goal.",
-    expectedResults: [
-      "A lighter dental shade.",
-      "A fresher, more youthful appearance.",
-      "A better aesthetic base for other treatments."
-    ],
-    eyebrow: "Professional whitening",
-    faqs: [
-      {
-        answer: "Temporary sensitivity may occur. That is why we evaluate your case before starting.",
-        question: "Does it cause sensitivity?"
-      },
-      {
-        answer: "It depends on your initial shade, habits and dental response. The assessment helps set realistic expectations.",
-        question: "How many shades can I whiten?"
-      },
-      {
-        answer: "If there are cavities, inflammation or old restorations, they may need to be treated first.",
-        question: "Can I do it right away?"
+        answer: "No. It is a more conservative alternative because it does not cover the entire dental surface, mainly the edges.",
+        question: "Is it the same as a full design?"
       }
     ],
     heroImage: "/assets/results/case-4-after.jpg",
-    icon: "lightbulb",
+    icon: "wand-sparkles",
     process: [
       {
-        description: "We review dental health, sensitivity and current shade.",
-        title: "Assessment"
+        description: "We prepare the smile shade with 3 dental whitening sessions.",
+        title: "Whitening"
       },
       {
-        description: "We protect tissues and apply the protocol indicated for your case.",
-        title: "Clinical session"
+        description: "We define the edge shape on the 6 anterior teeth.",
+        title: "Edge design"
       },
       {
-        description: "We give you recommendations to care for the result.",
-        title: "Maintenance"
+        description: "We apply resin, polish and adjust final details in an appointment of approximately 2 hours.",
+        title: "Finish"
       }
     ],
-    seoDescription: "Professional dental whitening in Medellin for a brighter, well-cared-for smile at Dental Expertos.",
-    seoKeywords: "dental whitening medellin, professional teeth whitening, white smile medellin",
-    slug: "blanqueamiento",
-    summary: "A professional treatment to brighten your smile in a controlled and aesthetic way.",
-    title: "Dental Whitening",
-    whatsappText: "Hello Dental Expertos, I would like information about dental whitening."
+    seoDescription: "Composite resin dental micro design in Medellin with previous whitening and edge work on anterior teeth.",
+    seoKeywords: "dental micro design medellin, composite micro design, dental whitening medellin",
+    slug: "microdiseno-en-resina",
+    summary: "A composite resin option to refine the edges of the 6 anterior teeth with previous whitening.",
+    title: "Composite Micro Design",
+    whatsappText: "Hello Dental Expertos, I would like information about composite micro design."
   },
   {
     benefits: [
-      "Tooth replacement with a natural appearance.",
-      "Improved function, smile and confidence.",
-      "Comprehensive plan from diagnosis to final restoration."
+      "Covers the tooth surface with the shade selected by the patient.",
+      "Can be completed as a flat or layered design.",
+      "Completed in approximately 2 hours."
     ],
-    duration: "The assessment takes about 60 minutes. The full process depends on diagnosis, healing and restoration.",
+    duration: "Composite resin smile design is completed in approximately 2 hours, depending on the number of teeth and finish selected.",
     expectedResults: [
-      "A fixed tooth with a natural appearance.",
-      "Improved chewing ability.",
-      "A more complete and stable smile."
+      "Visible change in shade and shape.",
+      "A more uniform smile.",
+      "An aesthetic result in a short appointment."
     ],
-    eyebrow: "Implants and rehabilitation",
+    eyebrow: "Resin | flat or layered",
     faqs: [
       {
-        answer: "First we review bone, gums, general health and expectations. Not every case is solved the same way.",
-        question: "How do I know if I am a candidate?"
+        answer: "The tooth surface is covered with the shade selected by the patient to improve shape, tone and harmony.",
+        question: "What is done to the tooth?"
       },
       {
-        answer: "The team explains phases, anesthesia and care so the process feels as comfortable as possible.",
-        question: "Does the procedure hurt?"
+        answer: "Yes. Depending on the case, it can be a flat or layered design, seeking the finish that best fits the smile.",
+        question: "Does it have variants?"
       },
       {
-        answer: "It depends on healing, grafting needs and the type of restoration. This is defined during the assessment.",
-        question: "How long does treatment take?"
+        answer: "It is usually completed in approximately 2 hours, although this may vary depending on the number of teeth treated.",
+        question: "How long does it take?"
       }
     ],
-    heroImage: "/img/about/nosotros.png",
-    icon: "shield-check",
+    heroImage: "/assets/results/case-3-after.jpg",
+    icon: "layers",
     process: [
       {
-        description: "We evaluate bone, gums, bite and aesthetic expectations.",
-        title: "Comprehensive diagnosis"
+        description: "We choose the shade and type of finish: flat or layered.",
+        title: "Aesthetic selection"
       },
       {
-        description: "We define surgical timing, restoration and care.",
-        title: "Clinical plan"
+        description: "We cover the tooth surface with resin according to the agreed design.",
+        title: "Application"
       },
       {
-        description: "We place the final restoration seeking function and naturalness.",
-        title: "Rehabilitation"
+        description: "We polish, adjust shape and review final smile harmony.",
+        title: "Final polish"
       }
     ],
-    seoDescription: "Aesthetic dental implants in Medellin with comprehensive diagnosis, rehabilitation and natural restorations at Dental Expertos.",
-    seoKeywords: "dental implants medellin, aesthetic implants medellin, oral rehabilitation guayabal",
-    slug: "implantes-esteticos",
-    summary: "Solutions to replace missing teeth with stability, function and natural aesthetics.",
-    title: "Aesthetic Implants",
-    whatsappText: "Hello Dental Expertos, I would like information about aesthetic implants."
+    seoDescription: "Composite resin smile design in Medellin: flat or layered design to change dental shade and shape.",
+    seoKeywords: "composite resin smile design medellin, flat resin design, layered resin design",
+    slug: "diseno-en-resina",
+    summary: "Composite resin design to cover the dental surface with the selected shade and a flat or layered finish.",
+    title: "Composite Resin Design",
+    whatsappText: "Hello Dental Expertos, I would like information about composite resin smile design."
+  },
+  {
+    benefits: [
+      "Starts with a digital scan.",
+      "The case is sent to the lab to create the pieces.",
+      "Includes several try-ins until the result is perfect."
+    ],
+    duration: "It usually requires approximately 8 days because it includes scanning, lab work and clinical try-ins.",
+    expectedResults: [
+      "High-aesthetic finish.",
+      "Flat or layered design depending on the case.",
+      "Precise result with a lab-based process."
+    ],
+    eyebrow: "Ceramic | lab process",
+    faqs: [
+      {
+        answer: "First we complete a scan, then the case is sent to the lab and try-ins are done until the result is perfect.",
+        question: "What is the process like?"
+      },
+      {
+        answer: "Yes. Ceramic can be completed as a flat or layered design, depending on the aesthetic goal.",
+        question: "Does it also have variants?"
+      },
+      {
+        answer: "It usually takes around 8 days because of the lab work and required try-ins.",
+        question: "Why does it take longer?"
+      }
+    ],
+    heroImage: "/assets/results/case-2-after.jpg",
+    icon: "gem",
+    process: [
+      {
+        description: "We scan the smile to plan the pieces with precision.",
+        title: "Scanning"
+      },
+      {
+        description: "We send the design to the lab so the ceramic pieces can be created.",
+        title: "Laboratory"
+      },
+      {
+        description: "We try in, adjust and finish when the design looks and feels perfect.",
+        title: "Try-ins"
+      }
+    ],
+    seoDescription: "Ceramic smile design in Medellin with digital scanning, lab work and aesthetic try-ins.",
+    seoKeywords: "ceramic smile design medellin, ceramic veneers medellin, ceramic dental design",
+    slug: "diseno-en-ceramica",
+    summary: "Ceramic design with scanning, laboratory work and try-ins for a high-precision aesthetic result.",
+    title: "Ceramic Smile Design",
+    whatsappText: "Hello Dental Expertos, I would like information about ceramic smile design."
   }
 ];
 

@@ -33,21 +33,18 @@
         </a>
       </div>
       
-      <div class="mt-12 flex items-center gap-4">
-        <div class="flex -space-x-4">
-          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-valeria.svg" alt="<%= isEnglish ? 'Patient' : 'Paciente' %>" />
-          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-carlos.svg" alt="<%= isEnglish ? 'Patient' : 'Paciente' %>" />
-          <img class="w-12 h-12 rounded-full border-2 border-white bg-dental-beige" src="/img/placeholders/patient-elena.svg" alt="<%= isEnglish ? 'Patient' : 'Paciente' %>" />
+      <div class="mt-12 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-2xl border border-dental-beige bg-white/75 px-4 py-3 backdrop-blur-sm">
+          <p class="text-xs font-bold uppercase tracking-widest text-dental-brown"><%= isEnglish ? "Experience" : "Experiencia" %></p>
+          <p class="mt-1 text-sm font-semibold text-dental-dark">+15 <%= isEnglish ? "years" : "años" %></p>
         </div>
-        <div class="flex items-center gap-2 text-sm font-medium">
-          <div class="flex text-[#F59E0B]">
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-          </div>
-          <span class="text-dental-brown">5.0 (200+ <%= isEnglish ? "Reviews" : "Reseñas" %>)</span>
+        <div class="rounded-2xl border border-dental-beige bg-white/75 px-4 py-3 backdrop-blur-sm">
+          <p class="text-xs font-bold uppercase tracking-widest text-dental-brown"><%= isEnglish ? "Focus" : "Enfoque" %></p>
+          <p class="mt-1 text-sm font-semibold text-dental-dark"><%= isEnglish ? "Natural aesthetic results" : "Resultados estéticos naturales" %></p>
+        </div>
+        <div class="rounded-2xl border border-dental-beige bg-white/75 px-4 py-3 backdrop-blur-sm">
+          <p class="text-xs font-bold uppercase tracking-widest text-dental-brown"><%= isEnglish ? "Care" : "Atención" %></p>
+          <p class="mt-1 text-sm font-semibold text-dental-dark"><%= isEnglish ? "Personalized planning" : "Planeación personalizada" %></p>
         </div>
       </div>
     </div>
@@ -59,7 +56,7 @@
           src="/img/clinic/Home.png" 
           alt="<%= isEnglish ? 'Smile design and aesthetic dentistry' : 'Diseño de Sonrisa - Estética Dental' %>"
           loading="lazy"
-          onerror="this.src='/img/clinic/image.png';"
+          onerror="this.onerror=null; this.src='/img/placeholders/dental-preview.svg';"
           class="w-full h-[420px] sm:h-[520px] lg:h-[600px] object-cover"
         />
       </div>
@@ -151,39 +148,28 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonios" class="py-24 bg-dental-cream">
+<!-- CLINICAL TRUST -->
+<section class="py-24 bg-dental-cream">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl font-serif text-dental-dark mb-4"><%= isEnglish ? "Real Experiences" : "Experiencias Reales" %></h2>
-      <p class="text-dental-brown/80 max-w-2xl mx-auto"><%= isEnglish ? "What our patients say about the impact our work had on their lives." : "Lo que dicen nuestros pacientes sobre el impacto que tuvo nuestro trabajo en sus vidas." %></p>
+      <span class="text-dental-brown text-sm font-bold tracking-widest uppercase mb-2 block"><%= isEnglish ? "Clinical trust" : "Confianza clínica" %></span>
+      <h2 class="text-4xl font-serif text-dental-dark mb-4"><%= isEnglish ? "A process focused on predictable care" : "Un proceso enfocado en una atención predecible" %></h2>
+      <p class="text-dental-brown/80 max-w-2xl mx-auto"><%= isEnglish ? "We prioritize diagnosis, planning and follow-up so the experience is clear from the first visit." : "Priorizamos el diagnóstico, la planeación y el seguimiento para que la experiencia sea clara desde la primera visita." %></p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <% const testimonials = [
-        { avatar: "/img/placeholders/patient-valeria.svg", name: "Valeria Mendoza", esRole: "Paciente de Diseño de Sonrisa", enRole: "Smile Design Patient", esQuote: "La atención en Dental Expertos es simplemente excepcional. Superaron mis expectativas con mi diseño de sonrisa, ahora me siento mucho más segura.", enQuote: "The care at Dental Expertos is simply exceptional. They exceeded my expectations with my smile design, and now I feel much more confident." },
-        { avatar: "/img/placeholders/patient-carlos.svg", name: "Carlos Ruiz", esRole: "Paciente de Implantes", enRole: "Implants Patient", esQuote: "Profesionalismo puro. El proceso de mis implantes fue indoloro y el resultado es tan natural que olvido que los tengo. Muy recomendados.", enQuote: "Pure professionalism. My implant process was painless and the result is so natural that I forget I have them. Highly recommended." },
-        { avatar: "/img/placeholders/patient-elena.svg", name: "Elena Santos", esRole: "Paciente de Ortodoncia", enRole: "Orthodontics Patient", esQuote: "Buscaba una clínica que entendiera la estética moderna y aquí la encontré. Mis brackets invisibles han sido la mejor decisión.", enQuote: "I was looking for a clinic that understood modern aesthetics, and I found it here. My invisible braces have been the best decision." }
+      <% const trustPoints = [
+        { icon: "scan-search", esTitle: "Diagnóstico Claro", enTitle: "Clear Diagnosis", esCopy: "Revisamos el caso con criterios clínicos y estéticos antes de proponer cualquier tratamiento.", enCopy: "We review every case using clinical and aesthetic criteria before proposing a treatment." },
+        { icon: "clipboard-list", esTitle: "Planificación Precisa", enTitle: "Precise Planning", esCopy: "Definimos etapas, materiales y objetivos para que sepas qué esperar en cada paso.", enCopy: "We define phases, materials and goals so you know what to expect at every step." },
+        { icon: "badge-check", esTitle: "Seguimiento Profesional", enTitle: "Professional Follow-up", esCopy: "Acompañamos el proceso para cuidar el resultado y resolver ajustes de manera oportuna.", enCopy: "We follow the process to protect the result and resolve adjustments in a timely way." }
       ]; %>
-      <% testimonials.forEach((testimonial, index) => { %>
+      <% trustPoints.forEach((point, index) => { %>
         <div class="premium-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="<%= (index + 1) * 100 %>">
-          <div class="flex text-[#F59E0B] mb-6">
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <div class="w-14 h-14 bg-dental-cream rounded-2xl flex items-center justify-center text-dental-brown mb-6">
+            <i data-lucide="<%= point.icon %>" class="w-6 h-6"></i>
           </div>
-          <p class="text-dental-dark mb-8 text-sm leading-relaxed italic">
-            "<%= isEnglish ? testimonial.enQuote : testimonial.esQuote %>"
-          </p>
-          <div class="flex items-center gap-4">
-            <img src="<%= testimonial.avatar %>" alt="<%= testimonial.name %>" class="w-12 h-12 rounded-full object-cover bg-dental-beige">
-            <div>
-              <h4 class="font-bold text-dental-dark text-sm"><%= testimonial.name %></h4>
-              <p class="text-xs text-dental-brown"><%= isEnglish ? testimonial.enRole : testimonial.esRole %></p>
-            </div>
-          </div>
+          <h3 class="font-serif text-xl mb-3 text-dental-dark"><%= isEnglish ? point.enTitle : point.esTitle %></h3>
+          <p class="text-sm text-dental-brown/80 leading-relaxed"><%= isEnglish ? point.enCopy : point.esCopy %></p>
         </div>
       <% }) %>
     </div>
